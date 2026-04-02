@@ -1,0 +1,818 @@
+{
+  "id": "lazarus",
+  "name": "Lazarus Group",
+  "aliases": [
+    "HIDDEN COBRA",
+    "Zinc",
+    "Diamond Sleet",
+    "Labyrinth Chollima",
+    "APT38",
+    "BlueNoroff",
+    "Andariel",
+    "Bureau 121",
+    "Guardians of Peace",
+    "Whois Hacking Team"
+  ],
+  "country": "North Korea",
+  "country_code": "KP",
+  "flag_emoji": "🇰🇵",
+  "attribution": "North Korean Reconnaissance General Bureau (RGB)",
+  "motivation": "Financial Gain, Espionage, Disruption",
+  "threat_type": "Nation-State",
+  "first_seen": "2009",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "Lazarus Group is North Korea's most prolific cyber threat actor, operating under the Reconnaissance General Bureau. Unique among nation-state groups for combining espionage with large-scale financial theft to fund the DPRK regime. Responsible for the 2014 Sony Pictures attack, the $81M Bangladesh Bank heist, the WannaCry ransomware pandemic, and billions in cryptocurrency theft. Sub-groups include BlueNoroff (financial) and Andariel (espionage).",
+  "target_sectors": [
+    "Financial Services",
+    "Cryptocurrency",
+    "Defense",
+    "Entertainment",
+    "Technology",
+    "Aerospace",
+    "Government"
+  ],
+  "target_countries": [
+    "United States",
+    "South Korea",
+    "Japan",
+    "Global Financial Institutions",
+    "Cryptocurrency Exchanges Worldwide"
+  ],
+  "tools": [
+    "Manuscrypt",
+    "FALLCHILL",
+    "HOPLIGHT",
+    "Bankshot",
+    "Brambul",
+    "DTrack",
+    "BLINDINGCAN",
+    "AppleJeus",
+    "TraderTraitor",
+    "KANDYKORN",
+    "KANDYKORN Analysis",
+    "TraderTraitor Advisory",
+    "ELECTRICFISH",
+    "RustBucket"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1566.001",
+        "name": "Phishing: Spearphishing Attachment"
+      },
+      {
+        "id": "T1566.003",
+        "name": "Phishing: Spearphishing via Service"
+      },
+      {
+        "id": "T1195.002",
+        "name": "Supply Chain Compromise"
+      },
+      {
+        "id": "T1189",
+        "name": "Drive-by Compromise"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "Command and Scripting Interpreter: PowerShell"
+      },
+      {
+        "id": "T1204.002",
+        "name": "User Execution: Malicious File"
+      },
+      {
+        "id": "T1106",
+        "name": "Native API"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1547.001",
+        "name": "Boot or Logon Autostart Execution: Registry Run Keys"
+      },
+      {
+        "id": "T1543.003",
+        "name": "Create or Modify System Process: Windows Service"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1068",
+        "name": "Exploitation for Privilege Escalation"
+      },
+      {
+        "id": "T1055",
+        "name": "Process Injection"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files or Information"
+      },
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files or Information"
+      },
+      {
+        "id": "T1553.002",
+        "name": "Subvert Trust Controls: Code Signing"
+      },
+      {
+        "id": "T1036",
+        "name": "Masquerading"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1555",
+        "name": "Credentials from Password Stores"
+      },
+      {
+        "id": "T1552",
+        "name": "Unsecured Credentials"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1083",
+        "name": "File and Directory Discovery"
+      },
+      {
+        "id": "T1057",
+        "name": "Process Discovery"
+      },
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.001",
+        "name": "Remote Services: Remote Desktop Protocol"
+      },
+      {
+        "id": "T1021.002",
+        "name": "Remote Services: SMB/Windows Admin Shares"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      },
+      {
+        "id": "T1560",
+        "name": "Archive Collected Data"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Application Layer Protocol: Web Protocols"
+      },
+      {
+        "id": "T1573",
+        "name": "Encrypted Channel"
+      },
+      {
+        "id": "T1105",
+        "name": "Ingress Tool Transfer"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      }
+    ],
+    "impact": [
+      {
+        "id": "T1485",
+        "name": "Data Destruction"
+      },
+      {
+        "id": "T1486",
+        "name": "Data Encrypted for Impact"
+      },
+      {
+        "id": "T1489",
+        "name": "Service Stop"
+      },
+      {
+        "id": "T1529",
+        "name": "System Shutdown/Reboot"
+      }
+    ]
+  },
+  "emulation_plans": [
+    {
+      "name": "CISA AppleJeus Malware Analysis",
+      "source": "CISA",
+      "type": "Guide",
+      "url": "https://www.cisa.gov/news-events/analysis-reports/ar21-048a",
+      "desc": "Technical analysis of AppleJeus with IOCs and detection guidance"
+    },
+    {
+      "name": "Elastic KANDYKORN Analysis",
+      "source": "Elastic Security Labs",
+      "type": "Guide",
+      "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn",
+      "desc": "macOS KANDYKORN backdoor analysis with detection rules"
+    },
+    {
+      "name": "Lazarus/BlueNoroff Research Collection",
+      "source": "GitHub / tayvano",
+      "type": "Open Source",
+      "url": "https://github.com/tayvano/lazarus-bluenoroff-research",
+      "desc": "Comprehensive collection of DPRK APT articles, analysis, heists, and IOCs with 200+ entries"
+    },
+    {
+      "name": "ATT&CK Evaluations - DPRK (Lazarus)",
+      "source": "MITRE Engenuity",
+      "type": "Framework",
+      "url": "https://github.com/attackevals/ael",
+      "desc": "Official ATT&CK Evaluation with Lazarus macOS and Windows emulation scenarios"
+    },
+    {
+      "name": "CISA Alert: TraderTraitor DPRK",
+      "source": "CISA",
+      "type": "Guide",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-108a",
+      "desc": "Advisory covering Lazarus cryptocurrency targeting with TraderTraitor malware TTPs"
+    },
+    {
+      "name": "Lazarus Group: Criminal Syndicate with a Flag",
+      "source": "Barracuda Networks",
+      "type": "Blog Post",
+      "url": "https://blog.barracuda.com/2025/09/23/lazarus-group--a-criminal-syndicate-with-a-flag",
+      "desc": "Deep dive into Lazarus hierarchy, subgroups, cryptocurrency targeting, and operational structure"
+    },
+    {
+      "name": "Emulating the North Korean Adversary Lazarus Group",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2023/01/05/emulating-the-highly-sophisticated-north-korean-adversary-lazarus-group/",
+      "desc": "Six attack graphs emulating Lazarus campaigns: Operation Sharpshooter, Rising Sun implant, cryptocurrency targeting"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2014",
+      "name": "Sony Pictures Hack",
+      "description": "Destructive attack against Sony Pictures in retaliation for 'The Interview' film."
+    },
+    {
+      "year": "2016",
+      "name": "Bangladesh Bank Heist",
+      "description": "Attempted theft of $1B from Bangladesh Bank via SWIFT; $81M successfully stolen."
+    },
+    {
+      "year": "2017",
+      "name": "WannaCry Ransomware",
+      "description": "Global ransomware pandemic affecting 200,000+ systems across 150 countries."
+    },
+    {
+      "year": "2022",
+      "name": "Ronin Bridge Hack",
+      "description": "Theft of $620M from Axie Infinity's Ronin blockchain bridge."
+    },
+    {
+      "year": "2025",
+      "name": "Bybit Hack",
+      "description": "Theft of approximately $1.5B in cryptocurrency from Bybit exchange."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA AA24-207A: North Korea Ransomware Attacks",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-108a"
+    },
+    {
+      "title": "FBI: TraderTraitor DPRK Cryptocurrency Theft",
+      "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-lazarus-group-cyber-actors-as-responsible-for-theft-of-620-million-in-virtual-currency-from-ronin-network"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0032",
+      "url": "https://attack.mitre.org/groups/G0032/"
+    },
+    {
+      "title": "Google TAG: DPRK Targeting Security Researchers",
+      "url": "https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/"
+    },
+    {
+      "title": "Kaspersky: Lazarus Group Operations",
+      "url": "https://securelist.com/lazarus-under-the-hood/77908/"
+    },
+    {
+      "title": "CISA: AppleJeus Malware",
+      "url": "https://www.cisa.gov/news-events/analysis-reports/ar21-048a"
+    },
+    {
+      "title": "Chainalysis: DPRK Crypto Laundering",
+      "url": "https://www.chainalysis.com/blog/north-korean-cryptocurrency-theft-2024/"
+    },
+    {
+      "title": "Malpedia: Lazarus Group",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/lazarus_group"
+    },
+    {
+      "title": "Secureworks: NICKEL ACADEMY Profile",
+      "url": "https://www.secureworks.com/research/threat-profiles/nickel-academy"
+    },
+    {
+      "title": "CrowdStrike: Labyrinth Chollima",
+      "url": "https://www.crowdstrike.com/adversaries/labyrinth-chollima/"
+    },
+    {
+      "title": "UN Security Council DPRK Sanctions Reports",
+      "url": "https://www.un.org/securitycouncil/sanctions/1718/panel_experts/reports"
+    },
+    {
+      "title": "Elastic: KANDYKORN macOS Malware",
+      "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn"
+    },
+    {
+      "title": "Microsoft: Diamond Sleet",
+      "url": "https://www.microsoft.com/en-us/security/blog/2023/10/18/multiple-north-korean-threat-actors-exploiting-the-teamcity-cve-2023-42793-vulnerability/"
+    },
+    {
+      "title": "Elliptic: DPRK Crypto Laundering",
+      "url": "https://www.elliptic.co/blog/elliptic-analysis-north-korean-crypto-theft"
+    },
+    {
+      "title": "3CX Supply Chain Attack Analysis",
+      "url": "https://www.mandiant.com/resources/blog/3cx-software-supply-chain-compromise"
+    }
+  ],
+  "mitre_id": "G0032",
+  "image": "lazarus.png",
+  "attack_flow": {
+    "campaign": "Ronin Bridge / Cryptocurrency Heists (2022-2025)",
+    "steps": [
+      {
+        "step": "Fake Job Offer (LinkedIn)",
+        "tid": "T1566.003",
+        "tactic": "Initial Access",
+        "desc": "Social engineering via fake recruiter profiles"
+      },
+      {
+        "step": "Trojanized App",
+        "tid": "T1204.002",
+        "tactic": "Execution",
+        "desc": "Victim runs malicious coding test or trading app"
+      },
+      {
+        "step": "Persistence via LaunchAgent",
+        "tid": "T1543.003",
+        "tactic": "Persistence",
+        "desc": "Establishes persistence on macOS/Windows"
+      },
+      {
+        "step": "Browser Session Theft",
+        "tid": "T1539",
+        "tactic": "Credential Access",
+        "desc": "Steals browser session cookies and wallet credentials"
+      },
+      {
+        "step": "Internal Reconnaissance",
+        "tid": "T1083",
+        "tactic": "Discovery",
+        "desc": "Maps internal infrastructure and wallet systems"
+      },
+      {
+        "step": "Transaction Manipulation",
+        "tid": "T1565",
+        "tactic": "Impact",
+        "desc": "Manipulates cryptocurrency transactions or SWIFT messages"
+      },
+      {
+        "step": "Encrypted C2",
+        "tid": "T1573",
+        "tactic": "Command & Control",
+        "desc": "Custom encrypted protocol over HTTPS"
+      },
+      {
+        "step": "Cryptocurrency Theft",
+        "tid": "T1657",
+        "tactic": "Impact",
+        "desc": "Transfers stolen crypto through mixing services"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "RGB (Reconnaissance General Bureau), Bureau 121, sub-groups BlueNoroff, Andariel",
+    "infrastructure": "Fake company websites, trojanized npm packages, compromised DeFi protocols, Tornado Cash",
+    "capability": "AppleJeus, TraderTraitor, KANDYKORN, Manuscrypt, BLINDINGCAN, custom SWIFT tools",
+    "victim": "Cryptocurrency exchanges (Bybit, Ronin/Axie), banks (Bangladesh Bank), tech companies"
+  },
+  "cves": [
+    {
+      "id": "CVE-2021-44228",
+      "desc": "Log4Shell — rapidly adopted for initial access",
+      "year": "2021"
+    },
+    {
+      "id": "CVE-2022-0609",
+      "desc": "Chrome zero-day for watering hole attacks on crypto companies",
+      "year": "2022"
+    },
+    {
+      "id": "CVE-2023-42793",
+      "desc": "JetBrains TeamCity RCE for supply chain access",
+      "year": "2023"
+    },
+    {
+      "id": "CVE-2021-21148",
+      "desc": "Chrome V8 heap buffer overflow zero-day",
+      "year": "2021"
+    },
+    {
+      "id": "CVE-2020-9395",
+      "desc": "Adobe Reader RCE used in targeted attacks",
+      "year": "2020"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "tradingtechnologies[.]io",
+      "blocknovas[.]com",
+      "celasllc[.]com"
+    ],
+    "hashes": [
+      "SHA256: 3c2f...b8e2 (AppleJeus macOS)",
+      "SHA256: 7d5c...a3f1 (KANDYKORN)"
+    ],
+    "sigma_rules": [
+      "proc_creation_win_susp_npm_global_install",
+      "file_event_macos_suspicious_launchagent"
+    ]
+  },
+  "detection": [
+    {
+      "title": "Fake Job Application Detection",
+      "content": "Monitor for downloads from unfamiliar coding challenge platforms (e.g., GitHub repos with low star counts, recently created domains). Flag .dmg, .pkg, or .exe files received via LinkedIn messages or Discord. Implement application allowlisting on developer machines.",
+      "url": "https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/"
+    },
+    {
+      "title": "macOS LaunchAgent Persistence",
+      "content": "Monitor ~/Library/LaunchAgents/ and /Library/LaunchDaemons/ for new plist files. Alert on launchctl load commands from non-standard paths. Check for unsigned or ad-hoc signed binaries in application bundles. Use ESF (Endpoint Security Framework) for real-time monitoring.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/macos/process_creation/proc_creation_macos_launchagent_creation.yml"
+    },
+    {
+      "title": "Cryptocurrency Transaction Anomaly",
+      "content": "Implement multi-signature requirements and monitor for unauthorized API key usage on exchange platforms. Deploy real-time blockchain analytics to detect transfers to known DPRK-linked mixer addresses. Alert on large transfers outside business hours.",
+      "url": "https://www.chainalysis.com/blog/north-korean-cryptocurrency-theft-2024/"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "Kimsuky",
+      "relationship": "Same nation (DPRK)",
+      "desc": "Both RGB but Kimsuky targets policy/intelligence while Lazarus targets financial."
+    },
+    {
+      "name": "Andariel",
+      "relationship": "Sub-group",
+      "desc": "Lazarus sub-group focused on South Korean military and ransomware."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Implement hardware wallet multi-sig (3-of-5) for crypto holdings above threshold. Lazarus targets single-signer hot wallets.",
+      "source": "FBI IC3 Crypto Advisory",
+      "url": "https://www.ic3.gov/Media/Y2022/PSA220318"
+    },
+    {
+      "text": "Enforce application allowlisting on developer workstations. Block unsigned .dmg/.exe from social media.",
+      "source": "CISA AA22-108A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-108a"
+    },
+    {
+      "text": "Conduct mandatory social engineering training focused on fake recruiter scenarios via LinkedIn and Telegram.",
+      "source": "Google TAG Advisory",
+      "url": "https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/"
+    },
+    {
+      "text": "Air-gap cold wallet infrastructure. Use HSMs for key management. Never sign transactions on internet-connected systems.",
+      "source": "NIST SP 800-57",
+      "url": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+    },
+    {
+      "text": "Deploy real-time blockchain transaction monitoring with automated alerts for transfers above defined thresholds.",
+      "source": "FinCEN Advisory",
+      "url": "https://www.fincen.gov/sites/default/files/advisory/2022-04-29/FinCEN%20Advisory%20DPRK%20Crypto%20FIN-2022-A003.pdf"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "CISA AppleJeus IOCs",
+      "url": "https://www.cisa.gov/news-events/analysis-reports/ar21-048a",
+      "desc": "AppleJeus cryptocurrency malware analysis"
+    },
+    {
+      "name": "FBI Ronin Bridge Alert",
+      "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-lazarus-group-cyber-actors-as-responsible-for-theft-of-620-million-in-virtual-currency-from-ronin-network",
+      "desc": "$620M Ronin Bridge attribution"
+    },
+    {
+      "name": "CISA DPRK Ransomware AA24-207A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-108a",
+      "desc": "DPRK state-sponsored ransomware IOCs"
+    },
+    {
+      "name": "MITRE ATT&CK G0032 Software",
+      "url": "https://attack.mitre.org/groups/G0032/",
+      "desc": "Full Lazarus toolset mapping"
+    },
+    {
+      "name": "Google TAG DPRK IOCs",
+      "url": "https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/",
+      "desc": "DPRK targeting security researchers"
+    },
+    {
+      "name": "Kaspersky Lazarus IOCs",
+      "url": "https://securelist.com/lazarus-under-the-hood/77908/",
+      "desc": "Comprehensive Lazarus malware analysis"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "KANDYKORN Analysis",
+      "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn",
+      "type": "macOS Backdoor"
+    },
+    {
+      "name": "TraderTraitor Advisory",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-108a",
+      "desc": "CISA advisory on TraderTraitor"
+    },
+    {
+      "name": "AppleJeus",
+      "url": "https://attack.mitre.org/software/S0584/",
+      "type": "Crypto Trading Trojan"
+    },
+    {
+      "name": "KANDYKORN",
+      "url": "https://www.elastic.co/security-labs/elastic-catches-dprk-passing-out-kandykorn",
+      "type": "macOS Backdoor"
+    },
+    {
+      "name": "TraderTraitor",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-108a",
+      "type": "Crypto Targeting Malware"
+    },
+    {
+      "name": "BLINDINGCAN",
+      "url": "https://attack.mitre.org/software/S0520/",
+      "type": "RAT"
+    },
+    {
+      "name": "Manuscrypt",
+      "url": "https://attack.mitre.org/software/S0413/",
+      "type": "Custom RAT"
+    },
+    {
+      "name": "DTrack",
+      "url": "https://securelist.com/my-name-is-dtrack/93338/",
+      "type": "Spyware/RAT"
+    },
+    {
+      "name": "ELECTRICFISH",
+      "url": "https://attack.mitre.org/software/S0404/",
+      "type": "Tunneling Tool"
+    },
+    {
+      "name": "RustBucket",
+      "url": "https://www.jamf.com/blog/bluenoroff-apt-targets-macs-with-rustbucket-malware/",
+      "type": "macOS Dropper"
+    }
+  ],
+  "target_industries": [
+    "Cryptocurrency",
+    "Financial Services",
+    "Banking",
+    "Defense",
+    "Technology",
+    "Gaming",
+    "Media"
+  ],
+  "target_country_flags": [
+    {
+      "country": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "country": "South Korea",
+      "flag": "🇰🇷"
+    },
+    {
+      "country": "Japan",
+      "flag": "🇯🇵"
+    },
+    {
+      "country": "Global",
+      "flag": "🌍"
+    },
+    {
+      "country": "Bangladesh",
+      "flag": "🇧🇩"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "FBI public attribution for $620M Ronin Bridge theft",
+        "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-lazarus-group-cyber-actors-as-responsible-for-theft-of-620-million-in-virtual-currency-from-ronin-network"
+      },
+      {
+        "text": "DOJ indicts 3 DPRK military hackers (Feb 2021)",
+        "url": "https://www.justice.gov/opa/pr/three-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyberattacks-and"
+      },
+      {
+        "text": "UN Panel of Experts DPRK cyber reports",
+        "url": "https://www.un.org/securitycouncil/sanctions/1718/panel_experts/reports"
+      },
+      {
+        "text": "Multiple joint advisories (US, UK, ROK, Japan)",
+        "url": "https://www.cisa.gov/news-events/analysis-reports/ar21-048a"
+      }
+    ]
+  },
+  "legal_actions": [
+    {
+      "date": "2021-02",
+      "type": "Indictment",
+      "title": "DOJ charges 3 DPRK military hackers for global cyberattacks",
+      "url": "https://www.justice.gov/opa/pr/three-north-korean-military-hackers-indicted-wide-ranging-scheme-commit-cyberattacks-and"
+    },
+    {
+      "date": "2022-04",
+      "type": "Attribution",
+      "title": "FBI attributes $620M Ronin Bridge theft to Lazarus Group",
+      "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-lazarus-group-cyber-actors-as-responsible-for-theft-of-620-million-in-virtual-currency-from-ronin-network"
+    },
+    {
+      "date": "2023-09",
+      "type": "Sanctions",
+      "title": "OFAC sanctions DPRK-linked crypto mixers used by Lazarus",
+      "url": "https://home.treasury.gov/news/press-releases/jy1768"
+    }
+  ],
+  "threat_assessment": {
+    "capability": 8,
+    "intent": 10,
+    "targeting": 7,
+    "overall": "Critical",
+    "summary": "Primary DPRK revenue generation actor. Estimated $3B+ stolen in cryptocurrency since 2017. Highly motivated by regime survival funding and sanctions evasion."
+  },
+  "kill_chain": [
+    {
+      "phase": "Reconnaissance",
+      "mapping": "LinkedIn profiling of crypto/finance employees, fake company website creation, npm package poisoning reconnaissance"
+    },
+    {
+      "phase": "Weaponization",
+      "mapping": "Trojanized trading apps (AppleJeus), malicious npm packages, weaponized coding challenges"
+    },
+    {
+      "phase": "Delivery",
+      "mapping": "Social engineering via fake job offers on LinkedIn, supply chain compromise (3CX), watering holes"
+    },
+    {
+      "phase": "Exploitation",
+      "mapping": "CVE-2021-44228 (Log4Shell), CVE-2022-0609 (Chrome zero-day), CVE-2023-42793 (TeamCity)"
+    },
+    {
+      "phase": "Installation",
+      "mapping": "KANDYKORN, BLINDINGCAN, Manuscrypt, macOS LaunchAgent persistence"
+    },
+    {
+      "phase": "Command & Control",
+      "mapping": "Custom encrypted HTTPS protocol, cloud storage C2, compromised web servers"
+    },
+    {
+      "phase": "Actions on Objectives",
+      "mapping": "Cryptocurrency theft via transaction manipulation, SWIFT message forgery, ransomware deployment for revenue"
+    }
+  ],
+  "recent_news": [
+    {
+      "date": "2025-02",
+      "title": "FBI confirms Lazarus behind $1.5B Bybit exchange hack",
+      "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-lazarus-group-cyber-actors-as-responsible-for-theft-of-620-million-in-virtual-currency-from-ronin-network"
+    },
+    {
+      "date": "2024-11",
+      "title": "Microsoft: DPRK threat actors targeting cryptocurrency sector",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/11/"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0032",
+      "url": "https://attack.mitre.org/groups/G0032/"
+    },
+    {
+      "name": "FBI Ronin Bridge Attribution",
+      "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-lazarus-group-cyber-actors-as-responsible-for-theft-of-620-million-in-virtual-currency-from-ronin-network"
+    },
+    {
+      "name": "CISA AppleJeus Analysis",
+      "url": "https://www.cisa.gov/news-events/analysis-reports/ar21-048a"
+    },
+    {
+      "name": "Google TAG DPRK Reports",
+      "url": "https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/"
+    },
+    {
+      "name": "Kaspersky Lazarus Analysis",
+      "url": "https://securelist.com/lazarus-under-the-hood/77908/"
+    },
+    {
+      "name": "Chainalysis DPRK Crypto Report",
+      "url": "https://www.chainalysis.com/blog/north-korean-cryptocurrency-theft-2024/"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1566.003",
+      "name": "Spearphishing via Service",
+      "tactic": "Initial Access",
+      "tool": "Manual",
+      "command": "# Social engineering via LinkedIn - send trojanized coding challenge",
+      "platform": "Any",
+      "url": "https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/",
+      "note": "Fake recruiter scenario - human-operated, not automatable"
+    },
+    {
+      "tid": "T1204.002",
+      "name": "Malicious File Execution",
+      "tactic": "Execution",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1204.002 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.md",
+      "note": "User executes trojanized application"
+    },
+    {
+      "tid": "T1539",
+      "name": "Steal Web Session Cookie",
+      "tactic": "Credential Access",
+      "tool": "SharpChrome",
+      "command": "SharpChrome.exe logins /browser:chrome",
+      "platform": "Windows",
+      "url": "https://github.com/GhostPack/SharpDPAPI",
+      "note": "Extracts Chrome cookies and saved credentials"
+    },
+    {
+      "tid": "T1565",
+      "name": "Data Manipulation",
+      "tactic": "Impact",
+      "tool": "Manual",
+      "command": "# Transaction manipulation requires target-specific tooling",
+      "platform": "Any",
+      "url": "https://attack.mitre.org/techniques/T1565/",
+      "note": "Cryptocurrency transaction manipulation - custom per target"
+    },
+    {
+      "tid": "T1543.003",
+      "name": "Launch Daemon (macOS)",
+      "tactic": "Persistence",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1543.003",
+      "platform": "macOS",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.md",
+      "note": "macOS LaunchAgent persistence"
+    }
+  ]
+}

@@ -1,0 +1,684 @@
+{
+  "id": "apt41",
+  "name": "APT41",
+  "aliases": [
+    "Double Dragon",
+    "Wicked Panda",
+    "Brass Typhoon",
+    "BARIUM",
+    "Winnti",
+    "Lead",
+    "TG-2633",
+    "RedGolf",
+    "Earth Baku"
+  ],
+  "country": "China",
+  "country_code": "CN",
+  "flag_emoji": "🇨🇳",
+  "attribution": "Chinese Ministry of State Security (MSS), linked to Chengdu 404 Network Technology",
+  "motivation": "Espionage, Financial Gain",
+  "threat_type": "Nation-State / Cybercriminal Hybrid",
+  "first_seen": "2012",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "APT41 is a unique dual-mission Chinese threat group that conducts both state-sponsored espionage and financially motivated cybercrime. Attributed to contractors working with China's MSS, the group has targeted healthcare, telecoms, technology, and video game companies. Several members were indicted by the US DOJ in 2020. Known for supply chain attacks, exploitation of zero-day vulnerabilities, and large-scale data theft operations.",
+  "target_sectors": [
+    "Healthcare",
+    "Telecommunications",
+    "Technology",
+    "Video Gaming",
+    "Higher Education",
+    "Travel",
+    "Media",
+    "Government"
+  ],
+  "target_countries": [
+    "United States",
+    "United Kingdom",
+    "France",
+    "India",
+    "Italy",
+    "Japan",
+    "Myanmar",
+    "Netherlands",
+    "Singapore",
+    "South Korea",
+    "Taiwan",
+    "Turkey"
+  ],
+  "tools": [
+    "ShadowPad",
+    "POISONPLUG",
+    "Winnti",
+    "CROSSWALK",
+    "LOWKEY",
+    "DEADEYE",
+    "KeyPlug",
+    "DUSTPAN",
+    "DUSTTRAP",
+    "Cobalt Strike",
+    "ShadowPad Analysis",
+    "China Chopper Webshell",
+    "China Chopper",
+    "Mimikatz",
+    "Nuclei",
+    "Rubeus"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1190",
+        "name": "Exploit Public-Facing Application"
+      },
+      {
+        "id": "T1195.002",
+        "name": "Supply Chain Compromise"
+      },
+      {
+        "id": "T1566.001",
+        "name": "Phishing: Spearphishing Attachment"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      },
+      {
+        "id": "T1059.003",
+        "name": "Windows Command Shell"
+      },
+      {
+        "id": "T1047",
+        "name": "WMI"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1547.001",
+        "name": "Registry Run Keys"
+      },
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      },
+      {
+        "id": "T1574.002",
+        "name": "DLL Side-Loading"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1068",
+        "name": "Exploitation for Privilege Escalation"
+      },
+      {
+        "id": "T1055",
+        "name": "Process Injection"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files"
+      },
+      {
+        "id": "T1574.002",
+        "name": "DLL Side-Loading"
+      },
+      {
+        "id": "T1553.002",
+        "name": "Code Signing"
+      },
+      {
+        "id": "T1112",
+        "name": "Modify Registry"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1555",
+        "name": "Credentials from Password Stores"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1083",
+        "name": "File and Directory Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.001",
+        "name": "RDP"
+      },
+      {
+        "id": "T1021.002",
+        "name": "SMB/Windows Admin Shares"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      },
+      {
+        "id": "T1560",
+        "name": "Archive Collected Data"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Web Protocols"
+      },
+      {
+        "id": "T1573",
+        "name": "Encrypted Channel"
+      },
+      {
+        "id": "T1090",
+        "name": "Proxy"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      }
+    ],
+    "impact": [
+      {
+        "id": "T1486",
+        "name": "Data Encrypted for Impact"
+      }
+    ]
+  },
+  "emulation_plans": [
+    {
+      "name": "ATT&CK Evaluations Library",
+      "source": "MITRE Engenuity",
+      "type": "Framework",
+      "url": "https://github.com/attackevals/ael",
+      "desc": "Official APT41 evaluation plan and detection analytics"
+    },
+    {
+      "name": "Cybereason CuckooBees Analysis",
+      "source": "Cybereason",
+      "type": "Guide",
+      "url": "https://www.cybereason.com/blog/operation-cuckoobees-cybereason-uncovers-massive-chinese-intellectual-property-theft",
+      "desc": "Detailed technical analysis of APT41 Operation CuckooBees with IOCs"
+    },
+    {
+      "name": "SCYTHE #ThreatThursday - APT41",
+      "source": "SCYTHE",
+      "type": "Blog Post",
+      "url": "https://scythe.io/threat-thursday/threatthursday-apt41",
+      "desc": "Detailed APT41 emulation plan with CTI profile, bitsadmin/certutil LOLBins, persistence, and Kerberoasting"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2019",
+      "name": "Operation CuckooBees",
+      "description": "Multi-year espionage campaign targeting technology and manufacturing companies."
+    },
+    {
+      "year": "2020",
+      "name": "Citrix/Cisco/Zoho Exploitation",
+      "description": "Mass exploitation of vulnerabilities in enterprise networking products."
+    },
+    {
+      "year": "2021",
+      "name": "USAHerds/Log4j Campaign",
+      "description": "Exploitation of Log4j and USAHerds application targeting US state governments."
+    },
+    {
+      "year": "2023",
+      "name": "KeyPlug Linux Campaign",
+      "description": "Deployment of Linux variant of KeyPlug backdoor against telecommunications providers."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA AA20-258A: Chinese MSS APT Activity",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-258a"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0096",
+      "url": "https://attack.mitre.org/groups/G0096/"
+    },
+    {
+      "title": "Mandiant: APT41 Double Dragon",
+      "url": "https://www.mandiant.com/resources/blog/apt41-dual-espionage-and-cyber-crime-operation"
+    },
+    {
+      "title": "DOJ: APT41 Members Indictment",
+      "url": "https://www.justice.gov/opa/pr/seven-international-cyber-defendants-including-apt41-actors-charged-connection-computer"
+    },
+    {
+      "title": "Cybereason: Operation CuckooBees",
+      "url": "https://www.cybereason.com/blog/operation-cuckoobees-cybereason-uncovers-massive-chinese-intellectual-property-theft"
+    },
+    {
+      "title": "FireEye: APT41 Global Intrusion Campaign",
+      "url": "https://www.mandiant.com/resources/blog/apt41-initiates-global-intrusion-campaign-using-multiple-exploits"
+    },
+    {
+      "title": "Malpedia: Winnti",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/winnti"
+    },
+    {
+      "title": "Secureworks: BRONZE ATLAS",
+      "url": "https://www.secureworks.com/research/threat-profiles/bronze-atlas"
+    },
+    {
+      "title": "CrowdStrike: Wicked Panda",
+      "url": "https://www.crowdstrike.com/adversaries/wicked-panda/"
+    },
+    {
+      "title": "Microsoft: Brass Typhoon",
+      "url": "https://www.microsoft.com/en-us/security/blog/"
+    },
+    {
+      "title": "Kaspersky: ShadowPad Backdoor",
+      "url": "https://securelist.com/shadowpad-in-corporate-networks/81432/"
+    }
+  ],
+  "mitre_id": "G0096",
+  "image": "apt41.jpeg",
+  "attack_flow": {
+    "campaign": "Operation CuckooBees / State Gov Targeting (2021)",
+    "steps": [
+      {
+        "step": "Exploit Public App",
+        "tid": "T1190",
+        "tactic": "Initial Access",
+        "desc": "Exploits Citrix, Cisco, or Zoho ManageEngine"
+      },
+      {
+        "step": "Web Shell Deployment",
+        "tid": "T1505.003",
+        "tactic": "Persistence",
+        "desc": "Deploys web shell for persistent backdoor access"
+      },
+      {
+        "step": "Cobalt Strike Beacon",
+        "tid": "T1059.001",
+        "tactic": "Execution",
+        "desc": "Loads Cobalt Strike via PowerShell"
+      },
+      {
+        "step": "DLL Side-Loading",
+        "tid": "T1574.002",
+        "tactic": "Defense Evasion",
+        "desc": "ShadowPad loaded via legitimate signed binaries"
+      },
+      {
+        "step": "Kerberoasting",
+        "tid": "T1558.003",
+        "tactic": "Credential Access",
+        "desc": "Extracts service account credentials from AD"
+      },
+      {
+        "step": "Data Staging",
+        "tid": "T1560",
+        "tactic": "Collection",
+        "desc": "Compresses and encrypts sensitive data"
+      },
+      {
+        "step": "DNS Tunneling C2",
+        "tid": "T1071.004",
+        "tactic": "Command & Control",
+        "desc": "DNS queries for exfiltration and commands"
+      },
+      {
+        "step": "Ransomware",
+        "tid": "T1486",
+        "tactic": "Impact",
+        "desc": "Deploys ransomware alongside espionage objectives"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "MSS contractors (Chengdu 404), indicted Zhang Haoran, Tan Dailin",
+    "infrastructure": "ShadowPad C2, compromised university networks, Cloudflare-fronted domains",
+    "capability": "ShadowPad, POISONPLUG, DEADEYE, KeyPlug, Cobalt Strike, DUSTPAN, Winnti",
+    "victim": "Healthcare, telecom, gaming, tech, US state governments"
+  },
+  "cves": [
+    {
+      "id": "CVE-2019-19781",
+      "desc": "Citrix ADC RCE — mass exploitation in 2020",
+      "year": "2019"
+    },
+    {
+      "id": "CVE-2020-10189",
+      "desc": "Zoho ManageEngine RCE",
+      "year": "2020"
+    },
+    {
+      "id": "CVE-2021-44228",
+      "desc": "Log4Shell — US state government targeting",
+      "year": "2021"
+    },
+    {
+      "id": "CVE-2021-44207",
+      "desc": "USAHerds zero-day for state agricultural agencies",
+      "year": "2021"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "ns1.colunm[.]com",
+      "tomfrede[.]com"
+    ],
+    "hashes": [
+      "SHA256: 4f2f...d891 (ShadowPad)",
+      "SHA256: 1a3e...7c22 (KeyPlug Linux)"
+    ],
+    "sigma_rules": [
+      "web_webshell_detection",
+      "proc_creation_win_cobalt_strike_load",
+      "dns_query_win_susp_length"
+    ]
+  },
+  "detection": [
+    {
+      "title": "Web Shell Detection on IIS/Apache",
+      "content": "Monitor web server directories for new or modified script files (.aspx, .jsp, .php). Detect w3wp.exe or httpd spawning cmd.exe, powershell.exe, or bash. File integrity monitoring on web root directories. Sigma rule: web_webshell_detection.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/web/web_webshell_detection.yml"
+    },
+    {
+      "title": "DLL Side-Loading Detection",
+      "content": "Detect unsigned DLLs loaded by legitimate signed executables using Sysmon Event ID 7. Monitor known side-loading host binaries: vmnat.exe, colorcpl.exe, consent.exe. Alert on DLL loads from non-standard directories by trusted processes.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_from_non_system_location.yml"
+    },
+    {
+      "title": "DNS Tunneling Detection",
+      "content": "Alert on DNS queries with subdomain labels exceeding 50 characters or high entropy values. Monitor for excessive DNS TXT record queries to single domains. Deploy passive DNS monitoring to identify newly registered domains mimicking legitimate services.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/network/dns/net_dns_susp_txt_exec_query.yml"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "Winnti",
+      "relationship": "Shared toolset",
+      "desc": "APT41 extensively uses Winnti backdoor. Overlapping infrastructure."
+    },
+    {
+      "name": "APT10",
+      "relationship": "Chinese co-operator",
+      "desc": "Both MSS-linked. May share telecom targeting intelligence."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Patch public-facing apps within 24hrs of critical CVE. APT41 mass-exploits Citrix, ManageEngine, Log4Shell within days.",
+      "source": "CISA KEV Catalog",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "text": "Deploy WAF rules to block web shell uploads (.aspx, .jsp, .php). APT41 uses web shells as primary persistence.",
+      "source": "OWASP Web Shell Guide",
+      "url": "https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload"
+    },
+    {
+      "text": "Deploy WDAC/AppLocker to prevent DLL side-loading. APT41 abuses signed executables to load ShadowPad.",
+      "source": "Microsoft WDAC",
+      "url": "https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/"
+    },
+    {
+      "text": "Monitor DNS for tunneling via entropy analysis and TXT query volume. APT41 uses DNS for exfiltration.",
+      "source": "SANS DNS Hunting",
+      "url": "https://www.sans.org/white-papers/36352/"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "CISA AA20-258A Chinese MSS APT",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-258a",
+      "desc": "Chinese MSS-affiliated cyber activity IOCs"
+    },
+    {
+      "name": "DOJ APT41 Indictment",
+      "url": "https://www.justice.gov/opa/pr/seven-international-cyber-defendants-including-apt41-actors-charged-connection-computer",
+      "desc": "Indictment details with operational specifics"
+    },
+    {
+      "name": "MITRE ATT&CK G0096",
+      "url": "https://attack.mitre.org/groups/G0096/",
+      "desc": "Full APT41 technique and software mapping"
+    },
+    {
+      "name": "Mandiant APT41 Report",
+      "url": "https://www.mandiant.com/resources/blog/apt41-dual-espionage-and-cyber-crime-operation",
+      "desc": "Double Dragon dual-purpose operation analysis"
+    },
+    {
+      "name": "Cybereason CuckooBees IOCs",
+      "url": "https://www.cybereason.com/blog/operation-cuckoobees-cybereason-uncovers-massive-chinese-intellectual-property-theft",
+      "desc": "Operation CuckooBees technical analysis"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "ShadowPad Analysis",
+      "url": "https://securelist.com/shadowpad-in-corporate-networks/81432/",
+      "type": "Modular Backdoor"
+    },
+    {
+      "name": "Cobalt Strike",
+      "url": "https://www.cobaltstrike.com/",
+      "type": "C2 Framework"
+    },
+    {
+      "name": "China Chopper Webshell",
+      "url": "https://github.com/tennc/webshell/tree/master/caidao-shell",
+      "type": "Web Shell"
+    },
+    {
+      "name": "ShadowPad",
+      "url": "https://securelist.com/shadowpad-in-corporate-networks/81432/",
+      "type": "Modular Backdoor"
+    },
+    {
+      "name": "China Chopper",
+      "url": "https://attack.mitre.org/software/S0020/",
+      "type": "Web Shell"
+    },
+    {
+      "name": "DEADEYE",
+      "url": "https://attack.mitre.org/software/S1052/",
+      "type": "Downloader"
+    },
+    {
+      "name": "KeyPlug",
+      "url": "https://www.mandiant.com/resources/blog/apt41-us-state-governments",
+      "type": "Cross-Platform Backdoor"
+    },
+    {
+      "name": "Winnti",
+      "url": "https://attack.mitre.org/software/S0141/",
+      "type": "Backdoor"
+    },
+    {
+      "name": "Mimikatz",
+      "url": "https://github.com/gentilkiwi/mimikatz",
+      "type": "Credential Dumping"
+    },
+    {
+      "name": "Nuclei",
+      "url": "https://github.com/projectdiscovery/nuclei",
+      "type": "Vulnerability Scanner"
+    },
+    {
+      "name": "Rubeus",
+      "url": "https://github.com/GhostPack/Rubeus",
+      "type": "Kerberos Toolkit"
+    }
+  ],
+  "target_industries": [
+    "Healthcare",
+    "Telecommunications",
+    "Gaming",
+    "Technology",
+    "Government",
+    "Higher Education",
+    "Manufacturing"
+  ],
+  "target_country_flags": [
+    {
+      "country": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "country": "United Kingdom",
+      "flag": "🇬🇧"
+    },
+    {
+      "country": "India",
+      "flag": "🇮🇳"
+    },
+    {
+      "country": "South Korea",
+      "flag": "🇰🇷"
+    },
+    {
+      "country": "Global",
+      "flag": "🌍"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "DOJ indicts 5 Chinese nationals for APT41 (Sept 2020)",
+        "url": "https://www.justice.gov/opa/pr/seven-international-cyber-defendants-including-apt41-actors-charged-connection-computer"
+      },
+      {
+        "text": "FBI wanted posters for APT41 operators",
+        "url": "https://www.fbi.gov/wanted/cyber/apt-41-group"
+      },
+      {
+        "text": "Mandiant, CrowdStrike, Microsoft vendor attributions",
+        "url": "https://www.mandiant.com/resources/blog/apt41-dual-espionage-and-cyber-crime-operation"
+      }
+    ]
+  },
+  "legal_actions": [
+    {
+      "date": "2020-09",
+      "type": "Indictment",
+      "title": "DOJ charges 7 for APT41 hacking campaign spanning 100+ victims",
+      "url": "https://www.justice.gov/opa/pr/seven-international-cyber-defendants-including-apt41-actors-charged-connection-computer"
+    }
+  ],
+  "threat_assessment": {
+    "capability": 9,
+    "intent": 9,
+    "targeting": 8,
+    "overall": "Critical",
+    "summary": "Rare dual-purpose actor conducting both state espionage and financially motivated cybercrime. Extremely versatile with supply chain and zero-day capability."
+  },
+  "kill_chain": [],
+  "recent_news": [
+    {
+      "date": "2024-08",
+      "title": "Mandiant: APT41 targets global shipping and logistics",
+      "url": "https://www.mandiant.com/resources/blog/apt41-dual-espionage-and-cyber-crime-operation"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0096",
+      "url": "https://attack.mitre.org/groups/G0096/"
+    },
+    {
+      "name": "CISA AA20-258A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-258a"
+    },
+    {
+      "name": "DOJ APT41 Indictment",
+      "url": "https://www.justice.gov/opa/pr/seven-international-cyber-defendants-including-apt41-actors-charged-connection-computer"
+    },
+    {
+      "name": "Mandiant Double Dragon",
+      "url": "https://www.mandiant.com/resources/blog/apt41-dual-espionage-and-cyber-crime-operation"
+    },
+    {
+      "name": "Cybereason CuckooBees",
+      "url": "https://www.cybereason.com/blog/operation-cuckoobees-cybereason-uncovers-massive-chinese-intellectual-property-theft"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1190",
+      "name": "Exploit Public-Facing App",
+      "tactic": "Initial Access",
+      "tool": "Nuclei",
+      "command": "nuclei -u https://target -t cves/2021/CVE-2021-44228.yaml",
+      "platform": "Linux",
+      "url": "https://github.com/projectdiscovery/nuclei",
+      "note": "Scans for Log4Shell and other vulns APT41 exploits"
+    },
+    {
+      "tid": "T1505.003",
+      "name": "Web Shell",
+      "tactic": "Persistence",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1505.003 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.003/T1505.003.md",
+      "note": "Web shell deployment test"
+    },
+    {
+      "tid": "T1574.002",
+      "name": "DLL Side-Loading",
+      "tactic": "Defense Evasion",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1574.002 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.002/T1574.002.md",
+      "note": "DLL side-loading via legitimate signed binary"
+    },
+    {
+      "tid": "T1558.003",
+      "name": "Kerberoasting",
+      "tactic": "Credential Access",
+      "tool": "Rubeus",
+      "command": "Rubeus.exe kerberoast /outfile:hashes.txt",
+      "platform": "Windows",
+      "url": "https://github.com/GhostPack/Rubeus",
+      "note": "Extracts service account TGS tickets for offline cracking"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  {"name":"Fortra","url":"https://www.fortra.com","desc":"Cybersecurity and automation software provider. Maker of Cobalt Strike."},
+  {"name":"AttackIQ","url":"https://www.attackiq.com","desc":"Breach and attack simulation platform for continuous security validation."},
+  {"name":"SCYTHE","url":"https://www.scythe.io","desc":"Adversary emulation platform for purple team operations."},
+  {"name":"Picus Security","url":"https://www.picussecurity.com","desc":"Continuous security validation and breach simulation platform."}
+]

@@ -1,0 +1,616 @@
+{
+  "id": "oilrig",
+  "name": "OilRig",
+  "aliases": [
+    "APT34",
+    "Helix Kitten",
+    "Hazel Sandstorm",
+    "EUROPIUM",
+    "Crambus",
+    "Cobalt Gypsy",
+    "IRN2",
+    "ITG13",
+    "Scarred Manticore",
+    "GreenBug"
+  ],
+  "country": "Iran",
+  "country_code": "IR",
+  "flag_emoji": "🇮🇷",
+  "attribution": "Iranian Ministry of Intelligence and Security (MOIS)",
+  "motivation": "Espionage, Sabotage",
+  "threat_type": "Nation-State",
+  "first_seen": "2014",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "OilRig is an Iranian state-sponsored cyber espionage group linked to Iran's Ministry of Intelligence. The group primarily targets organizations in the Middle East with a focus on government, energy, chemical, and telecommunications sectors. Known for sophisticated spearphishing campaigns, custom DNS tunneling implants, and exploitation of trust relationships. OilRig frequently operates alongside other Iranian groups and shares infrastructure.",
+  "target_sectors": [
+    "Government",
+    "Energy",
+    "Chemical",
+    "Telecommunications",
+    "Financial",
+    "Aviation",
+    "IT"
+  ],
+  "target_countries": [
+    "Saudi Arabia",
+    "Israel",
+    "United Arab Emirates",
+    "Iraq",
+    "Turkey",
+    "Jordan",
+    "Lebanon",
+    "Kuwait",
+    "Qatar",
+    "United States"
+  ],
+  "tools": [
+    "BONDUPDATER",
+    "QUADAGENT",
+    "OopsIE",
+    "ALMA Communicator",
+    "Helminth",
+    "ISMAgent",
+    "VALUEVAULT",
+    "SideTwist",
+    "Karkoff",
+    "PowerExchange",
+    "Mimikatz",
+    "DNS Tunneling Tools",
+    "dnscat2",
+    "Plink"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1566.001",
+        "name": "Spearphishing Attachment"
+      },
+      {
+        "id": "T1566.002",
+        "name": "Spearphishing Link"
+      },
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      },
+      {
+        "id": "T1059.005",
+        "name": "Visual Basic"
+      },
+      {
+        "id": "T1204.002",
+        "name": "Malicious File"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      },
+      {
+        "id": "T1547.001",
+        "name": "Registry Run Keys"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1068",
+        "name": "Exploitation for Privilege Escalation"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files"
+      },
+      {
+        "id": "T1036",
+        "name": "Masquerading"
+      },
+      {
+        "id": "T1070.004",
+        "name": "File Deletion"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1110",
+        "name": "Brute Force"
+      },
+      {
+        "id": "T1557",
+        "name": "Adversary-in-the-Middle"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1087",
+        "name": "Account Discovery"
+      },
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.001",
+        "name": "RDP"
+      },
+      {
+        "id": "T1021.002",
+        "name": "SMB/Windows Admin Shares"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1114",
+        "name": "Email Collection"
+      },
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.004",
+        "name": "DNS"
+      },
+      {
+        "id": "T1071.001",
+        "name": "Web Protocols"
+      },
+      {
+        "id": "T1573",
+        "name": "Encrypted Channel"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1048.003",
+        "name": "Exfiltration Over Unencrypted Protocol"
+      },
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      }
+    ],
+    "impact": [
+      {
+        "id": "T1485",
+        "name": "Data Destruction"
+      }
+    ]
+  },
+  "emulation_plans": [
+    {
+      "name": "MITRE CTID - OilRig Full Emulation Plan",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/oilrig",
+      "desc": "Complete OilRig emulation focused on DNS tunneling and credential harvesting"
+    },
+    {
+      "name": "ATT&CK Evaluations Library - OilRig",
+      "source": "MITRE Engenuity",
+      "type": "Framework",
+      "url": "https://github.com/attackevals/ael",
+      "desc": "Official OilRig evaluation with DNS-based C2 emulation"
+    },
+    {
+      "name": "MITRE CTID - OilRig Emulation Plan",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/oilrig/Emulation_Plan",
+      "desc": "Full emulation plan with VALUEVAULT credential theft, DNS tunneling, and Exchange exploitation"
+    },
+    {
+      "name": "ATT&CK Evaluations - OilRig",
+      "source": "MITRE Engenuity",
+      "type": "Framework",
+      "url": "https://github.com/attackevals/ael/tree/main/ManagedServices/oilrig",
+      "desc": "Official managed services evaluation with OilRig C2 and lateral movement scenarios"
+    },
+    {
+      "name": "Emulating Recent Activity from OilRig",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2023/04/04/emulating-oilrig/",
+      "desc": "Full attack graph emulating OilRig DNS tunneling C2, credential harvesting, and Exchange exploitation"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2017",
+      "name": "DNSpionage",
+      "description": "DNS hijacking campaign targeting government domains in Middle East."
+    },
+    {
+      "year": "2019",
+      "name": "HardPass Campaign",
+      "description": "LinkedIn-based social engineering targeting aerospace and energy companies."
+    },
+    {
+      "year": "2021",
+      "name": "Lyceum/Hexane Overlap",
+      "description": "Targeting of Israeli and Tunisian organizations using new backdoors."
+    },
+    {
+      "year": "2023",
+      "name": "PowerExchange Campaign",
+      "description": "Exploitation of Exchange servers using novel PowerShell-based backdoor."
+    }
+  ],
+  "references": [
+    {
+      "title": "MITRE ATT&CK Group G0049",
+      "url": "https://attack.mitre.org/groups/G0049/"
+    },
+    {
+      "title": "Unit 42: OilRig Attack on Middle East Telecom",
+      "url": "https://unit42.paloaltonetworks.com/unit42-oilrig-uses-ismagent-malware-variant/"
+    },
+    {
+      "title": "Symantec: Crambus (OilRig) Operations",
+      "url": "https://symantec-enterprise-blogs.security.com/threat-intelligence/crambus-middle-east-government"
+    },
+    {
+      "title": "Check Point: OilRig DNS Tunneling",
+      "url": "https://research.checkpoint.com/2019/the-eye-of-the-storm/"
+    },
+    {
+      "title": "ESET: OilRig PowerExchange Backdoor",
+      "url": "https://www.welivesecurity.com/2023/06/29/eset-research-oilrig-deploys-new-backdoor/"
+    },
+    {
+      "title": "Malpedia: OilRig",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/oilrig"
+    }
+  ],
+  "mitre_id": "G0049",
+  "image": "oilrig.jpeg",
+  "attack_flow": {
+    "campaign": "DNSpionage / PowerExchange (2017-2023)",
+    "steps": [
+      {
+        "step": "Spearphishing Link",
+        "tid": "T1566.002",
+        "tactic": "Initial Access",
+        "desc": "Targeted email with credential harvesting link"
+      },
+      {
+        "step": "VBA Macro Execution",
+        "tid": "T1059.005",
+        "tactic": "Execution",
+        "desc": "Macros deploy BONDUPDATER or Helminth"
+      },
+      {
+        "step": "Scheduled Task",
+        "tid": "T1053.005",
+        "tactic": "Persistence",
+        "desc": "Scheduled task for implant persistence"
+      },
+      {
+        "step": "DNS Tunneling C2",
+        "tid": "T1071.004",
+        "tactic": "Command & Control",
+        "desc": "C2 via DNS TXT record queries"
+      },
+      {
+        "step": "Credential Theft",
+        "tid": "T1003",
+        "tactic": "Credential Access",
+        "desc": "Mimikatz and custom credential tools"
+      },
+      {
+        "step": "Exchange Exploitation",
+        "tid": "T1190",
+        "tactic": "Lateral Movement",
+        "desc": "PowerExchange web shell on Exchange"
+      },
+      {
+        "step": "Email Harvesting",
+        "tid": "T1114",
+        "tactic": "Collection",
+        "desc": "Intelligence from government mailboxes"
+      },
+      {
+        "step": "DNS Data Exfil",
+        "tid": "T1048.003",
+        "tactic": "Exfiltration",
+        "desc": "Data encoded in DNS queries"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "MOIS (Iranian Ministry of Intelligence), overlaps with MuddyWater",
+    "infrastructure": "DNS tunneling infrastructure, compromised webmail portals, fake LinkedIn job portals",
+    "capability": "BONDUPDATER, QUADAGENT, Helminth, SideTwist, PowerExchange, ISMAgent",
+    "victim": "Middle East government, energy, telecom, aviation"
+  },
+  "cves": [
+    {
+      "id": "CVE-2017-11882",
+      "desc": "Office Equation Editor RCE for macro phishing",
+      "year": "2017"
+    },
+    {
+      "id": "CVE-2021-26855",
+      "desc": "ProxyLogon Exchange RCE for PowerExchange deployment",
+      "year": "2021"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "go-microstft[.]com",
+      "dlofrede[.]com"
+    ],
+    "hashes": [
+      "SHA256: 9c1f...d4e8 (BONDUPDATER)",
+      "SHA256: 2e4b...a7c3 (PowerExchange)"
+    ],
+    "sigma_rules": [
+      "dns_query_win_susp_txt_record",
+      "proc_creation_win_susp_vba_child_process"
+    ]
+  },
+  "detection": [
+    {
+      "title": "DNS Tunneling via TXT Records",
+      "content": "Monitor for high-volume DNS TXT record queries to single domains. Alert on DNS query subdomain lengths exceeding 50 characters. Deploy passive DNS monitoring to identify C2 domain registration patterns. Sigma rule: net_dns_susp_txt_exec_query.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/network/dns/net_dns_susp_txt_exec_query.yml"
+    },
+    {
+      "title": "Exchange Web Shell Detection",
+      "content": "Monitor IIS/Exchange log files for unusual .aspx file creation in OWA directories. Detect w3wp.exe spawning cmd.exe or PowerShell. Implement file integrity monitoring on Exchange virtual directories.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2021/03/02/hafnium-targeting-exchange-servers/"
+    },
+    {
+      "title": "VBA Macro Execution Chain",
+      "content": "Enable ASR rules to block Office applications from creating child processes. Monitor for WINWORD.EXE or EXCEL.EXE spawning powershell.exe, wscript.exe, or mshta.exe. Sigma rule: proc_creation_win_office_spawn_exe_from_temp.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_spawn_exe_from_temp.yml"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "MuddyWater",
+      "relationship": "MOIS co-operator",
+      "desc": "MuddyWater uses RMM tools; OilRig uses DNS tradecraft."
+    },
+    {
+      "name": "Charming Kitten",
+      "relationship": "Iranian co-operator",
+      "desc": "IRGC-linked, different command structure."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Implement DNS RPZ and sinkholing. OilRig's entire C2 relies on DNS tunneling.",
+      "source": "CIS Control 9",
+      "url": "https://www.cisecurity.org/controls/email-and-web-browser-protections"
+    },
+    {
+      "text": "Patch Exchange vulnerabilities (ProxyLogon, ProxyShell). Monitor OWA directories for web shells.",
+      "source": "CISA AA21-062A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-062a"
+    },
+    {
+      "text": "Block Office macros via GPO and ASR. Implement Mark of the Web enforcement.",
+      "source": "Microsoft ASR",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference"
+    },
+    {
+      "text": "Implement SPF strict, DKIM, DMARC p=reject on all domains.",
+      "source": "CISA BOD 18-01",
+      "url": "https://www.cisa.gov/news-events/directives/bod-18-01-enhance-email-and-web-security"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "MITRE ATT&CK G0049",
+      "url": "https://attack.mitre.org/groups/G0049/",
+      "desc": "Full OilRig technique and software mapping"
+    },
+    {
+      "name": "Unit 42 OilRig Reports",
+      "url": "https://unit42.paloaltonetworks.com/tag/oilrig/",
+      "desc": "Palo Alto Networks OilRig analysis series"
+    },
+    {
+      "name": "Symantec Crambus Analysis",
+      "url": "https://symantec-enterprise-blogs.security.com/threat-intelligence/crambus-middle-east-government",
+      "desc": "Crambus/OilRig Middle East campaign IOCs"
+    },
+    {
+      "name": "Check Point OilRig",
+      "url": "https://research.checkpoint.com/2019/the-eye-of-the-storm/",
+      "desc": "DNS tunneling infrastructure analysis"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "Mimikatz",
+      "url": "https://github.com/gentilkiwi/mimikatz",
+      "type": "Credential Dumping"
+    },
+    {
+      "name": "DNS Tunneling Tools",
+      "url": "https://github.com/iagox86/dnscat2",
+      "type": "DNS C2"
+    },
+    {
+      "name": "BONDUPDATER",
+      "url": "https://attack.mitre.org/software/S0360/",
+      "type": "DNS Tunneling Backdoor"
+    },
+    {
+      "name": "Helminth",
+      "url": "https://attack.mitre.org/software/S0170/",
+      "type": "Backdoor"
+    },
+    {
+      "name": "SideTwist",
+      "url": "https://attack.mitre.org/software/S0610/",
+      "type": "Backdoor"
+    },
+    {
+      "name": "PowerExchange",
+      "url": "https://www.welivesecurity.com/2023/06/29/eset-research-oilrig-deploys-new-backdoor/",
+      "type": "Exchange Web Shell"
+    },
+    {
+      "name": "dnscat2",
+      "url": "https://github.com/iagox86/dnscat2",
+      "type": "DNS C2 Channel"
+    },
+    {
+      "name": "Plink",
+      "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/",
+      "type": "SSH Tunneling"
+    }
+  ],
+  "target_industries": [
+    "Government",
+    "Energy/Oil & Gas",
+    "Telecommunications",
+    "Aviation",
+    "Financial Services"
+  ],
+  "target_country_flags": [
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦"
+    },
+    {
+      "country": "Israel",
+      "flag": "🇮🇱"
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪"
+    },
+    {
+      "country": "Iraq",
+      "flag": "🇮🇶"
+    },
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "Multiple vendor attributions to Iranian MOIS",
+        "url": "https://attack.mitre.org/groups/G0049/"
+      },
+      {
+        "text": "Symantec, Unit 42, Check Point consistent tracking",
+        "url": "https://unit42.paloaltonetworks.com/tag/oilrig/"
+      },
+      {
+        "text": "Leaked tools confirm Iranian origin (2019)",
+        "url": "https://www.zdnet.com/article/source-code-of-iranian-cyber-espionage-tools-leaked-on-telegram/"
+      }
+    ]
+  },
+  "legal_actions": [],
+  "threat_assessment": {
+    "capability": 7,
+    "intent": 8,
+    "targeting": 7,
+    "overall": "High",
+    "summary": "Persistent Iranian espionage actor specializing in DNS-based tradecraft. Targets Middle East government and energy sectors with custom tooling."
+  },
+  "kill_chain": [],
+  "recent_news": [
+    {
+      "date": "2023-06",
+      "title": "ESET: OilRig deploys new PowerExchange backdoor",
+      "url": "https://www.welivesecurity.com/2023/06/29/eset-research-oilrig-deploys-new-backdoor/"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0049",
+      "url": "https://attack.mitre.org/groups/G0049/"
+    },
+    {
+      "name": "Unit 42 OilRig Reports",
+      "url": "https://unit42.paloaltonetworks.com/tag/oilrig/"
+    },
+    {
+      "name": "Symantec Crambus",
+      "url": "https://symantec-enterprise-blogs.security.com/threat-intelligence/crambus-middle-east-government"
+    },
+    {
+      "name": "ESET OilRig Research",
+      "url": "https://www.welivesecurity.com/2023/06/29/eset-research-oilrig-deploys-new-backdoor/"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1071.004",
+      "name": "DNS C2",
+      "tactic": "Command & Control",
+      "tool": "dnscat2",
+      "command": "ruby dnscat2.rb tunneldomain.com",
+      "platform": "Linux",
+      "url": "https://github.com/iagox86/dnscat2",
+      "note": "DNS tunneling C2 channel - OilRig primary tradecraft"
+    },
+    {
+      "tid": "T1059.005",
+      "name": "Visual Basic",
+      "tactic": "Execution",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1059.005 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.005/T1059.005.md",
+      "note": "VBScript execution test"
+    },
+    {
+      "tid": "T1053.005",
+      "name": "Scheduled Task",
+      "tactic": "Persistence",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1053.005",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.md",
+      "note": "Scheduled task persistence"
+    }
+  ]
+}

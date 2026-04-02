@@ -1,0 +1,602 @@
+{
+  "id": "muddywater",
+  "name": "MuddyWater",
+  "aliases": [
+    "MERCURY",
+    "Mango Sandstorm",
+    "Static Kitten",
+    "Seedworm",
+    "TEMP.Zagros",
+    "TA450",
+    "Earth Vetala",
+    "ATK51",
+    "Yellow Nix"
+  ],
+  "country": "Iran",
+  "country_code": "IR",
+  "flag_emoji": "🇮🇷",
+  "attribution": "Iranian Ministry of Intelligence and Security (MOIS)",
+  "motivation": "Espionage, Surveillance",
+  "threat_type": "Nation-State",
+  "first_seen": "2017",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "MuddyWater is an Iranian state-sponsored group linked to MOIS conducting espionage operations primarily against Middle Eastern, Central Asian, and Western government and telecommunications organizations. Known for heavy use of legitimate tools like Atera, ScreenConnect, and SimpleHelp for remote access, making detection difficult. The group frequently uses living-off-the-land techniques and spearphishing with macro-enabled documents.",
+  "target_sectors": [
+    "Government",
+    "Telecommunications",
+    "Defense",
+    "Oil & Gas",
+    "IT",
+    "Academia"
+  ],
+  "target_countries": [
+    "Turkey",
+    "Pakistan",
+    "United Arab Emirates",
+    "Iraq",
+    "Israel",
+    "Saudi Arabia",
+    "Jordan",
+    "United States",
+    "Europe",
+    "India"
+  ],
+  "tools": [
+    "MuddyC2Go",
+    "PhonyC2",
+    "POWERSTATS",
+    "PowGoop",
+    "Small Sieve",
+    "MuddyC3",
+    "Atera Agent",
+    "ScreenConnect",
+    "SimpleHelp",
+    "ScreenConnect (abused)",
+    "LaZagne",
+    "Mimikatz",
+    "Atera"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1566.001",
+        "name": "Spearphishing Attachment"
+      },
+      {
+        "id": "T1566.002",
+        "name": "Spearphishing Link"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      },
+      {
+        "id": "T1059.005",
+        "name": "Visual Basic"
+      },
+      {
+        "id": "T1204.002",
+        "name": "Malicious File"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1547.001",
+        "name": "Registry Run Keys"
+      },
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1055",
+        "name": "Process Injection"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files"
+      },
+      {
+        "id": "T1036",
+        "name": "Masquerading"
+      },
+      {
+        "id": "T1218",
+        "name": "System Binary Proxy Execution"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1555",
+        "name": "Credentials from Password Stores"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1087",
+        "name": "Account Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.001",
+        "name": "RDP"
+      },
+      {
+        "id": "T1021.004",
+        "name": "SSH"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      },
+      {
+        "id": "T1560",
+        "name": "Archive Collected Data"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Web Protocols"
+      },
+      {
+        "id": "T1219",
+        "name": "Remote Access Software"
+      },
+      {
+        "id": "T1573",
+        "name": "Encrypted Channel"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      }
+    ],
+    "impact": []
+  },
+  "emulation_plans": [
+    {
+      "name": "CISA AA22-055A MuddyWater Advisory",
+      "source": "CISA",
+      "type": "Guide",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a",
+      "desc": "Iranian MOIS advisory with MuddyWater TTPs and detection guidance"
+    },
+    {
+      "name": "Deep Instinct MuddyC2Go Analysis",
+      "source": "Deep Instinct",
+      "type": "Guide",
+      "url": "https://www.deepinstinct.com/blog/muddyc2go-latest-c2-framework-used-by-iranian-apt-muddywater-spotted-in-israel",
+      "desc": "Technical analysis of MuddyC2Go framework"
+    },
+    {
+      "name": "Deep Instinct: PhonyC2 Framework",
+      "source": "Deep Instinct",
+      "type": "Guide",
+      "url": "https://www.deepinstinct.com/blog/phonyc2-revealing-a-new-malicious-command-control-framework-by-muddywater",
+      "desc": "Technical analysis of PhonyC2 C2 framework with detection and emulation guidance"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2018",
+      "name": "POWERSTATS Campaign",
+      "description": "Targeting of government organizations in the Middle East with custom PowerShell backdoor."
+    },
+    {
+      "year": "2021",
+      "name": "Log4j Exploitation",
+      "description": "Rapid adoption of Log4j vulnerabilities for initial access against Israeli targets."
+    },
+    {
+      "year": "2022",
+      "name": "PhonyC2 Deployment",
+      "description": "Development and deployment of custom C2 framework replacing older tools."
+    },
+    {
+      "year": "2024",
+      "name": "SimpleHelp Abuse",
+      "description": "Large-scale abuse of legitimate remote management tools for persistent access."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA AA22-055A: MuddyWater Iranian APT",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0069",
+      "url": "https://attack.mitre.org/groups/G0069/"
+    },
+    {
+      "title": "Cisco Talos: MuddyWater Operations",
+      "url": "https://blog.talosintelligence.com/2022/01/iranian-apt-muddywater-targets-turkey.html"
+    },
+    {
+      "title": "Deep Instinct: MuddyC2Go",
+      "url": "https://www.deepinstinct.com/blog/muddyc2go-latest-c2-framework-used-by-iranian-apt-muddywater-spotted-in-israel"
+    },
+    {
+      "title": "Trend Micro: Earth Vetala (MuddyWater)",
+      "url": "https://www.trendmicro.com/en_us/research/22/c/cyberespionage-campaign-earth-vetala-muddywater.html"
+    },
+    {
+      "title": "Malpedia: MuddyWater",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/muddywater"
+    }
+  ],
+  "mitre_id": "G0069",
+  "image": "muddywater.png",
+  "attack_flow": {
+    "campaign": "POWERSTATS / RMM Tool Abuse (2022-2024)",
+    "steps": [
+      {
+        "step": "Spearphishing Macro Doc",
+        "tid": "T1566.001",
+        "tactic": "Initial Access",
+        "desc": "Email with weaponized Excel/Word document"
+      },
+      {
+        "step": "POWERSTATS via Macro",
+        "tid": "T1059.001",
+        "tactic": "Execution",
+        "desc": "VBA launches PowerShell downloading POWERSTATS"
+      },
+      {
+        "step": "RMM Tool Install",
+        "tid": "T1219",
+        "tactic": "Command & Control",
+        "desc": "Installs ScreenConnect, Atera, or SimpleHelp"
+      },
+      {
+        "step": "Scheduled Task",
+        "tid": "T1053.005",
+        "tactic": "Persistence",
+        "desc": "Scheduled tasks maintain RMM access"
+      },
+      {
+        "step": "LOLBIN Execution",
+        "tid": "T1218",
+        "tactic": "Defense Evasion",
+        "desc": "mshta.exe, rundll32.exe, regsvr32.exe abuse"
+      },
+      {
+        "step": "Credential Harvesting",
+        "tid": "T1003",
+        "tactic": "Credential Access",
+        "desc": "LaZagne and custom PowerShell scripts"
+      },
+      {
+        "step": "SSH Lateral Movement",
+        "tid": "T1021.004",
+        "tactic": "Lateral Movement",
+        "desc": "SSH into Linux servers with stolen creds"
+      },
+      {
+        "step": "Data Exfiltration",
+        "tid": "T1041",
+        "tactic": "Exfiltration",
+        "desc": "Documents exfiltrated via RMM channels"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "MOIS, overlaps with OilRig operators",
+    "infrastructure": "Legitimate RMM platforms (ScreenConnect, Atera, SimpleHelp), compromised webmail",
+    "capability": "POWERSTATS, MuddyC2Go, PhonyC2, PowGoop, Small Sieve, LaZagne, RMM tools",
+    "victim": "Turkey, Pakistan, UAE, Iraq, Israel, Saudi Arabia — gov, telecom, defense, oil & gas"
+  },
+  "cves": [
+    {
+      "id": "CVE-2021-44228",
+      "desc": "Log4Shell for access against Israeli targets",
+      "year": "2021"
+    },
+    {
+      "id": "CVE-2021-26855",
+      "desc": "ProxyLogon for Exchange web shells",
+      "year": "2021"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "afrede[.]com",
+      "stfrede[.]com"
+    ],
+    "hashes": [
+      "SHA256: 5e3a...c8f2 (POWERSTATS)",
+      "SHA256: 2f7d...b4a1 (MuddyC2Go)"
+    ],
+    "sigma_rules": [
+      "proc_creation_win_susp_mshta",
+      "proc_creation_win_rmm_tool_install"
+    ]
+  },
+  "detection": [
+    {
+      "title": "RMM Tool Abuse Detection",
+      "content": "Maintain an inventory of approved RMM tools. Alert on installation of ScreenConnect, Atera, SimpleHelp, AnyDesk, or TeamViewer if not approved for that endpoint. Monitor for RMM agent communication to unexpected tenant IDs or account identifiers.",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a"
+    },
+    {
+      "title": "LOLBIN Execution Monitoring",
+      "content": "Monitor mshta.exe executing remote HTA files from URLs. Detect regsvr32.exe loading remote SCT files via /s /u /i:URL patterns. Alert on rundll32.exe with unusual command-line arguments. Enable Windows ASR rules for LOLBIN restriction.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_javascript.yml"
+    },
+    {
+      "title": "PowerShell Obfuscation Detection",
+      "content": "Enable Script Block Logging (Event ID 4104). Detect Base64-encoded commands, string concatenation obfuscation (-join, [char] casting), and Invoke-Expression (IEX) with downloaded content. Monitor for AMSI bypass attempts.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_susp_download.yml"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "OilRig",
+      "relationship": "MOIS co-operator",
+      "desc": "OilRig uses DNS; MuddyWater uses RMM/LOLBIN abuse."
+    },
+    {
+      "name": "Charming Kitten",
+      "relationship": "Iranian co-operator",
+      "desc": "IRGC-linked, overlapping victim sets."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Block unauthorized RMM tools (ScreenConnect, Atera, SimpleHelp). MuddyWater uses legitimate RMM for persistence.",
+      "source": "CISA AA22-055A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a"
+    },
+    {
+      "text": "Deploy ASR rules blocking LOLBIN abuse (mshta.exe, regsvr32.exe, rundll32.exe).",
+      "source": "Microsoft ASR",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference"
+    },
+    {
+      "text": "Enable PowerShell CLM and Script Block Logging. MuddyWater uses obfuscated PowerShell heavily.",
+      "source": "NSA/CISA PowerShell Guide",
+      "url": "https://media.defense.gov/2022/Jun/22/2003021689/-1/-1/0/CSI_KEEPING_POWERSHELL_SECURITY_MEASURES_TO_USE_AND_EMBRACE_20220622.PDF"
+    },
+    {
+      "text": "Block macros from internet via MOTW enforcement.",
+      "source": "Microsoft Macro Policy",
+      "url": "https://learn.microsoft.com/en-us/deployoffice/security/internet-macros-blocked"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "CISA AA22-055A MuddyWater",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a",
+      "desc": "Iranian MOIS-affiliated MuddyWater IOCs"
+    },
+    {
+      "name": "MITRE ATT&CK G0069",
+      "url": "https://attack.mitre.org/groups/G0069/",
+      "desc": "Full MuddyWater technique mapping"
+    },
+    {
+      "name": "Cisco Talos MuddyWater",
+      "url": "https://blog.talosintelligence.com/2022/01/iranian-apt-muddywater-targets-turkey.html",
+      "desc": "MuddyWater Turkey targeting IOCs"
+    },
+    {
+      "name": "Deep Instinct MuddyC2Go",
+      "url": "https://www.deepinstinct.com/blog/muddyc2go-latest-c2-framework-used-by-iranian-apt-muddywater-spotted-in-israel",
+      "desc": "MuddyC2Go framework analysis"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "ScreenConnect (abused)",
+      "url": "https://www.connectwise.com/software/screenconnect",
+      "type": "Remote Management"
+    },
+    {
+      "name": "LaZagne",
+      "url": "https://github.com/AlessandroZ/LaZagne",
+      "type": "Credential Recovery"
+    },
+    {
+      "name": "Mimikatz",
+      "url": "https://github.com/gentilkiwi/mimikatz",
+      "type": "Credential Dumping"
+    },
+    {
+      "name": "POWERSTATS",
+      "url": "https://attack.mitre.org/software/S0223/",
+      "type": "PowerShell Backdoor"
+    },
+    {
+      "name": "MuddyC2Go",
+      "url": "https://www.deepinstinct.com/blog/muddyc2go-latest-c2-framework-used-by-iranian-apt-muddywater-spotted-in-israel",
+      "type": "Go-Based C2"
+    },
+    {
+      "name": "PhonyC2",
+      "url": "https://www.deepinstinct.com/blog/phonyc2-revealing-a-new-malicious-command-control-framework-by-muddywater",
+      "type": "C2 Framework"
+    },
+    {
+      "name": "ScreenConnect",
+      "url": "https://www.connectwise.com/software/screenconnect",
+      "type": "RMM Tool (Abused)"
+    },
+    {
+      "name": "Atera",
+      "url": "https://www.atera.com/",
+      "type": "RMM Tool (Abused)"
+    },
+    {
+      "name": "SimpleHelp",
+      "url": "https://simple-help.com/",
+      "type": "RMM Tool (Abused)"
+    }
+  ],
+  "target_industries": [
+    "Government",
+    "Telecommunications",
+    "Defense",
+    "Oil & Gas",
+    "Media"
+  ],
+  "target_country_flags": [
+    {
+      "country": "Turkey",
+      "flag": "🇹🇷"
+    },
+    {
+      "country": "Pakistan",
+      "flag": "🇵🇰"
+    },
+    {
+      "country": "UAE",
+      "flag": "🇦🇪"
+    },
+    {
+      "country": "Israel",
+      "flag": "🇮🇱"
+    },
+    {
+      "country": "Iraq",
+      "flag": "🇮🇶"
+    },
+    {
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "US Cyber Command attributes to Iranian MOIS",
+        "url": "https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/"
+      },
+      {
+        "text": "CISA/FBI joint advisory (2022)",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a"
+      },
+      {
+        "text": "Multiple vendor attributions (Cisco Talos, Trend Micro)",
+        "url": "https://blog.talosintelligence.com/2022/01/iranian-apt-muddywater-targets-turkey.html"
+      }
+    ]
+  },
+  "legal_actions": [
+    {
+      "date": "2022-01",
+      "type": "Attribution",
+      "title": "US Cyber Command attributes MuddyWater to Iranian MOIS",
+      "url": "https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/"
+    }
+  ],
+  "threat_assessment": {
+    "capability": 6,
+    "intent": 8,
+    "targeting": 7,
+    "overall": "Moderate",
+    "summary": "Iranian MOIS-affiliated actor notable for abusing legitimate RMM tools and living-off-the-land techniques. Broad Middle East targeting."
+  },
+  "kill_chain": [],
+  "recent_news": [
+    {
+      "date": "2024-01",
+      "title": "Deep Instinct: MuddyC2Go framework analysis",
+      "url": "https://www.deepinstinct.com/blog/muddyc2go-latest-c2-framework-used-by-iranian-apt-muddywater-spotted-in-israel"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0069",
+      "url": "https://attack.mitre.org/groups/G0069/"
+    },
+    {
+      "name": "CISA AA22-055A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a"
+    },
+    {
+      "name": "US Cyber Command Attribution",
+      "url": "https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/"
+    },
+    {
+      "name": "Cisco Talos Reports",
+      "url": "https://blog.talosintelligence.com/2022/01/iranian-apt-muddywater-targets-turkey.html"
+    },
+    {
+      "name": "Deep Instinct MuddyC2Go",
+      "url": "https://www.deepinstinct.com/blog/muddyc2go-latest-c2-framework-used-by-iranian-apt-muddywater-spotted-in-israel"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1219",
+      "name": "Remote Access Software",
+      "tactic": "Command & Control",
+      "tool": "ScreenConnect",
+      "command": "# Install ScreenConnect agent with attacker tenant ID",
+      "platform": "Windows",
+      "url": "https://www.connectwise.com/software/screenconnect",
+      "note": "Legitimate RMM tool abuse - MuddyWater primary C2"
+    },
+    {
+      "tid": "T1218",
+      "name": "System Binary Proxy Execution",
+      "tactic": "Defense Evasion",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1218.005 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.005/T1218.005.md",
+      "note": "mshta.exe proxy execution test"
+    },
+    {
+      "tid": "T1003",
+      "name": "OS Credential Dumping",
+      "tactic": "Credential Access",
+      "tool": "LaZagne",
+      "command": "python3 laZagne.py all",
+      "platform": "Windows/Linux",
+      "url": "https://github.com/AlessandroZ/LaZagne",
+      "note": "Multi-platform credential recovery"
+    }
+  ]
+}

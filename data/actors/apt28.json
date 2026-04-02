@@ -1,0 +1,1006 @@
+{
+  "id": "apt28",
+  "name": "APT28",
+  "aliases": [
+    "Fancy Bear",
+    "Sofacy",
+    "Pawn Storm",
+    "Sednit",
+    "STRONTIUM",
+    "Forest Blizzard",
+    "ITG05",
+    "Blue Athena",
+    "TA422",
+    "Fighting Ursa",
+    "Tsar Team",
+    "Group 74",
+    "FROZENLAKE",
+    "GruesomeLarch"
+  ],
+  "country": "Russia",
+  "country_code": "RU",
+  "flag_emoji": "🇷🇺",
+  "attribution": "GRU 85th Main Special Service Center (GTsSS), military unit 26165",
+  "motivation": "Espionage, Information Operations, Disruption",
+  "threat_type": "Nation-State",
+  "first_seen": "2004",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "APT28 (also tracked as Fancy Bear, Forest Blizzard, STRONTIUM, Pawn Storm, Sednit, and Sofacy) is a Russian military intelligence (GRU) cyber espionage group attributed to Unit 26165 of the 85th Main Special Service Center (GTsSS). Active since at least 2004, APT28 conducts intelligence collection aligned with Russian military and geopolitical objectives. The group is known for sophisticated spearphishing campaigns, zero-day exploitation, and credential harvesting operations targeting government, military, defense, political organizations, media, and anti-doping agencies across NATO member states and former Soviet countries. APT28 gained widespread public attention for its role in the 2016 US presidential election interference, including the DNC breach and subsequent hack-and-leak operations. In recent years, the group has expanded targeting to Western logistics and technology companies supporting Ukraine, as documented in the May 2025 joint advisory (CISA AA25-141A). The group demonstrates sustained evolution in tradecraft, including the development of custom exploit tools (GooseEgg), novel access techniques (Nearest Neighbor Wi-Fi attack), and webmail exploitation campaigns (Operation RoundPress).",
+  "target_sectors": [
+    "Government",
+    "Military",
+    "Defense",
+    "Energy",
+    "Media",
+    "Political Organizations",
+    "International Organizations",
+    "Think Tanks"
+  ],
+  "target_countries": [
+    "United States",
+    "Ukraine",
+    "Germany",
+    "France",
+    "NATO Members",
+    "Georgia",
+    "Poland",
+    "Norway"
+  ],
+  "tools": [
+    "X-Tunnel",
+    "XAgent",
+    "Zebrocy",
+    "Seduploader",
+    "LoJax",
+    "Komplex",
+    "CHOPSTICK",
+    "GAMEFISH",
+    "GooseEgg",
+    "Graphite",
+    "Mimikatz",
+    "Responder",
+    "Impacket",
+    "PowerShell Empire",
+    "Cobalt Strike",
+    "Empire",
+    "Nmap"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1566.001",
+        "name": "Phishing: Spearphishing Attachment"
+      },
+      {
+        "id": "T1566.002",
+        "name": "Phishing: Spearphishing Link"
+      },
+      {
+        "id": "T1190",
+        "name": "Exploit Public-Facing Application"
+      },
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "Command and Scripting Interpreter: PowerShell"
+      },
+      {
+        "id": "T1204.001",
+        "name": "User Execution: Malicious Link"
+      },
+      {
+        "id": "T1204.002",
+        "name": "User Execution: Malicious File"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1547.001",
+        "name": "Boot or Logon Autostart Execution: Registry Run Keys"
+      },
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task/Job: Scheduled Task"
+      },
+      {
+        "id": "T1542.001",
+        "name": "Pre-OS Boot: System Firmware"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1068",
+        "name": "Exploitation for Privilege Escalation"
+      },
+      {
+        "id": "T1055",
+        "name": "Process Injection"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files or Information"
+      },
+      {
+        "id": "T1070.004",
+        "name": "Indicator Removal: File Deletion"
+      },
+      {
+        "id": "T1036",
+        "name": "Masquerading"
+      },
+      {
+        "id": "T1112",
+        "name": "Modify Registry"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1110",
+        "name": "Brute Force"
+      },
+      {
+        "id": "T1556",
+        "name": "Modify Authentication Process"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1083",
+        "name": "File and Directory Discovery"
+      },
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1016",
+        "name": "System Network Configuration Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.002",
+        "name": "Remote Services: SMB/Windows Admin Shares"
+      },
+      {
+        "id": "T1021.001",
+        "name": "Remote Services: Remote Desktop Protocol"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1560",
+        "name": "Archive Collected Data"
+      },
+      {
+        "id": "T1114.002",
+        "name": "Email Collection: Remote Email Collection"
+      },
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Application Layer Protocol: Web Protocols"
+      },
+      {
+        "id": "T1573",
+        "name": "Encrypted Channel"
+      },
+      {
+        "id": "T1090",
+        "name": "Proxy"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      },
+      {
+        "id": "T1048",
+        "name": "Exfiltration Over Alternative Protocol"
+      }
+    ],
+    "impact": [
+      {
+        "id": "T1485",
+        "name": "Data Destruction"
+      },
+      {
+        "id": "T1531",
+        "name": "Account Access Removal"
+      }
+    ]
+  },
+  "emulation_plans": [
+    {
+      "name": "MITRE Attack Arsenal - APT28 Caldera Plan",
+      "source": "MITRE",
+      "type": "Open Source",
+      "url": "https://github.com/emulation-plans/emulation-plans/tree/main/plans/APT-28",
+      "desc": "Caldera-compatible emulation plan with abilities, payloads, and adversary profiles"
+    },
+    {
+      "name": "AttackIQ - CISA AA25-141A Response",
+      "source": "AttackIQ",
+      "type": "Commercial",
+      "url": "https://www.attackiq.com/2025/05/22/response-to-cisa-advisory-aa25-141a/",
+      "desc": "Validation scenario for APT28 logistics targeting campaign TTPs"
+    },
+    {
+      "name": "APT28 Adversary Simulation (S3N4T0R)",
+      "source": "GitHub / S3N4T0R",
+      "type": "Open Source",
+      "url": "https://github.com/S3N4T0R-0X0/APT28-Adversary-Simulation",
+      "desc": "Full simulation: Excel dropper, CVE-2021-40444, OneDrive C2, credential harvesting targeting government officials"
+    },
+    {
+      "name": "APT28 BadPaw/MeowMeow Lab to Emulation",
+      "source": "SCYTHE",
+      "type": "Blog Post",
+      "url": "https://scythe.io/library/apt28-badpaw-meowmeow",
+      "desc": "Manual lab simulation + SCYTHE continuous emulation for BadPaw steganography loader and MeowMeow RAT"
+    },
+    {
+      "name": "APT Digital Weapon - APT28 IOCs",
+      "source": "RedDrip7",
+      "type": "Open Source",
+      "url": "https://github.com/RedDrip7/APT_Digital_Weapon/tree/master/APT28",
+      "desc": "Collection of IOCs, malware samples, and analysis reports for APT28 campaigns"
+    },
+    {
+      "name": "Fancy Bear APT28 Adversary Simulation Walkthrough",
+      "source": "S3N4T0R (Medium)",
+      "type": "Blog Post",
+      "url": "https://medium.com/@S3N4T0R/fancy-bear-apt28-adversary-simulation-e5b019668dfa",
+      "desc": "Step-by-step: Excel dropper with CVE-2021-40444, DLL injection into Word, OneDrive C2 for exfiltration"
+    },
+    {
+      "name": "S3N4T0R APTs Adversary Simulation Collection",
+      "source": "S3N4T0R (GitHub)",
+      "type": "Open Source",
+      "url": "https://github.com/S3N4T0R-0X0/APTs-Adversary-Simulation",
+      "desc": "Multi-APT simulation repo with custom C2, backdoors, exploitation chains for APT28 and others"
+    },
+    {
+      "name": "Panopticon APT28 Intelligence Collection",
+      "source": "Panopticon Project (GitHub)",
+      "type": "Open Source",
+      "url": "https://github.com/Panopticon-Project/panopticon-APT28",
+      "desc": "Curated collection of APT28 campaign reports, IOCs, and analysis references"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2016",
+      "name": "DNC Hack",
+      "description": "Breach of the Democratic National Committee systems and subsequent leak of emails."
+    },
+    {
+      "year": "2017",
+      "name": "NotPetya Precursor",
+      "description": "Spearphishing operations against Ukrainian government and military entities."
+    },
+    {
+      "year": "2018",
+      "name": "WADA/USADA Breach",
+      "description": "Compromise of anti-doping agencies and leak of athlete medical records."
+    },
+    {
+      "year": "2020",
+      "name": "COVID-19 Vaccine Research",
+      "description": "Targeting of organizations involved in COVID-19 vaccine development."
+    },
+    {
+      "year": "2024",
+      "name": "GooseEgg Campaign",
+      "description": "Exploitation of Windows Print Spooler vulnerability using GooseEgg tool."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA AA25-141A: Russian GRU Targeting Western Logistics",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a"
+    },
+    {
+      "title": "CISA AA23-108A: APT28 Exploits Cisco Routers",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-108a"
+    },
+    {
+      "title": "CISA AA22-110A: Russian State-Sponsored Threats",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0007",
+      "url": "https://attack.mitre.org/groups/G0007/"
+    },
+    {
+      "title": "Microsoft: Forest Blizzard (STRONTIUM)",
+      "url": "https://www.microsoft.com/en-us/security/blog/2023/12/07/star-blizzard-increases-sophistication-and-evasion-in-ongoing-attacks/"
+    },
+    {
+      "title": "FireEye: APT28 - At the Center of the Storm",
+      "url": "https://www.mandiant.com/resources/apt28-center-storm"
+    },
+    {
+      "title": "ESET: Sednit/APT28 Activity",
+      "url": "https://www.welivesecurity.com/2019/05/22/journey-zebrocy-land/"
+    },
+    {
+      "title": "NSA: Russian GRU Brute Force Campaign",
+      "url": "https://media.defense.gov/2021/Jul/01/2002753896/-1/-1/0/CSA_GRU_GLOBAL_BRUTE_FORCE_CAMPAIGN_UOO158036-21.PDF"
+    },
+    {
+      "title": "DOJ: Indictment of GRU Officers",
+      "url": "https://www.justice.gov/opa/pr/grand-jury-indicts-12-russian-intelligence-officers-hacking-offenses-related-2016-election"
+    },
+    {
+      "title": "Malpedia: Sofacy",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/sofacy"
+    },
+    {
+      "title": "FireEye: APT28 - A Window into Russia's Cyber Espionage Operations",
+      "url": "https://www.mandiant.com/resources/apt28-a-window-into-russias-cyber-espionage-operations"
+    },
+    {
+      "title": "Secureworks: IRON TWILIGHT Profile",
+      "url": "https://www.secureworks.com/research/threat-profiles/iron-twilight"
+    },
+    {
+      "title": "CrowdStrike: Fancy Bear (STRONTIUM)",
+      "url": "https://www.crowdstrike.com/adversaries/fancy-bear/"
+    },
+    {
+      "title": "Trend Micro: Pawn Storm Campaign",
+      "url": "https://www.trendmicro.com/en_us/research/20/l/pawn-storm-lack-of-sophistication-as-a-strategy.html"
+    },
+    {
+      "title": "Unit 42: Sofacy Attacks",
+      "url": "https://unit42.paloaltonetworks.com/sofacy-creates-new-go-variant/"
+    },
+    {
+      "title": "NCSC UK: APT28/Fancy Bear Advisory",
+      "url": "https://www.ncsc.gov.uk/news/russian-military-almost-certainly-responsible-destructive-2017-cyber-attack"
+    },
+    {
+      "title": "Microsoft: STRONTIUM Targeting",
+      "url": "https://blogs.microsoft.com/on-the-issues/2020/09/10/cyberattacks-us-elections-trump-biden/"
+    },
+    {
+      "title": "Volexity: Nearest Neighbor Attack",
+      "url": "https://www.volexity.com/blog/2024/11/22/the-nearest-neighbor-attack/"
+    },
+    {
+      "title": "ESET: Operation RoundPress",
+      "url": "https://www.welivesecurity.com/en/eset-research/operation-roundpress/"
+    },
+    {
+      "title": "ANSSI: APT28 Campaigns Since 2021",
+      "url": "https://cert.ssi.gouv.fr/cti/CERTFR-2023-CTI-009/"
+    },
+    {
+      "title": "NSA: Keeping PowerShell Security Guide",
+      "url": "https://media.defense.gov/2022/Jun/22/2003021689/-1/-1/0/CSI_KEEPING_POWERSHELL_SECURITY_MEASURES_TO_USE_AND_EMBRACE_20220622.PDF"
+    }
+  ],
+  "mitre_id": "G0007",
+  "image": "apt28.png",
+  "attack_flow": {
+    "campaign": "DNC Breach (2016)",
+    "steps": [
+      {
+        "step": "Spearphishing Email",
+        "tid": "T1566.001",
+        "tactic": "Initial Access",
+        "desc": "Weaponized Office doc with VBA macro sent to target"
+      },
+      {
+        "step": "User Executes Macro",
+        "tid": "T1204.002",
+        "tactic": "Execution",
+        "desc": "Victim opens attachment and enables macros"
+      },
+      {
+        "step": "PowerShell Dropper",
+        "tid": "T1059.001",
+        "tactic": "Execution",
+        "desc": "Macro spawns PowerShell to download Zebrocy/XAgent"
+      },
+      {
+        "step": "Registry Run Key",
+        "tid": "T1547.001",
+        "tactic": "Persistence",
+        "desc": "Implant establishes persistence via registry autorun"
+      },
+      {
+        "step": "Credential Dumping",
+        "tid": "T1003",
+        "tactic": "Credential Access",
+        "desc": "Mimikatz/custom tool dumps LSASS credentials"
+      },
+      {
+        "step": "SMB Lateral Movement",
+        "tid": "T1021.002",
+        "tactic": "Lateral Movement",
+        "desc": "Pass-the-hash to move through Active Directory"
+      },
+      {
+        "step": "Email Collection",
+        "tid": "T1114.002",
+        "tactic": "Collection",
+        "desc": "Exfiltrates mailbox data from Exchange/O365"
+      },
+      {
+        "step": "HTTPS C2 Beacon",
+        "tid": "T1071.001",
+        "tactic": "Command & Control",
+        "desc": "Data staged and exfiltrated over encrypted HTTPS C2"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "GRU Unit 26165, Russian military intelligence officers",
+    "infrastructure": "Dedicated VPS, compromised WordPress sites, X-Tunnel relays, DCLeaks.com",
+    "capability": "Zebrocy, XAgent, X-Tunnel, LoJax UEFI rootkit, GooseEgg, Komplex (macOS)",
+    "victim": "Government agencies, political organizations, military, media, anti-doping agencies"
+  },
+  "cves": [
+    {
+      "id": "CVE-2017-0262",
+      "desc": "Microsoft Office EPS RCE used in spearphishing campaigns",
+      "year": "2017"
+    },
+    {
+      "id": "CVE-2017-0263",
+      "desc": "Windows kernel privilege escalation paired with EPS exploit",
+      "year": "2017"
+    },
+    {
+      "id": "CVE-2022-38028",
+      "desc": "Windows Print Spooler (GooseEgg) — used 2020-2024",
+      "year": "2022"
+    },
+    {
+      "id": "CVE-2023-23397",
+      "desc": "Outlook NTLM relay zero-day exploited against European orgs",
+      "year": "2023"
+    },
+    {
+      "id": "CVE-2024-11182",
+      "desc": "MDaemon XSS zero-day used in Operation RoundPress webmail exploitation",
+      "year": "2024"
+    },
+    {
+      "id": "CVE-2023-43770",
+      "desc": "Roundcube XSS used in webmail compromise campaigns",
+      "year": "2023"
+    },
+    {
+      "id": "CVE-2023-38831",
+      "desc": "WinRAR RCE used in Ukraine-targeting phishing campaigns",
+      "year": "2023"
+    },
+    {
+      "id": "CVE-2020-12641",
+      "desc": "Roundcube RCE exploited for webmail access",
+      "year": "2020"
+    },
+    {
+      "id": "CVE-2020-35730",
+      "desc": "Roundcube XSS exploited for session hijacking",
+      "year": "2020"
+    },
+    {
+      "id": "CVE-2017-6742",
+      "desc": "Cisco SNMP RCE for router compromise and Jaguar Tooth malware",
+      "year": "2017"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "vpn-service[.]us",
+      "login-verify[.]com",
+      "account-verify[.]net"
+    ],
+    "hashes": [
+      "SHA256: 5a3c...e7d2 (Zebrocy dropper)",
+      "SHA256: 8b2f...c4a1 (XAgent implant)"
+    ],
+    "sigma_rules": [
+      "proc_creation_win_susp_powershell_enc_cmd",
+      "proc_creation_win_mimikatz_command_line"
+    ]
+  },
+  "detection": [
+    {
+      "title": "PowerShell Encoded Command Execution",
+      "content": "Monitor for powershell.exe launched with -enc, -encodedcommand, or -e flags containing Base64 payloads. Enable Script Block Logging (Event ID 4104) and Module Logging. Sigma rule: proc_creation_win_susp_powershell_enc_cmd. KQL: DeviceProcessEvents | where FileName == 'powershell.exe' and ProcessCommandLine contains '-enc'",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_powershell_enc_cmd.yml"
+    },
+    {
+      "title": "Outlook NTLM Relay (CVE-2023-23397)",
+      "content": "Detect outbound SMB connections initiated by Outlook calendar processing. Monitor for Windows Event ID 4648 (logon with explicit credentials) to external IPs. Alert on UNC path access from outlook.exe. KQL: DeviceNetworkEvents | where InitiatingProcessFileName == 'outlook.exe' and RemotePort == 445",
+      "url": "https://microsoft.github.io/CSS-Exchange/Security/CVE-2023-23397/"
+    },
+    {
+      "title": "LSASS Credential Dumping",
+      "content": "Monitor for processes accessing lsass.exe memory. Sysmon Event ID 10 with TargetImage containing lsass.exe and GrantedAccess of 0x1010 or 0x1038. Deploy Credential Guard where possible. Sigma rule: sysmon_cred_dump_lsass_access.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/sysmon/sysmon_cred_dump_lsass_access.yml"
+    },
+    {
+      "title": "GooseEgg Print Spooler Exploitation (CVE-2022-38028)",
+      "content": "Monitor svchost.exe (spoolsv) spawning unexpected child processes like cmd.exe or powershell.exe. Track file modifications in C:\\Windows\\System32\\spool\\drivers\\. Microsoft published specific detection guidance for GooseEgg exploitation.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/04/22/analyzing-forest-blizzards-custom-post-compromise-tool-for-exploiting-cve-2022-38028/"
+    },
+    {
+      "title": "Encoded PowerShell via WMI",
+      "content": "Monitor for WMI spawning powershell.exe with encoded arguments. Sysmon Event ID 1 with ParentImage wmiprvse.exe. Elastic detection rule: command_and_scripting_interpreter_via_wmi.",
+      "url": "https://github.com/elastic/detection-rules/blob/main/rules/windows/execution_command_virtual_machine.toml"
+    },
+    {
+      "title": "Suspicious Outlook Behavior",
+      "content": "Monitor for Outlook spawning script interpreters or making outbound SMB connections. ASR rule: Block Office applications from creating executable content. Elastic rule: microsoft_365_exchange_transport_rule_creation.",
+      "url": "https://github.com/elastic/detection-rules"
+    },
+    {
+      "title": "Registry Autorun Modification",
+      "content": "Monitor HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run for new entries. Sysmon Event ID 13 (Registry value set). Sigma rule: registry_set_asep_reg_keys_modification_currentversion.",
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_asep_reg_keys_modification_currentversion.yml"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "Sandworm",
+      "relationship": "Sister GRU unit",
+      "desc": "Both GRU but different units (26165 vs 74455). Occasional shared infrastructure."
+    },
+    {
+      "name": "Turla",
+      "relationship": "Russian co-operator",
+      "desc": "FSB group. Documented cases of Turla piggybacking on APT28 infrastructure."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Deploy phishing-resistant MFA (FIDO2/WebAuthn) for all accounts, prioritizing email and VPN. APT28 credential harvesting bypasses SMS/TOTP MFA.",
+      "source": "CISA AA25-141A Section 4",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a"
+    },
+    {
+      "text": "Patch Outlook CVE-2023-23397 and Print Spooler CVE-2022-38028 immediately. Both actively exploited by APT28 in ongoing campaigns.",
+      "source": "CISA KEV Catalog",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    },
+    {
+      "text": "Enable PowerShell Constrained Language Mode and Script Block Logging (Event ID 4104). Block encoded command execution via ASR rules.",
+      "source": "NSA/CISA PowerShell Guide",
+      "url": "https://media.defense.gov/2022/Jun/22/2003021689/-1/-1/0/CSI_KEEPING_POWERSHELL_SECURITY_MEASURES_TO_USE_AND_EMBRACE_20220622.PDF"
+    },
+    {
+      "text": "Block outbound NTLM to external IPs at network perimeter. APT28 uses NTLM relay via Outlook calendar invites.",
+      "source": "Microsoft CVE-2023-23397 Guidance",
+      "url": "https://microsoft.github.io/CSS-Exchange/Security/CVE-2023-23397/"
+    },
+    {
+      "text": "Deploy Credential Guard on Windows 10/11 to protect LSASS from memory dumping. Monitor LSASS access via Sysmon Event ID 10.",
+      "source": "Microsoft Security Baseline",
+      "url": "https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/"
+    },
+    {
+      "text": "Segment email infrastructure from Active Directory domain controllers. APT28 pivots from mailboxes to DC via pass-the-hash.",
+      "source": "NIST SP 800-41 Rev 1",
+      "url": "https://csrc.nist.gov/pubs/sp/800/41/r1/final"
+    },
+    {
+      "text": "Enforce DMARC p=reject on all organizational domains to prevent email spoofing in spearphishing campaigns.",
+      "source": "CISA BOD 18-01",
+      "url": "https://www.cisa.gov/news-events/directives/bod-18-01-enhance-email-and-web-security"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "CISA AA25-141A IOCs",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a",
+      "desc": "GRU logistics targeting - IP indicators, TTPs, IOCs"
+    },
+    {
+      "name": "CISA AA23-108A IOCs",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-108a",
+      "desc": "APT28 Cisco router exploitation indicators"
+    },
+    {
+      "name": "MITRE ATT&CK G0007 Software",
+      "url": "https://attack.mitre.org/groups/G0007/",
+      "desc": "Mapped malware families and technique IOCs"
+    },
+    {
+      "name": "NSA GRU Brute Force IOCs",
+      "url": "https://media.defense.gov/2021/Jul/01/2002753896/-1/-1/0/CSA_GRU_GLOBAL_BRUTE_FORCE_CAMPAIGN_UOO158036-21.PDF",
+      "desc": "Kubernetes, cloud credential brute force indicators"
+    },
+    {
+      "name": "Malpedia Sofacy YARA Rules",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/sofacy",
+      "desc": "YARA rules for Zebrocy, XAgent, CompuTrace"
+    },
+    {
+      "name": "ESET Sednit IOCs",
+      "url": "https://github.com/eset/malware-ioc/tree/master/sednit",
+      "desc": "ESET published IOCs on GitHub for Sednit/APT28"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "Mimikatz",
+      "url": "https://github.com/gentilkiwi/mimikatz",
+      "type": "Credential Dumping"
+    },
+    {
+      "name": "Responder",
+      "url": "https://github.com/lgandx/Responder",
+      "type": "NTLM Relay"
+    },
+    {
+      "name": "Impacket",
+      "url": "https://github.com/fortra/impacket",
+      "type": "Network Protocols"
+    },
+    {
+      "name": "PowerShell Empire",
+      "url": "https://github.com/BC-SECURITY/Empire",
+      "type": "Post-Exploitation"
+    },
+    {
+      "name": "Cobalt Strike",
+      "url": "https://www.cobaltstrike.com/",
+      "type": "C2 Framework"
+    },
+    {
+      "name": "Empire",
+      "url": "https://github.com/BC-SECURITY/Empire",
+      "type": "Post-Exploitation C2"
+    },
+    {
+      "name": "Nmap",
+      "url": "https://github.com/nmap/nmap",
+      "type": "Network Scanner"
+    },
+    {
+      "name": "Zebrocy",
+      "url": "https://attack.mitre.org/software/S0230/",
+      "type": "Custom Downloader"
+    },
+    {
+      "name": "XAgent",
+      "url": "https://attack.mitre.org/software/S0023/",
+      "type": "Custom Backdoor"
+    },
+    {
+      "name": "X-Tunnel",
+      "url": "https://attack.mitre.org/software/S0117/",
+      "type": "VPN Tunneling"
+    },
+    {
+      "name": "LoJax",
+      "url": "https://attack.mitre.org/software/S0397/",
+      "type": "UEFI Rootkit"
+    },
+    {
+      "name": "GooseEgg",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/04/22/analyzing-forest-blizzards-custom-post-compromise-tool-for-exploiting-cve-2022-38028/",
+      "type": "Exploit Tool"
+    },
+    {
+      "name": "Komplex",
+      "url": "https://attack.mitre.org/software/S0162/",
+      "type": "macOS Backdoor"
+    },
+    {
+      "name": "Seduploader",
+      "url": "https://attack.mitre.org/software/S0120/",
+      "type": "Reconnaissance Downloader"
+    }
+  ],
+  "target_industries": [
+    "Government",
+    "Military",
+    "Defense",
+    "Political Organizations",
+    "Media",
+    "Anti-Doping Agencies",
+    "Logistics",
+    "Technology"
+  ],
+  "target_country_flags": [
+    {
+      "country": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "country": "Ukraine",
+      "flag": "🇺🇦"
+    },
+    {
+      "country": "Germany",
+      "flag": "🇩🇪"
+    },
+    {
+      "country": "France",
+      "flag": "🇫🇷"
+    },
+    {
+      "country": "United Kingdom",
+      "flag": "🇬🇧"
+    },
+    {
+      "country": "Poland",
+      "flag": "🇵🇱"
+    },
+    {
+      "country": "Georgia",
+      "flag": "🇬🇪"
+    },
+    {
+      "country": "NATO Members",
+      "flag": "🏳️"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "DOJ indictment of 12 GRU Unit 26165 officers (July 2018)",
+        "url": "https://www.justice.gov/opa/pr/grand-jury-indicts-12-russian-intelligence-officers-hacking-offenses-related-2016-election"
+      },
+      {
+        "text": "Five Eyes joint attribution (US, UK, CA, AU, NZ)",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a"
+      },
+      {
+        "text": "ANSSI France public attribution (2023, 2025)",
+        "url": "https://cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-007/"
+      },
+      {
+        "text": "Technical overlap across 15+ campaigns",
+        "url": "https://attack.mitre.org/groups/G0007/"
+      }
+    ]
+  },
+  "legal_actions": [
+    {
+      "date": "2018-07",
+      "type": "Indictment",
+      "title": "DOJ indicts 12 GRU officers for 2016 election interference",
+      "url": "https://www.justice.gov/opa/pr/grand-jury-indicts-12-russian-intelligence-officers-hacking-offenses-related-2016-election"
+    },
+    {
+      "date": "2018-10",
+      "type": "Indictment",
+      "title": "DOJ charges 7 GRU officers for anti-doping agency hacks",
+      "url": "https://www.justice.gov/opa/pr/us-charges-russian-gru-officers-international-hacking-and-related-influence-and"
+    },
+    {
+      "date": "2020-10",
+      "type": "Sanctions",
+      "title": "EU sanctions GRU officers linked to Bundestag hack",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2020/10/22/cyber-attacks-council-imposes-sanctions-against-russian-military-intelligence/"
+    },
+    {
+      "date": "2024-02",
+      "type": "Disruption",
+      "title": "DOJ disrupts GRU botnet of compromised routers",
+      "url": "https://www.justice.gov/opa/pr/justice-department-conducts-court-authorized-disruption-botnet-controlled-russian"
+    }
+  ],
+  "threat_assessment": {
+    "capability": 9,
+    "intent": 9,
+    "targeting": 8,
+    "overall": "Critical",
+    "summary": "Tier 1 nation-state actor with demonstrated zero-day capability, global reach, and destructive intent when aligned with Russian military objectives."
+  },
+  "kill_chain": [
+    {
+      "phase": "Reconnaissance",
+      "mapping": "Open-source research on targets, credential harvesting via phishing portals, LinkedIn profiling"
+    },
+    {
+      "phase": "Weaponization",
+      "mapping": "Weaponized Office documents with VBA macros, EPS exploits (CVE-2017-0262), GooseEgg exploit tool"
+    },
+    {
+      "phase": "Delivery",
+      "mapping": "Spearphishing emails with attachments/links, watering hole sites, Wi-Fi proximity attacks (Nearest Neighbor)"
+    },
+    {
+      "phase": "Exploitation",
+      "mapping": "CVE-2023-23397 (Outlook NTLM), CVE-2022-38028 (Print Spooler), CVE-2023-38831 (WinRAR)"
+    },
+    {
+      "phase": "Installation",
+      "mapping": "Zebrocy, XAgent, Komplex (macOS), registry run keys, scheduled tasks"
+    },
+    {
+      "phase": "Command & Control",
+      "mapping": "HTTPS C2 via compromised WordPress sites, X-Tunnel for encrypted relay, Tor for anonymization"
+    },
+    {
+      "phase": "Actions on Objectives",
+      "mapping": "Email exfiltration, credential harvesting, hack-and-leak operations, intelligence collection on military/political targets"
+    }
+  ],
+  "recent_news": [
+    {
+      "date": "2025-05",
+      "title": "CISA AA25-141A: APT28 targeting Western logistics companies supporting Ukraine",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a"
+    },
+    {
+      "date": "2025-05",
+      "title": "ESET: Operation RoundPress webmail exploitation campaign",
+      "url": "https://www.welivesecurity.com/en/eset-research/operation-roundpress/"
+    },
+    {
+      "date": "2024-11",
+      "title": "Volexity: Nearest Neighbor Wi-Fi attack technique",
+      "url": "https://www.volexity.com/blog/2024/11/22/the-nearest-neighbor-attack/"
+    },
+    {
+      "date": "2024-04",
+      "title": "Microsoft: Forest Blizzard GooseEgg exploitation",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/04/22/analyzing-forest-blizzards-custom-post-compromise-tool-for-exploiting-cve-2022-38028/"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0007",
+      "url": "https://attack.mitre.org/groups/G0007/"
+    },
+    {
+      "name": "CISA AA25-141A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a"
+    },
+    {
+      "name": "CISA AA23-108A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-108a"
+    },
+    {
+      "name": "NSA GRU Brute Force Advisory",
+      "url": "https://media.defense.gov/2021/Jul/01/2002753896/-1/-1/0/CSA_GRU_GLOBAL_BRUTE_FORCE_CAMPAIGN_UOO158036-21.PDF"
+    },
+    {
+      "name": "Microsoft Forest Blizzard",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/04/22/analyzing-forest-blizzards-custom-post-compromise-tool-for-exploiting-cve-2022-38028/"
+    },
+    {
+      "name": "ESET Sednit Research",
+      "url": "https://www.welivesecurity.com/2019/05/22/journey-zebrocy-land/"
+    },
+    {
+      "name": "DOJ GRU Indictment",
+      "url": "https://www.justice.gov/opa/pr/grand-jury-indicts-12-russian-intelligence-officers-hacking-offenses-related-2016-election"
+    },
+    {
+      "name": "Malpedia Sofacy",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/sofacy"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1566.001",
+      "name": "Spearphishing Attachment",
+      "tactic": "Initial Access",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1566.001 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1566.001/T1566.001.md",
+      "note": "Sends test phishing email with macro-enabled attachment"
+    },
+    {
+      "tid": "T1059.001",
+      "name": "PowerShell Execution",
+      "tactic": "Execution",
+      "tool": "Native",
+      "command": "powershell.exe -NoP -NonI -W Hidden -Enc <base64_payload>",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.md",
+      "note": "Encoded PowerShell execution - APT28 primary execution method"
+    },
+    {
+      "tid": "T1547.001",
+      "name": "Registry Run Key Persistence",
+      "tactic": "Persistence",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1547.001 -TestNumbers 1,2,3",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.md",
+      "note": "Creates autorun registry entries for persistence"
+    },
+    {
+      "tid": "T1003",
+      "name": "LSASS Credential Dumping",
+      "tactic": "Credential Access",
+      "tool": "Mimikatz",
+      "command": "mimikatz.exe \"privilege::debug\" \"sekurlsa::logonpasswords\" exit",
+      "platform": "Windows",
+      "url": "https://github.com/gentilkiwi/mimikatz",
+      "note": "Dumps credentials from LSASS process memory"
+    },
+    {
+      "tid": "T1003.001",
+      "name": "LSASS Memory via ProcDump",
+      "tactic": "Credential Access",
+      "tool": "Sysinternals",
+      "command": "procdump.exe -ma lsass.exe lsass.dmp",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.md",
+      "note": "Dumps LSASS using legitimate Microsoft tool"
+    },
+    {
+      "tid": "T1021.002",
+      "name": "SMB/Windows Admin Shares",
+      "tactic": "Lateral Movement",
+      "tool": "Impacket",
+      "command": "python3 psexec.py domain/user:password@target",
+      "platform": "Linux/Windows",
+      "url": "https://github.com/fortra/impacket/blob/master/examples/psexec.py",
+      "note": "Remote execution via SMB - pass-the-hash supported"
+    },
+    {
+      "tid": "T1071.001",
+      "name": "Web Protocol C2",
+      "tactic": "Command & Control",
+      "tool": "Cobalt Strike",
+      "command": "./teamserver <ip> <password> c2.profile",
+      "platform": "Linux",
+      "url": "https://www.cobaltstrike.com/",
+      "note": "HTTPS beacon with malleable C2 profile"
+    },
+    {
+      "tid": "T1114.002",
+      "name": "Remote Email Collection",
+      "tactic": "Collection",
+      "tool": "MailSniper",
+      "command": "Invoke-SelfSearch -Mailbox target@org.com -Terms 'password','classified'",
+      "platform": "Windows",
+      "url": "https://github.com/dafthack/MailSniper",
+      "note": "Searches Exchange/O365 mailboxes for sensitive content"
+    }
+  ]
+}

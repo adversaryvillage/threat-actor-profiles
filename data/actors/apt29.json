@@ -1,0 +1,894 @@
+{
+  "id": "apt29",
+  "name": "APT29",
+  "aliases": [
+    "Cozy Bear",
+    "The Dukes",
+    "NOBELIUM",
+    "Midnight Blizzard",
+    "CozyDuke",
+    "Dark Halo",
+    "StellarParticle",
+    "UNC2452",
+    "Blue Kitsune",
+    "Iron Hemlock",
+    "Grizzly Steppe"
+  ],
+  "country": "Russia",
+  "country_code": "RU",
+  "flag_emoji": "🇷🇺",
+  "attribution": "Russian Foreign Intelligence Service (SVR)",
+  "motivation": "Espionage, Intelligence Collection",
+  "threat_type": "Nation-State",
+  "first_seen": "2008",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "APT29 is attributed to Russia's Foreign Intelligence Service (SVR) and is one of the most sophisticated state-sponsored threat groups in operation. Known for supply chain attacks like SolarWinds and persistent espionage campaigns targeting government agencies, diplomatic entities, and technology companies across NATO countries. APT29 is characterized by its exceptional operational security, use of novel malware, and ability to maintain long-term access.",
+  "target_sectors": [
+    "Government",
+    "Diplomacy",
+    "Technology",
+    "Think Tanks",
+    "Healthcare",
+    "Energy",
+    "Telecommunications"
+  ],
+  "target_countries": [
+    "United States",
+    "United Kingdom",
+    "European Union",
+    "NATO Members",
+    "Ukraine",
+    "Norway"
+  ],
+  "tools": [
+    "SUNBURST",
+    "TEARDROP",
+    "Raindrop",
+    "GoldMax",
+    "GoldFinder",
+    "Sibot",
+    "EnvyScout",
+    "BoomBox",
+    "NativeZone",
+    "WellMess",
+    "WellMail",
+    "MagicWeb",
+    "Cobalt Strike",
+    "Sliver",
+    "Brute Ratel",
+    "Impacket",
+    "AADInternals",
+    "ROADtools",
+    "GraphRunner"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1195.002",
+        "name": "Supply Chain Compromise: Compromise Software Supply Chain"
+      },
+      {
+        "id": "T1566.001",
+        "name": "Phishing: Spearphishing Attachment"
+      },
+      {
+        "id": "T1199",
+        "name": "Trusted Relationship"
+      },
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "Command and Scripting Interpreter: PowerShell"
+      },
+      {
+        "id": "T1059.003",
+        "name": "Command and Scripting Interpreter: Windows Command Shell"
+      },
+      {
+        "id": "T1047",
+        "name": "Windows Management Instrumentation"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1098",
+        "name": "Account Manipulation"
+      },
+      {
+        "id": "T1547.001",
+        "name": "Boot or Logon Autostart Execution: Registry Run Keys"
+      },
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task/Job: Scheduled Task"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1068",
+        "name": "Exploitation for Privilege Escalation"
+      },
+      {
+        "id": "T1134",
+        "name": "Access Token Manipulation"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1480.001",
+        "name": "Execution Guardrails: Environmental Keying"
+      },
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files or Information"
+      },
+      {
+        "id": "T1070",
+        "name": "Indicator Removal"
+      },
+      {
+        "id": "T1553.002",
+        "name": "Subvert Trust Controls: Code Signing"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1528",
+        "name": "Steal Application Access Token"
+      },
+      {
+        "id": "T1606.002",
+        "name": "Forge Web Credentials: SAML Tokens"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1087",
+        "name": "Account Discovery"
+      },
+      {
+        "id": "T1482",
+        "name": "Domain Trust Discovery"
+      },
+      {
+        "id": "T1069",
+        "name": "Permission Groups Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.002",
+        "name": "Remote Services: SMB/Windows Admin Shares"
+      },
+      {
+        "id": "T1550.001",
+        "name": "Use Alternate Authentication Material: Application Access Token"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1114.002",
+        "name": "Email Collection: Remote Email Collection"
+      },
+      {
+        "id": "T1213",
+        "name": "Data from Information Repositories"
+      },
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Application Layer Protocol: Web Protocols"
+      },
+      {
+        "id": "T1102",
+        "name": "Web Service"
+      },
+      {
+        "id": "T1573.002",
+        "name": "Encrypted Channel: Asymmetric Cryptography"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      },
+      {
+        "id": "T1567",
+        "name": "Exfiltration Over Web Service"
+      }
+    ],
+    "impact": []
+  },
+  "emulation_plans": [
+    {
+      "name": "MITRE CTID - APT29 Full Emulation Plan",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/apt29",
+      "desc": "Two-day emulation plan with Day 1 (rapid) and Day 2 (methodical) scenarios"
+    },
+    {
+      "name": "MITRE Attack Arsenal - APT29 Caldera DIY",
+      "source": "MITRE",
+      "type": "Open Source",
+      "url": "https://github.com/mitre-attack/attack-arsenal/tree/master/adversary_emulation/APT29",
+      "desc": "Caldera abilities, adversary profiles, and emulation plan PDF for APT29"
+    },
+    {
+      "name": "ATT&CK Evaluations Library - APT29",
+      "source": "MITRE Engenuity",
+      "type": "Framework",
+      "url": "https://github.com/attackevals/ael",
+      "desc": "Official ATT&CK Evaluation emulation plan and detection analytics"
+    },
+    {
+      "name": "VMware Invoke-APT29 PowerShell Script",
+      "source": "VMware Carbon Black TAU",
+      "type": "Open Source",
+      "url": "https://github.com/carbonblack/tau-tools/tree/master/threat_emulation/Invoke-APT29",
+      "desc": "PowerShell script simulating APT29 TTPs from MITRE ATT&CK evaluation"
+    },
+    {
+      "name": "AttackIQ - CISA AA24-057A SVR Cloud Access",
+      "source": "AttackIQ",
+      "type": "Commercial",
+      "url": "https://www.attackiq.com/2024/02/27/response-to-cisa-advisory-aa24-057a/",
+      "desc": "Emulation of SVR cloud access TTPs from CISA advisory"
+    },
+    {
+      "name": "Mandiant SUNBURST Countermeasures",
+      "source": "Mandiant",
+      "type": "Open Source",
+      "url": "https://github.com/mandiant/sunburst_countermeasures",
+      "desc": "Detection rules, IOCs, and YARA rules for SolarWinds/SUNBURST"
+    },
+    {
+      "name": "APT29 Adversary Simulation (S3N4T0R)",
+      "source": "GitHub / S3N4T0R",
+      "type": "Open Source",
+      "url": "https://github.com/S3N4T0R-0X0/APT29-Adversary-Simulation",
+      "desc": "Full attack simulation targeting diplomatic missions with APT29 tradecraft"
+    },
+    {
+      "name": "APT29 Emulation Plan PDF",
+      "source": "MITRE",
+      "type": "Open Source",
+      "url": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/Emulation_Plan/APT29_EmuPlan.pdf",
+      "desc": "Detailed 2-day emulation plan document with Day 1 (rapid) and Day 2 (methodical) operations"
+    },
+    {
+      "name": "Adversary Emulation Framework (APT29 Playbook)",
+      "source": "GitHub / Aviral2642",
+      "type": "Open Source",
+      "url": "https://github.com/Aviral2642/adversary-emulation-framework",
+      "desc": "Python-based framework with APT29 playbook supporting real and safe execution modes"
+    },
+    {
+      "name": "Purple Teaming with CALDERA - APT29",
+      "source": "Medium / InderveerSingh",
+      "type": "Blog Post",
+      "url": "https://medium.com/@InderveerSingh/hands-on-apt29-adversary-emulation-in-powershell-91746b1d6daa",
+      "desc": "Hands-on walkthrough: Invoke-APT29 PowerShell emulation with CALDERA and ELK detection"
+    },
+    {
+      "name": "VMware Invoke-APT29 Blog Post",
+      "source": "VMware Security Blog",
+      "type": "Blog Post",
+      "url": "https://blogs.vmware.com/security/2020/01/invoke-apt29-adversarial-threat-emulation.html",
+      "desc": "How to use Invoke-APT29 PowerShell module to simulate techniques from MITRE ATT&CK evaluation"
+    },
+    {
+      "name": "mnemonic: Detecting Advanced Threats with Purple Team",
+      "source": "mnemonic",
+      "type": "Blog Post",
+      "url": "https://www.mnemonic.io/resources/blog/detecting-advanced-threats-with-purple-team-testing/",
+      "desc": "Advanced purple team testing methodology emulating APT29-style multi-stage operations with BOFs"
+    },
+    {
+      "name": "Emulating APT29 with AttackIQ",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://attackiq.com/blog/emulating-apt29-with-attackiq/",
+      "desc": "Full attack chain emulation of APT29 with assessment templates and validation scenarios"
+    },
+    {
+      "name": "Emulating the Russian Adversary Nobelium/APT29",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2023/05/04/emulating-nobelium-apt29/",
+      "desc": "Emulation of APT29 EU government targeting campaign with intelligence-gathering TTPs"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2015",
+      "name": "Pentagon Email Breach",
+      "description": "Compromise of unclassified US DoD email systems."
+    },
+    {
+      "year": "2020",
+      "name": "SolarWinds / SUNBURST",
+      "description": "Supply chain compromise affecting ~18,000 organizations including US government agencies."
+    },
+    {
+      "year": "2021",
+      "name": "Microsoft 365 Campaign",
+      "description": "Large-scale spearphishing targeting government agencies using compromised USAID account."
+    },
+    {
+      "year": "2024",
+      "name": "Microsoft Corporate Breach",
+      "description": "Compromise of Microsoft corporate email systems via password spray attack."
+    },
+    {
+      "year": "2024",
+      "name": "TeamViewer Breach",
+      "description": "Infiltration of TeamViewer's corporate IT environment."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA AA24-057A: SVR Cloud Access Tactics",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a"
+    },
+    {
+      "title": "CISA AA23-347A: SVR Exploiting JetBrains TeamCity",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a"
+    },
+    {
+      "title": "CISA Alert AA21-008A: SolarWinds/SUNBURST",
+      "url": "https://www.cisa.gov/news-events/alerts/2021/01/08/detecting-post-compromise-threat-activity-microsoft-cloud-environments"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0016",
+      "url": "https://attack.mitre.org/groups/G0016/"
+    },
+    {
+      "title": "Microsoft: Midnight Blizzard/Nobelium",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/"
+    },
+    {
+      "title": "Mandiant: SolarWinds UNC2452",
+      "url": "https://www.mandiant.com/resources/blog/unc2452-merged-into-apt29"
+    },
+    {
+      "title": "NCSC UK: APT29 Advisory",
+      "url": "https://www.ncsc.gov.uk/news/advisory-apt29-targets-covid-19-vaccine-development"
+    },
+    {
+      "title": "Malpedia: Cozy Bear",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/cozy_bear"
+    },
+    {
+      "title": "Secureworks: IRON RITUAL Profile",
+      "url": "https://www.secureworks.com/research/threat-profiles/iron-ritual"
+    },
+    {
+      "title": "CrowdStrike: Cozy Bear",
+      "url": "https://www.crowdstrike.com/adversaries/cozy-bear/"
+    },
+    {
+      "title": "Volexity: Dark Halo SolarWinds Analysis",
+      "url": "https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+    },
+    {
+      "title": "SolarWinds Advisory",
+      "url": "https://www.solarwinds.com/sa-overview/securityadvisory"
+    },
+    {
+      "title": "FireEye: SUNBURST Backdoor Analysis",
+      "url": "https://www.mandiant.com/resources/sunburst-additional-technical-details"
+    },
+    {
+      "title": "Microsoft: Nobelium Resource Center",
+      "url": "https://www.microsoft.com/en-us/security/blog/2021/05/28/breaking-down-nobeliums-latest-early-stage-toolset/"
+    },
+    {
+      "title": "Recorded Future: BlueBravo",
+      "url": "https://www.recordedfuture.com/research/bluebravo-uses-ambassador-lure"
+    }
+  ],
+  "mitre_id": "G0016",
+  "image": "apt29.png",
+  "attack_flow": {
+    "campaign": "SolarWinds / SUNBURST (2020)",
+    "steps": [
+      {
+        "step": "Supply Chain Trojan",
+        "tid": "T1195.002",
+        "tactic": "Initial Access",
+        "desc": "Compromised SolarWinds Orion build process to inject SUNBURST"
+      },
+      {
+        "step": "DLL Side-Loading",
+        "tid": "T1574.002",
+        "tactic": "Execution",
+        "desc": "SUNBURST loaded as legitimate SolarWinds DLL"
+      },
+      {
+        "step": "Environmental Keying",
+        "tid": "T1480.001",
+        "tactic": "Defense Evasion",
+        "desc": "Dormant 12-14 days; checks domain, AV, processes before activating"
+      },
+      {
+        "step": "SAML Token Forgery",
+        "tid": "T1606.002",
+        "tactic": "Credential Access",
+        "desc": "Golden SAML attack to forge authentication tokens for cloud access"
+      },
+      {
+        "step": "Cloud Service Access",
+        "tid": "T1550.001",
+        "tactic": "Lateral Movement",
+        "desc": "Compromised OAuth tokens to access M365, Azure AD"
+      },
+      {
+        "step": "Email Collection",
+        "tid": "T1114.002",
+        "tactic": "Collection",
+        "desc": "Bulk exfiltration of executive and security team mailboxes"
+      },
+      {
+        "step": "Web Service C2",
+        "tid": "T1102",
+        "tactic": "Command & Control",
+        "desc": "C2 traffic disguised as legitimate SolarWinds API calls"
+      },
+      {
+        "step": "Data Exfiltration",
+        "tid": "T1567",
+        "tactic": "Exfiltration",
+        "desc": "Exfiltration via cloud storage and encrypted channels"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "SVR (Russian Foreign Intelligence Service), covert cyber operations directorate",
+    "infrastructure": "Compromised SolarWinds build server, Cobalt Strike C2, cloud-based staging, anonymized VPS",
+    "capability": "SUNBURST, TEARDROP, Raindrop, GoldMax, EnvyScout, MagicWeb, WellMess, custom SAML forgery tools",
+    "victim": "US government (Treasury, Commerce, DOE, DHS), Microsoft, FireEye, ~18,000 SolarWinds customers"
+  },
+  "cves": [
+    {
+      "id": "CVE-2020-4006",
+      "desc": "VMware Workspace ONE RCE for initial access in parallel campaigns",
+      "year": "2020"
+    },
+    {
+      "id": "CVE-2021-21972",
+      "desc": "VMware vCenter RCE exploited for lateral movement",
+      "year": "2021"
+    },
+    {
+      "id": "CVE-2021-34527",
+      "desc": "PrintNightmare — used alongside SUNBURST for privilege escalation",
+      "year": "2021"
+    },
+    {
+      "id": "CVE-2023-42793",
+      "desc": "JetBrains TeamCity RCE exploited for supply chain access",
+      "year": "2023"
+    },
+    {
+      "id": "CVE-2019-19781",
+      "desc": "Citrix ADC RCE used for initial access",
+      "year": "2019"
+    },
+    {
+      "id": "CVE-2018-13379",
+      "desc": "Fortinet VPN path traversal for credential theft",
+      "year": "2018"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "avsvmcloud[.]com",
+      "freescanonline[.]com",
+      "deftsecurity[.]com"
+    ],
+    "hashes": [
+      "SHA256: d0d6...f944 (SUNBURST)",
+      "SHA256: 118d...59be (TEARDROP)"
+    ],
+    "sigma_rules": [
+      "sysmon_ads_executable",
+      "proc_creation_win_susp_rundll32",
+      "win_security_susp_logon_type9"
+    ]
+  },
+  "detection": [
+    {
+      "title": "Golden SAML Token Forgery",
+      "content": "Monitor Azure AD sign-in logs for tokens with abnormal issuer claims or unusual lifetime durations. Alert on SAML assertions signed by certificates not matching the legitimate AD FS signing certificate. Check for AADInternals or ADFSDump tool artifacts in AD FS server logs.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/"
+    },
+    {
+      "title": "OAuth Application Abuse",
+      "content": "Monitor Azure AD audit logs for application consent grants with Mail.Read, Mail.ReadWrite, or full_access_as_app permissions. Alert on new service principal credential additions outside change windows. KQL: AuditLogs | where OperationName == 'Consent to application'",
+      "url": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
+    },
+    {
+      "title": "SolarWinds DLL Anomaly",
+      "content": "Detect anomalous DLL loading in SolarWinds Orion processes. Monitor for SolarWinds.Orion.Core.BusinessLayer.dll with unexpected file hashes. Network detection of DNS queries to avsvmcloud[.]com subdomains using encoded victim identifiers.",
+      "url": "https://github.com/mandiant/sunburst_countermeasures"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "APT28",
+      "relationship": "Co-national (Russia)",
+      "desc": "Both Russian intelligence but different services (SVR vs GRU)."
+    },
+    {
+      "name": "Turla",
+      "relationship": "Co-national (Russia)",
+      "desc": "FSB-attributed group. APT29 operations generally more stealthy."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Implement software supply chain integrity verification (SLSA framework, SBOMs). APT29 compromised SolarWinds build pipeline.",
+      "source": "CISA ICT Supply Chain",
+      "url": "https://www.cisa.gov/supply-chain-compromise"
+    },
+    {
+      "text": "Deploy Conditional Access in Azure AD/Entra ID requiring compliant devices and IP restrictions for admin access.",
+      "source": "CISA AA24-057A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a"
+    },
+    {
+      "text": "Monitor Azure AD sign-in logs for SAML token anomalies. APT29 uses Golden SAML to forge authentication tokens.",
+      "source": "CISA ED 21-01",
+      "url": "https://www.cisa.gov/news-events/directives/emergency-directive-21-01"
+    },
+    {
+      "text": "Audit all OAuth consent grants. Remove excessive permissions (Mail.Read, full_access_as_app). APT29 abuses OAuth for M365 access.",
+      "source": "Microsoft IR Playbook",
+      "url": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
+    },
+    {
+      "text": "Enable unified audit logging in M365 with 365-day retention. Monitor MailItemsAccessed from unusual IPs.",
+      "source": "CISA AA24-057A Section 3",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "CISA AA24-057A IOCs",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a",
+      "desc": "SVR cloud access tactics, techniques, IOCs"
+    },
+    {
+      "name": "CISA AA23-347A IOCs",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a",
+      "desc": "SVR TeamCity exploitation indicators"
+    },
+    {
+      "name": "CISA SolarWinds Alert",
+      "url": "https://www.cisa.gov/news-events/alerts/2021/01/08/detecting-post-compromise-threat-activity-microsoft-cloud-environments",
+      "desc": "SUNBURST/SolarWinds detection and IOCs"
+    },
+    {
+      "name": "FireEye SUNBURST IOCs",
+      "url": "https://github.com/mandiant/sunburst_countermeasures",
+      "desc": "Mandiant published countermeasures on GitHub"
+    },
+    {
+      "name": "MITRE ATT&CK G0016 Software",
+      "url": "https://attack.mitre.org/groups/G0016/",
+      "desc": "Full software and technique mapping"
+    },
+    {
+      "name": "Microsoft Midnight Blizzard IOCs",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/",
+      "desc": "Microsoft published IOCs and guidance"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "Cobalt Strike",
+      "url": "https://www.cobaltstrike.com/",
+      "type": "C2 Framework"
+    },
+    {
+      "name": "Sliver",
+      "url": "https://github.com/BishopFox/sliver",
+      "type": "C2 Framework"
+    },
+    {
+      "name": "Brute Ratel",
+      "url": "https://bruteratel.com/",
+      "type": "C2 Framework"
+    },
+    {
+      "name": "Impacket",
+      "url": "https://github.com/fortra/impacket",
+      "type": "Network Protocols"
+    },
+    {
+      "name": "SUNBURST",
+      "url": "https://attack.mitre.org/software/S0559/",
+      "type": "Supply Chain Backdoor"
+    },
+    {
+      "name": "TEARDROP",
+      "url": "https://attack.mitre.org/software/S0560/",
+      "type": "Memory-Only Dropper"
+    },
+    {
+      "name": "GoldMax",
+      "url": "https://attack.mitre.org/software/S0588/",
+      "type": "C2 Backdoor"
+    },
+    {
+      "name": "EnvyScout",
+      "url": "https://attack.mitre.org/software/S0634/",
+      "type": "HTML Smuggling Dropper"
+    },
+    {
+      "name": "MagicWeb",
+      "url": "https://www.microsoft.com/en-us/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/",
+      "type": "AD FS Backdoor"
+    },
+    {
+      "name": "WellMess",
+      "url": "https://attack.mitre.org/software/S0514/",
+      "type": "Custom RAT"
+    },
+    {
+      "name": "BoomBox",
+      "url": "https://attack.mitre.org/software/S0635/",
+      "type": "Downloader"
+    },
+    {
+      "name": "AADInternals",
+      "url": "https://github.com/Gerenios/AADInternals",
+      "type": "Azure AD Toolkit"
+    },
+    {
+      "name": "ROADtools",
+      "url": "https://github.com/dirkjanm/ROADtools",
+      "type": "Azure AD Enumeration"
+    },
+    {
+      "name": "GraphRunner",
+      "url": "https://github.com/dafthack/GraphRunner",
+      "type": "M365 Post-Exploitation"
+    }
+  ],
+  "target_industries": [
+    "Government",
+    "Technology",
+    "Think Tanks",
+    "NGOs",
+    "Healthcare",
+    "Energy",
+    "Telecommunications"
+  ],
+  "target_country_flags": [
+    {
+      "country": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "country": "United Kingdom",
+      "flag": "🇬🇧"
+    },
+    {
+      "country": "European Union",
+      "flag": "🇪🇺"
+    },
+    {
+      "country": "Ukraine",
+      "flag": "🇺🇦"
+    },
+    {
+      "country": "Canada",
+      "flag": "🇨🇦"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "NSA/FBI/CISA joint SVR attribution (2021)",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a"
+      },
+      {
+        "text": "Microsoft attributes Midnight Blizzard to SVR",
+        "url": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/"
+      },
+      {
+        "text": "UK NCSC SVR attribution",
+        "url": "https://www.ncsc.gov.uk/news/advisory-apt29-targets-covid-19-vaccine-development"
+      },
+      {
+        "text": "Dutch AIVD infiltrated APT29 network (2014-2017)",
+        "url": "https://www.volkskrant.nl/wetenschap/dutch-agencies-provide-crucial-intel-about-russia-s-interference-in-us-elections~b4f8111b/"
+      }
+    ]
+  },
+  "legal_actions": [
+    {
+      "date": "2021-04",
+      "type": "Sanctions",
+      "title": "US sanctions SVR and expels Russian diplomats for SolarWinds campaign",
+      "url": "https://home.treasury.gov/news/press-releases/jy0127"
+    },
+    {
+      "date": "2021-01",
+      "type": "Advisory",
+      "title": "CISA Emergency Directive 21-01 for SolarWinds remediation",
+      "url": "https://www.cisa.gov/news-events/directives/emergency-directive-21-01"
+    }
+  ],
+  "threat_assessment": {
+    "capability": 10,
+    "intent": 8,
+    "targeting": 9,
+    "overall": "Critical",
+    "summary": "Most sophisticated Russian cyber espionage actor. Demonstrated supply chain compromise capability and advanced cloud tradecraft. Patient, stealthy, and highly resourced."
+  },
+  "kill_chain": [
+    {
+      "phase": "Reconnaissance",
+      "mapping": "Supply chain vendor research, cloud infrastructure enumeration, password spraying at scale"
+    },
+    {
+      "phase": "Weaponization",
+      "mapping": "Trojanized SolarWinds Orion update (SUNBURST), EnvyScout HTML smuggling, ISO/IMG lure files"
+    },
+    {
+      "phase": "Delivery",
+      "mapping": "Supply chain compromise, spearphishing with HTML smuggling, trusted relationship abuse"
+    },
+    {
+      "phase": "Exploitation",
+      "mapping": "CVE-2021-21972 (vCenter), CVE-2023-42793 (TeamCity), OAuth consent abuse"
+    },
+    {
+      "phase": "Installation",
+      "mapping": "SUNBURST, TEARDROP, GoldMax, MagicWeb (AD FS persistence), WellMess"
+    },
+    {
+      "phase": "Command & Control",
+      "mapping": "DNS C2 mimicking SolarWinds API traffic, Cobalt Strike, cloud service C2 via Azure/AWS"
+    },
+    {
+      "phase": "Actions on Objectives",
+      "mapping": "Email exfiltration via Graph API, Golden SAML for persistent cloud access, source code theft (Microsoft, SolarWinds)"
+    }
+  ],
+  "recent_news": [
+    {
+      "date": "2024-01",
+      "title": "Microsoft: Midnight Blizzard attack on Microsoft corporate email",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/"
+    },
+    {
+      "date": "2024-02",
+      "title": "CISA AA24-057A: SVR cloud access tactics update",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a"
+    },
+    {
+      "date": "2023-12",
+      "title": "CISA AA23-347A: SVR exploiting JetBrains TeamCity",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0016",
+      "url": "https://attack.mitre.org/groups/G0016/"
+    },
+    {
+      "name": "CISA AA24-057A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a"
+    },
+    {
+      "name": "CISA AA23-347A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a"
+    },
+    {
+      "name": "Microsoft Midnight Blizzard",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/"
+    },
+    {
+      "name": "Mandiant UNC2452",
+      "url": "https://www.mandiant.com/resources/blog/unc2452-merged-into-apt29"
+    },
+    {
+      "name": "Mandiant SUNBURST Countermeasures",
+      "url": "https://github.com/mandiant/sunburst_countermeasures"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1195.002",
+      "name": "Supply Chain Compromise",
+      "tactic": "Initial Access",
+      "tool": "Manual",
+      "command": "# Build pipeline injection - requires access to CI/CD",
+      "platform": "Any",
+      "url": "https://github.com/mandiant/sunburst_countermeasures",
+      "note": "SolarWinds-style build process tampering - not automatable as atomic test"
+    },
+    {
+      "tid": "T1606.002",
+      "name": "SAML Token Forgery",
+      "tactic": "Credential Access",
+      "tool": "AADInternals",
+      "command": "$token = Open-AADIntOffice365 -SAMLToken $forgedToken",
+      "platform": "Windows",
+      "url": "https://github.com/Gerenios/AADInternals",
+      "note": "Golden SAML attack - forges authentication tokens for cloud access"
+    },
+    {
+      "tid": "T1550.001",
+      "name": "Application Access Token",
+      "tactic": "Lateral Movement",
+      "tool": "ROADtools",
+      "command": "roadrecon gather --access-token <token>",
+      "platform": "Linux/Windows",
+      "url": "https://github.com/dirkjanm/ROADtools",
+      "note": "Azure AD enumeration with stolen OAuth tokens"
+    },
+    {
+      "tid": "T1114.002",
+      "name": "Remote Email Collection",
+      "tactic": "Collection",
+      "tool": "GraphRunner",
+      "command": "Invoke-GraphRunner -Tokens $tokens -Command GetEmails",
+      "platform": "Windows",
+      "url": "https://github.com/dafthack/GraphRunner",
+      "note": "M365 email exfiltration via Microsoft Graph API"
+    },
+    {
+      "tid": "T1059.001",
+      "name": "PowerShell",
+      "tactic": "Execution",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1059.001 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.md",
+      "note": "PowerShell execution test"
+    }
+  ]
+}

@@ -1,0 +1,831 @@
+{
+  "id": "sandworm",
+  "name": "Sandworm",
+  "aliases": [
+    "Voodoo Bear",
+    "IRIDIUM",
+    "Seashell Blizzard",
+    "TeleBots",
+    "Iron Viking",
+    "BlackEnergy Group",
+    "Quedagh",
+    "ELECTRUM",
+    "DEV-0586",
+    "APT44",
+    "FROZENBARENTS"
+  ],
+  "country": "Russia",
+  "country_code": "RU",
+  "flag_emoji": "🇷🇺",
+  "attribution": "GRU Unit 74455 (GTsST/Sandworm Team), Russian Main Intelligence Directorate",
+  "motivation": "Disruption, Sabotage, Espionage",
+  "threat_type": "Nation-State",
+  "first_seen": "2009",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "Sandworm is Russia's most destructive cyber threat group, responsible for the first-ever cyberattacks to cause power outages (Ukraine 2015/2016), the NotPetya attack causing $10B+ in global damages, and Olympic Destroyer. Attributed to GRU Unit 74455, the group specializes in destructive operations against critical infrastructure, with a focus on Ukraine. Six GRU officers were indicted by the US DOJ in 2020.",
+  "target_sectors": [
+    "Energy",
+    "Government",
+    "Transportation",
+    "Financial",
+    "Media",
+    "Critical Infrastructure",
+    "Elections"
+  ],
+  "target_countries": [
+    "Ukraine",
+    "Georgia",
+    "United States",
+    "France",
+    "South Korea",
+    "United Kingdom",
+    "Global"
+  ],
+  "tools": [
+    "BlackEnergy",
+    "Industroyer/CrashOverride",
+    "NotPetya",
+    "Olympic Destroyer",
+    "VPNFilter",
+    "Cyclops Blink",
+    "AcidRain",
+    "CaddyWiper",
+    "WhisperGate",
+    "SwiftSlicer",
+    "Industroyer Analysis",
+    "BlackEnergy Analysis",
+    "Impacket",
+    "Industroyer2",
+    "HermeticWiper",
+    "KillDisk",
+    "Metasploit"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1566.001",
+        "name": "Spearphishing Attachment"
+      },
+      {
+        "id": "T1190",
+        "name": "Exploit Public-Facing Application"
+      },
+      {
+        "id": "T1195.002",
+        "name": "Supply Chain Compromise"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      },
+      {
+        "id": "T1059.003",
+        "name": "Windows Command Shell"
+      },
+      {
+        "id": "T1047",
+        "name": "WMI"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1547.001",
+        "name": "Registry Run Keys"
+      },
+      {
+        "id": "T1053.005",
+        "name": "Scheduled Task"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1068",
+        "name": "Exploitation for Privilege Escalation"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files"
+      },
+      {
+        "id": "T1070",
+        "name": "Indicator Removal"
+      },
+      {
+        "id": "T1036",
+        "name": "Masquerading"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1110",
+        "name": "Brute Force"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1083",
+        "name": "File and Directory Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.002",
+        "name": "SMB/Windows Admin Shares"
+      },
+      {
+        "id": "T1570",
+        "name": "Lateral Tool Transfer"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Web Protocols"
+      },
+      {
+        "id": "T1573",
+        "name": "Encrypted Channel"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      }
+    ],
+    "impact": [
+      {
+        "id": "T1485",
+        "name": "Data Destruction"
+      },
+      {
+        "id": "T1486",
+        "name": "Data Encrypted for Impact"
+      },
+      {
+        "id": "T1489",
+        "name": "Service Stop"
+      },
+      {
+        "id": "T1529",
+        "name": "System Shutdown/Reboot"
+      },
+      {
+        "id": "T1495",
+        "name": "Firmware Corruption"
+      }
+    ]
+  },
+  "emulation_plans": [
+    {
+      "name": "MITRE CTID - Sandworm Full Emulation Plan",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/sandworm",
+      "desc": "Complete Sandworm emulation with detection and protection scenarios, YARA rules, and ICS focus"
+    },
+    {
+      "name": "Sandworm Emulation Plan - Scenario 1",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/sandworm/Emulation_Plan/Scenario_1",
+      "desc": "Step-by-step walkthrough: SSH compromise, webshell, lateral movement, data destruction"
+    },
+    {
+      "name": "ATT&CK Evaluations Library - Sandworm",
+      "source": "MITRE Engenuity",
+      "type": "Framework",
+      "url": "https://github.com/attackevals/ael",
+      "desc": "Official Sandworm evaluation plan with destructive operations"
+    },
+    {
+      "name": "AttackIQ - Sandworm Emulation Part 1",
+      "source": "AttackIQ",
+      "type": "Commercial",
+      "url": "https://www.attackiq.com/2024/03/05/emulating-the-sabotage-focused-russian-adversary-sandworm-part-1/",
+      "desc": "Destructive operations validation for Sandworm TTPs"
+    },
+    {
+      "name": "ESET Industroyer2 Technical Analysis",
+      "source": "ESET",
+      "type": "Guide",
+      "url": "https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/",
+      "desc": "Deep technical analysis of Industroyer2 ICS malware with YARA rules"
+    },
+    {
+      "name": "Sandworm Emulation - Scenario 2 Protection",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/sandworm/Emulation_Plan/Scenario_2",
+      "desc": "Protection scenario: 3 independent tests for CaddyWiper, Exaramel, and NotPetya-style propagation"
+    },
+    {
+      "name": "AttackIQ: Emulating Sandworm Part 2",
+      "source": "AttackIQ",
+      "type": "Commercial",
+      "url": "https://www.attackiq.com/2024/03/12/emulating-sandworm-part-2/",
+      "desc": "ICS targeting and wiper deployment validation scenarios"
+    },
+    {
+      "name": "Emulating Sandworm - Part 1",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2024/03/06/emulating-sandworm/",
+      "desc": "Post-compromise TTP emulation: ICS targeting, wiper deployment, EternalBlue propagation"
+    },
+    {
+      "name": "Emulating Sandworm - Part 2",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2024/07/03/emulating-sandworm-2/",
+      "desc": "HermeticWiper, HermeticWizard spreader, and destructive operations validation"
+    },
+    {
+      "name": "Emulating the Destructive Sandworm Adversary (2025)",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2025/11/14/sandworm/",
+      "desc": "Latest 2025 Sandworm emulation: nano.exe and system.exe samples, scheduled task persistence"
+    },
+    {
+      "name": "Unearthing APT44: Russia's Sandworm",
+      "source": "Google Cloud / Mandiant",
+      "type": "Blog Post",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/apt44-unearthing-sandworm",
+      "desc": "Mandiant's comprehensive analysis of Sandworm graduating to APT44 designation"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2015",
+      "name": "Ukraine Power Grid Attack",
+      "description": "First cyberattack to cause power outage; 230,000 customers affected."
+    },
+    {
+      "year": "2017",
+      "name": "NotPetya",
+      "description": "Destructive wiper disguised as ransomware; $10B+ in global damages."
+    },
+    {
+      "year": "2018",
+      "name": "Olympic Destroyer",
+      "description": "Destructive attack on PyeongChang Winter Olympics infrastructure."
+    },
+    {
+      "year": "2022",
+      "name": "Industroyer2/CaddyWiper",
+      "description": "Attempted power grid attack during Russia-Ukraine war."
+    },
+    {
+      "year": "2023",
+      "name": "AcidPour Campaign",
+      "description": "Destructive wiper targeting Linux and IoT devices in Ukraine."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA AA22-110A: Russian State-Sponsored Threats",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a"
+    },
+    {
+      "title": "FBI: Snake Malware (Operation MEDUSA)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0034",
+      "url": "https://attack.mitre.org/groups/G0034/"
+    },
+    {
+      "title": "Mandiant: Sandworm - Destructive Threat Actor",
+      "url": "https://www.mandiant.com/resources/blog/sandworm-disrupts-power-ukraine-operational-technology"
+    },
+    {
+      "title": "ESET: Industroyer2 Analysis",
+      "url": "https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/"
+    },
+    {
+      "title": "DOJ: Sandworm GRU Officers Indictment",
+      "url": "https://www.justice.gov/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and"
+    },
+    {
+      "title": "Dragos: ELECTRUM Threat Group",
+      "url": "https://www.dragos.com/threat/electrum/"
+    },
+    {
+      "title": "Malpedia: Sandworm",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/sandworm"
+    },
+    {
+      "title": "Secureworks: IRON VIKING Profile",
+      "url": "https://www.secureworks.com/research/threat-profiles/iron-viking"
+    },
+    {
+      "title": "CrowdStrike: Voodoo Bear",
+      "url": "https://www.crowdstrike.com/adversaries/voodoo-bear/"
+    },
+    {
+      "title": "Microsoft: Seashell Blizzard (IRIDIUM)",
+      "url": "https://www.microsoft.com/en-us/security/blog/2023/04/07/forestblizzard-update/"
+    },
+    {
+      "title": "Wired: Sandworm (Andy Greenberg book)",
+      "url": "https://www.wired.com/story/sandworm-kremlin-most-dangerous-hackers/"
+    },
+    {
+      "title": "CISA: Cyclops Blink Advisory",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-054a"
+    },
+    {
+      "title": "ESET: HermeticWiper Analysis",
+      "url": "https://www.welivesecurity.com/2022/03/01/isaacwiper-hermeticwizard-wiper-worm-targeting-ukraine/"
+    },
+    {
+      "title": "Mandiant: UNC3810 Ukraine Operations",
+      "url": "https://www.mandiant.com/resources/blog/gru-disruptive-playbook"
+    },
+    {
+      "title": "NIST SP 800-82 Rev 3: ICS Security Guide",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+    }
+  ],
+  "mitre_id": "G0034",
+  "image": "sandworm.jpeg",
+  "attack_flow": {
+    "campaign": "Ukraine Power Grid Attack (2015-2016)",
+    "steps": [
+      {
+        "step": "Spearphishing Email",
+        "tid": "T1566.001",
+        "tactic": "Initial Access",
+        "desc": "Phishing to Ukrainian energy sector employees"
+      },
+      {
+        "step": "BlackEnergy Dropper",
+        "tid": "T1204.002",
+        "tactic": "Execution",
+        "desc": "Weaponized Excel deploying BlackEnergy"
+      },
+      {
+        "step": "Credential Harvesting",
+        "tid": "T1003",
+        "tactic": "Credential Access",
+        "desc": "Dumps credentials from compromised workstations"
+      },
+      {
+        "step": "VPN to OT Network",
+        "tid": "T1021.001",
+        "tactic": "Lateral Movement",
+        "desc": "Stolen VPN creds to pivot into SCADA/ICS"
+      },
+      {
+        "step": "ICS Manipulation",
+        "tid": "T1565",
+        "tactic": "Impact",
+        "desc": "Commands to open circuit breakers via SCADA HMI"
+      },
+      {
+        "step": "KillDisk Wiper",
+        "tid": "T1485",
+        "tactic": "Impact",
+        "desc": "KillDisk to destroy evidence and prevent recovery"
+      },
+      {
+        "step": "UPS Firmware Attack",
+        "tid": "T1495",
+        "tactic": "Impact",
+        "desc": "Corrupts UPS firmware to prevent power restoration"
+      },
+      {
+        "step": "Phone Flood DoS",
+        "tid": "T1498",
+        "tactic": "Impact",
+        "desc": "TDoS on utility call center to delay response"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "GRU Unit 74455 (GTsST), six indicted officers",
+    "infrastructure": "BlackEnergy C2, compromised ISP infrastructure, VPNFilter (500K+ devices)",
+    "capability": "BlackEnergy, Industroyer, NotPetya, Olympic Destroyer, CaddyWiper, AcidRain, VPNFilter",
+    "victim": "Ukrainian power grid, Maersk, Merck, FedEx, PyeongChang Olympics"
+  },
+  "cves": [
+    {
+      "id": "CVE-2014-4114",
+      "desc": "Windows OLE RCE (BlackEnergy campaigns)",
+      "year": "2014"
+    },
+    {
+      "id": "CVE-2017-0144",
+      "desc": "EternalBlue SMB — NotPetya worm propagation",
+      "year": "2017"
+    },
+    {
+      "id": "CVE-2023-38831",
+      "desc": "WinRAR RCE in 2023 Ukraine campaigns",
+      "year": "2023"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "update-ede3[.]com",
+      "transaborede[.]com"
+    ],
+    "hashes": [
+      "SHA256: 027c...e91a (Industroyer)",
+      "SHA256: d5e8...f4c1 (NotPetya)"
+    ],
+    "sigma_rules": [
+      "proc_creation_win_susp_schtasks",
+      "file_event_win_creation_mbr_overwrite"
+    ]
+  },
+  "detection": [
+    {
+      "title": "ICS/SCADA Protocol Anomaly Detection",
+      "content": "Deploy OT-specific IDS to monitor IEC 104, Modbus, DNP3 traffic patterns. Alert on unauthorized SCADA commands outside maintenance windows. Detect anomalous circuit breaker open/close command sequences. Baseline normal OT traffic patterns for deviation detection.",
+      "url": "https://www.dragos.com/threat/electrum/"
+    },
+    {
+      "title": "Wiper Malware / MBR Modification",
+      "content": "Monitor for MBR/VBR modification attempts via raw disk access. Alert on mass SMB lateral movement patterns consistent with worm propagation. Detect rundll32.exe loading DLLs with perfc.dat or similar naming conventions. Sysmon Event ID 1 + raw access monitoring.",
+      "url": "https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/"
+    },
+    {
+      "title": "VPNFilter/Cyclops Blink IoT Detection",
+      "content": "Monitor network edge devices (routers, firewalls, NAS) for unexpected reboots, configuration changes, or outbound C2 beaconing. Scan SOHO devices for known VPNFilter/Cyclops Blink indicators. FBI published YARA rules for Cyclops Blink detection.",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-054a"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "APT28",
+      "relationship": "Sister GRU unit",
+      "desc": "Unit 74455 (destructive) vs Unit 26165 (espionage)."
+    },
+    {
+      "name": "Turla",
+      "relationship": "Russian co-operator",
+      "desc": "FSB group, different command structure."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Air-gap or segment IT from OT/ICS/SCADA. Use unidirectional gateways where data transfer is needed.",
+      "source": "NIST SP 800-82 Rev 3",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+    },
+    {
+      "text": "Deploy OT-specific monitoring (Dragos, Claroty, Nozomi) for ICS protocol anomaly detection.",
+      "source": "CISA ICS-CERT",
+      "url": "https://www.cisa.gov/topics/industrial-control-systems"
+    },
+    {
+      "text": "Patch EternalBlue (MS17-010) and disable SMBv1. NotPetya used EternalBlue for propagation causing $10B+ damages.",
+      "source": "Microsoft MS17-010",
+      "url": "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010"
+    },
+    {
+      "text": "Implement immutable offline backups. Test restoration quarterly. Sandworm deploys wipers to destroy recovery.",
+      "source": "CISA Ransomware Guide",
+      "url": "https://www.cisa.gov/stopransomware/ransomware-guide"
+    },
+    {
+      "text": "Establish OT incident response with manual override procedures. Operators must run facilities without digital controls.",
+      "source": "NERC CIP Standards",
+      "url": "https://www.nerc.com/pa/Stand/Pages/CIPStandards.aspx"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "CISA AA22-110A Russian Threats",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a",
+      "desc": "Russian state-sponsored cyber threats overview"
+    },
+    {
+      "name": "CISA AA23-129A Snake Malware",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a",
+      "desc": "Snake malware network (shared with Turla)"
+    },
+    {
+      "name": "DOJ Sandworm Indictment",
+      "url": "https://www.justice.gov/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and",
+      "desc": "GRU officer indictments with operational details"
+    },
+    {
+      "name": "ESET Industroyer2 IOCs",
+      "url": "https://github.com/eset/malware-ioc/tree/master/industroyer2",
+      "desc": "ESET published Industroyer2 IOCs on GitHub"
+    },
+    {
+      "name": "MITRE ATT&CK G0034",
+      "url": "https://attack.mitre.org/groups/G0034/",
+      "desc": "Full Sandworm technique and software mapping"
+    },
+    {
+      "name": "Dragos ELECTRUM IOCs",
+      "url": "https://www.dragos.com/threat/electrum/",
+      "desc": "ICS-focused threat intelligence on Sandworm"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "Industroyer Analysis",
+      "url": "https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/",
+      "type": "ICS Malware"
+    },
+    {
+      "name": "BlackEnergy Analysis",
+      "url": "https://www.welivesecurity.com/2016/01/03/blackenergy-sshbeardoor-details-2015-attacks-ukrainian-news-media-electric-industry/",
+      "type": "Backdoor"
+    },
+    {
+      "name": "Impacket",
+      "url": "https://github.com/fortra/impacket",
+      "type": "Network Protocols"
+    },
+    {
+      "name": "Industroyer2",
+      "url": "https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/",
+      "type": "ICS Malware"
+    },
+    {
+      "name": "CaddyWiper",
+      "url": "https://www.welivesecurity.com/2022/03/15/caddywiper-new-wiper-malware-discovered-ukraine/",
+      "type": "Wiper"
+    },
+    {
+      "name": "HermeticWiper",
+      "url": "https://www.welivesecurity.com/2022/03/01/isaacwiper-hermeticwizard-wiper-worm-targeting-ukraine/",
+      "type": "Wiper"
+    },
+    {
+      "name": "NotPetya",
+      "url": "https://attack.mitre.org/software/S0368/",
+      "type": "Destructive Wiper/Ransomware"
+    },
+    {
+      "name": "Olympic Destroyer",
+      "url": "https://attack.mitre.org/software/S0365/",
+      "type": "Destructive Malware"
+    },
+    {
+      "name": "VPNFilter",
+      "url": "https://attack.mitre.org/software/S0496/",
+      "type": "IoT Botnet"
+    },
+    {
+      "name": "Cyclops Blink",
+      "url": "https://www.ncsc.gov.uk/news/joint-advisory-shows-new-sandworm-malware-cyclops-blink-replaces-vpnfilter",
+      "type": "Router Malware"
+    },
+    {
+      "name": "AcidRain",
+      "url": "https://www.sentinelone.com/labs/acidrain-a-modem-wiper-rains-down-on-europe/",
+      "type": "Modem Wiper"
+    },
+    {
+      "name": "BlackEnergy",
+      "url": "https://attack.mitre.org/software/S0089/",
+      "type": "Backdoor/ICS Targeting"
+    },
+    {
+      "name": "KillDisk",
+      "url": "https://attack.mitre.org/software/S0607/",
+      "type": "Disk Wiper"
+    },
+    {
+      "name": "Metasploit",
+      "url": "https://github.com/rapid7/metasploit-framework",
+      "type": "Exploitation Framework"
+    }
+  ],
+  "target_industries": [
+    "Energy/Power Grid",
+    "Transportation",
+    "Government",
+    "Financial Services",
+    "Media",
+    "Olympics",
+    "Shipping"
+  ],
+  "target_country_flags": [
+    {
+      "country": "Ukraine",
+      "flag": "🇺🇦"
+    },
+    {
+      "country": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "country": "Global (NotPetya)",
+      "flag": "🌍"
+    },
+    {
+      "country": "South Korea",
+      "flag": "🇰🇷"
+    },
+    {
+      "country": "Georgia",
+      "flag": "🇬🇪"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "DOJ indicts 6 GRU Unit 74455 officers (Oct 2020)",
+        "url": "https://www.justice.gov/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and"
+      },
+      {
+        "text": "US/UK publicly attribute NotPetya to Russian military",
+        "url": "https://www.whitehouse.gov/briefings-statements/statement-press-secretary-25/"
+      },
+      {
+        "text": "EU sanctions GRU Unit 74455",
+        "url": "https://www.consilium.europa.eu/en/press/press-releases/2020/10/22/cyber-attacks-council-imposes-sanctions-against-russian-military-intelligence/"
+      },
+      {
+        "text": "Ukraine CERT attributes power grid attacks",
+        "url": "https://cert.gov.ua/"
+      }
+    ]
+  },
+  "legal_actions": [
+    {
+      "date": "2020-10",
+      "type": "Indictment",
+      "title": "DOJ indicts 6 GRU officers for NotPetya, Olympics, Ukraine attacks",
+      "url": "https://www.justice.gov/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and"
+    },
+    {
+      "date": "2018-02",
+      "type": "Attribution",
+      "title": "US/UK publicly attribute NotPetya to Russian military",
+      "url": "https://www.whitehouse.gov/briefings-statements/statement-press-secretary-25/"
+    },
+    {
+      "date": "2020-10",
+      "type": "Sanctions",
+      "title": "EU sanctions GRU Unit 74455 officers",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2020/10/22/cyber-attacks-council-imposes-sanctions-against-russian-military-intelligence/"
+    }
+  ],
+  "threat_assessment": {
+    "capability": 10,
+    "intent": 10,
+    "targeting": 9,
+    "overall": "Critical",
+    "summary": "Most destructive cyber threat actor globally. Responsible for $10B+ in damages via NotPetya. Demonstrated ICS/SCADA attack capability against power grids."
+  },
+  "kill_chain": [
+    {
+      "phase": "Reconnaissance",
+      "mapping": "Targeting Ukrainian energy sector employees, mapping ICS/SCADA network architecture"
+    },
+    {
+      "phase": "Weaponization",
+      "mapping": "Industroyer/CrashOverride for ICS, BlackEnergy dropper, NotPetya wiper, Olympic Destroyer"
+    },
+    {
+      "phase": "Delivery",
+      "mapping": "Spearphishing to energy sector, supply chain via M.E.Doc software update (NotPetya), VPNFilter router compromise"
+    },
+    {
+      "phase": "Exploitation",
+      "mapping": "CVE-2017-0144 (EternalBlue), CVE-2014-4114 (Windows OLE), CVE-2023-38831 (WinRAR)"
+    },
+    {
+      "phase": "Installation",
+      "mapping": "BlackEnergy, Industroyer2, CaddyWiper, AcidRain (satellite modem wiper), VPNFilter on 500K+ routers"
+    },
+    {
+      "phase": "Command & Control",
+      "mapping": "Compromised ISP infrastructure, VPNFilter P2P network, Tor-based C2"
+    },
+    {
+      "phase": "Actions on Objectives",
+      "mapping": "Power grid shutdown (2015, 2016), global supply chain destruction (NotPetya), Olympics disruption, satellite communications disruption (Viasat)"
+    }
+  ],
+  "recent_news": [
+    {
+      "date": "2025-05",
+      "title": "CISA AA25-141A references Sandworm logistics targeting",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a"
+    },
+    {
+      "date": "2024-04",
+      "title": "Mandiant: Sandworm APT14 targeting Ukrainian infrastructure",
+      "url": "https://www.mandiant.com/resources/blog/sandworm-disrupts-power-ukraine-operational-technology"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0034",
+      "url": "https://attack.mitre.org/groups/G0034/"
+    },
+    {
+      "name": "CISA AA22-110A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a"
+    },
+    {
+      "name": "DOJ Sandworm Indictment",
+      "url": "https://www.justice.gov/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and"
+    },
+    {
+      "name": "ESET Industroyer2",
+      "url": "https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/"
+    },
+    {
+      "name": "Dragos ELECTRUM",
+      "url": "https://www.dragos.com/threat/electrum/"
+    },
+    {
+      "name": "Mandiant Sandworm Reports",
+      "url": "https://www.mandiant.com/resources/blog/sandworm-disrupts-power-ukraine-operational-technology"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1190",
+      "name": "Exploit Public-Facing Application",
+      "tactic": "Initial Access",
+      "tool": "Metasploit",
+      "command": "use exploit/windows/smb/ms17_010_eternalblue",
+      "platform": "Linux",
+      "url": "https://github.com/rapid7/metasploit-framework",
+      "note": "EternalBlue exploitation - used by NotPetya"
+    },
+    {
+      "tid": "T1485",
+      "name": "Data Destruction",
+      "tactic": "Impact",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1485 -TestNumbers 1",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.md",
+      "note": "Simulates wiper malware data destruction"
+    },
+    {
+      "tid": "T1021.001",
+      "name": "Remote Desktop Protocol",
+      "tactic": "Lateral Movement",
+      "tool": "xfreerdp",
+      "command": "xfreerdp /v:target /u:user /p:password /cert:ignore",
+      "platform": "Linux",
+      "url": "https://github.com/FreeRDP/FreeRDP",
+      "note": "RDP lateral movement with stolen credentials"
+    },
+    {
+      "tid": "T1053.005",
+      "name": "Scheduled Task",
+      "tactic": "Persistence",
+      "tool": "Atomic Red Team",
+      "command": "Invoke-AtomicTest T1053.005 -TestNumbers 1,2",
+      "platform": "Windows",
+      "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.md",
+      "note": "Creates scheduled tasks for persistence"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  {"name":"Adversary Village","role":"Project Lead","bio":"Offensive security community focused on adversary simulation, purple teaming, and nation-state threat actor research.","url":"https://adversaryvillage.org","github":"https://github.com/adversaryvillage","twitter":"https://twitter.com/AdversaryVillag"},
+  {"name":"MITRE ATT&CK","role":"Framework & Data","bio":"Global knowledge base of adversary tactics and techniques. Primary data source for technique mappings and group profiles.","url":"https://attack.mitre.org","github":"https://github.com/mitre-attack"},
+  {"name":"MITRE CTID","role":"Attack Flow & Emulation","bio":"Center for Threat-Informed Defense. Provides Attack Flow framework and adversary emulation libraries used throughout this project.","url":"https://ctid.mitre.org","github":"https://github.com/center-for-threat-informed-defense"},
+  {"name":"Community Contributors","role":"Data & Research","bio":"Open-source contributors who submit threat actor profiles, verify IOCs, and improve detection engineering content via GitHub pull requests.","url":"https://github.com/adversaryvillage/threat-actors","github":"https://github.com/adversaryvillage/threat-actors"}
+]

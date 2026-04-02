@@ -1,0 +1,576 @@
+{
+  "id": "kimsuky",
+  "name": "Kimsuky",
+  "aliases": [
+    "Velvet Chollima",
+    "Thallium",
+    "Emerald Sleet",
+    "Black Banshee",
+    "APT43",
+    "TA406",
+    "Sparkling Pisces",
+    "ARCHIPELAGO"
+  ],
+  "country": "North Korea",
+  "country_code": "KP",
+  "flag_emoji": "🇰🇵",
+  "attribution": "North Korean Reconnaissance General Bureau (RGB), 63rd Research Center",
+  "motivation": "Espionage, Intelligence Collection",
+  "threat_type": "Nation-State",
+  "first_seen": "2012",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "Kimsuky is a North Korean espionage group focused on intelligence collection supporting DPRK nuclear and geopolitical interests. Specializes in highly targeted social engineering against think tanks, academics, diplomats, and journalists covering Korean Peninsula affairs. Known for extensive use of credential phishing, reconnaissance operations, and deploying custom malware for long-term intelligence gathering.",
+  "target_sectors": [
+    "Think Tanks",
+    "Government",
+    "Academia",
+    "Media",
+    "Defense",
+    "Nuclear/Energy"
+  ],
+  "target_countries": [
+    "South Korea",
+    "United States",
+    "Japan",
+    "Europe"
+  ],
+  "tools": [
+    "BabyShark",
+    "AppleSeed",
+    "FlowerPower",
+    "GoldDragon",
+    "RandomQuery",
+    "ReconShark",
+    "FastViewer",
+    "SHARPEXT",
+    "BabyShark Analysis",
+    "GoPhish"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1566.001",
+        "name": "Spearphishing Attachment"
+      },
+      {
+        "id": "T1566.002",
+        "name": "Spearphishing Link"
+      },
+      {
+        "id": "T1566.003",
+        "name": "Spearphishing via Service"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      },
+      {
+        "id": "T1059.005",
+        "name": "Visual Basic"
+      },
+      {
+        "id": "T1204.002",
+        "name": "Malicious File"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1547.001",
+        "name": "Registry Run Keys"
+      },
+      {
+        "id": "T1176",
+        "name": "Browser Extensions"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1055",
+        "name": "Process Injection"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files"
+      },
+      {
+        "id": "T1036",
+        "name": "Masquerading"
+      },
+      {
+        "id": "T1564",
+        "name": "Hide Artifacts"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1056.001",
+        "name": "Keylogging"
+      },
+      {
+        "id": "T1539",
+        "name": "Steal Web Session Cookie"
+      },
+      {
+        "id": "T1111",
+        "name": "Multi-Factor Authentication Interception"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1057",
+        "name": "Process Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.001",
+        "name": "RDP"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1114.002",
+        "name": "Remote Email Collection"
+      },
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      },
+      {
+        "id": "T1113",
+        "name": "Screen Capture"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Web Protocols"
+      },
+      {
+        "id": "T1102",
+        "name": "Web Service"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      },
+      {
+        "id": "T1567",
+        "name": "Exfiltration Over Web Service"
+      }
+    ],
+    "impact": []
+  },
+  "emulation_plans": [
+    {
+      "name": "CISA AA20-301A Kimsuky Advisory",
+      "source": "CISA",
+      "type": "Guide",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a",
+      "desc": "Comprehensive advisory with TTPs, IOCs, and mitigation guidance"
+    },
+    {
+      "name": "Volexity SHARPEXT Analysis",
+      "source": "Volexity",
+      "type": "Guide",
+      "url": "https://www.volexity.com/blog/2022/07/28/sharptongue-deploys-clever-mail-stealing-browser-extension-sharpext/",
+      "desc": "Technical analysis of SHARPEXT Chrome extension with detection methods"
+    },
+    {
+      "name": "SentinelOne: ReconShark Deep Dive",
+      "source": "SentinelOne",
+      "type": "Guide",
+      "url": "https://www.sentinelone.com/labs/kimsuky-evolves-reconnaissance-capabilities-in-new-global-campaign/",
+      "desc": "Technical analysis of ReconShark with detection rules and emulation guidance"
+    },
+    {
+      "name": "Emulating Kimsuky's Espionage Operations",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2023/04/26/emulating-kimsukys-espionage-operations/",
+      "desc": "Emulation of Kimsuky credential phishing, browser extension deployment, and intelligence collection"
+    },
+    {
+      "name": "Combatting Kimsuky and Safeguarding National Intelligence",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2023/11/02/combatting-kimsuky/",
+      "desc": "In-depth emulation of Kimsuky behaviors with CISA AA20-301A response scenarios"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2014",
+      "name": "Korea Hydro Nuclear Power Breach",
+      "description": "Infiltration of South Korean nuclear power operator."
+    },
+    {
+      "year": "2019",
+      "name": "KISA Alert Campaign",
+      "description": "Targeting of journalists and diplomats covering DPRK."
+    },
+    {
+      "year": "2023",
+      "name": "ReconShark Campaign",
+      "description": "Spearphishing campaign targeting North Korea policy experts."
+    },
+    {
+      "year": "2024",
+      "name": "SHARPEXT Browser Extension",
+      "description": "Deployment of malicious browser extension to steal email from Chrome/Edge."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA AA20-301A: Kimsuky North Korean APT",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0094",
+      "url": "https://attack.mitre.org/groups/G0094/"
+    },
+    {
+      "title": "SentinelOne: Kimsuky SHARPEXT",
+      "url": "https://www.sentinelone.com/labs/kimsuky-new-social-engineering-campaign-aims-to-steal-credentials-and-gather-strategic-intelligence/"
+    },
+    {
+      "title": "AhnLab: Kimsuky Operations in Korea",
+      "url": "https://asec.ahnlab.com/en/57873/"
+    },
+    {
+      "title": "Rapid7: Kimsuky Social Engineering",
+      "url": "https://www.rapid7.com/blog/post/2024/03/14/social-engineering-by-dprk/"
+    },
+    {
+      "title": "Malpedia: Kimsuky",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/kimsuky"
+    }
+  ],
+  "mitre_id": "G0094",
+  "image": "kimsuky.png",
+  "attack_flow": {
+    "campaign": "ReconShark / SHARPEXT (2023-2024)",
+    "steps": [
+      {
+        "step": "Credential Phishing Email",
+        "tid": "T1566.002",
+        "tactic": "Initial Access",
+        "desc": "Impersonates journalist requesting interview"
+      },
+      {
+        "step": "Fake Login Portal",
+        "tid": "T1056.003",
+        "tactic": "Credential Access",
+        "desc": "Victim enters creds on cloned login page"
+      },
+      {
+        "step": "Browser Extension",
+        "tid": "T1176",
+        "tactic": "Persistence",
+        "desc": "SHARPEXT Chrome extension reads email silently"
+      },
+      {
+        "step": "Recon Scripts",
+        "tid": "T1059.005",
+        "tactic": "Discovery",
+        "desc": "VBScript collects system info and software"
+      },
+      {
+        "step": "Keylogger",
+        "tid": "T1056.001",
+        "tactic": "Collection",
+        "desc": "BabyShark/AppleSeed captures credentials"
+      },
+      {
+        "step": "Email Exfiltration",
+        "tid": "T1114.002",
+        "tactic": "Collection",
+        "desc": "SHARPEXT forwards all email to attacker"
+      },
+      {
+        "step": "Cloud C2",
+        "tid": "T1102",
+        "tactic": "Command & Control",
+        "desc": "Google Drive, Dropbox for C2 and exfil"
+      },
+      {
+        "step": "Intelligence Delivery",
+        "tid": "T1567",
+        "tactic": "Exfiltration",
+        "desc": "Stolen intelligence delivered to RGB handlers"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "RGB 63rd Research Center, operators posing as academics",
+    "infrastructure": "Compromised university websites, free hosting, Google/Dropbox for C2",
+    "capability": "BabyShark, AppleSeed, ReconShark, SHARPEXT, FlowerPower, GoldDragon, FastViewer",
+    "victim": "Think tanks (CSIS, Stimson), academics, journalists, diplomats on Korea policy"
+  },
+  "cves": [
+    {
+      "id": "CVE-2021-40444",
+      "desc": "MSHTML RCE in document attacks on South Korean targets",
+      "year": "2021"
+    },
+    {
+      "id": "CVE-2022-41128",
+      "desc": "Windows Scripting RCE via IE in phishing",
+      "year": "2022"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "nfrfrede[.]com",
+      "web-kakao-login[.]com"
+    ],
+    "hashes": [
+      "SHA256: 8f1a...c2d7 (ReconShark)",
+      "SHA256: 3b5e...f891 (SHARPEXT)"
+    ],
+    "sigma_rules": [
+      "file_event_win_susp_browser_extension",
+      "proc_creation_win_susp_wscript"
+    ]
+  },
+  "detection": [
+    {
+      "title": "Unauthorized Browser Extension Detection",
+      "content": "Monitor Chrome/Edge extension installations via registry (HKCU\\Software\\Google\\Chrome\\Extensions). Alert on sideloaded extensions not from official Web Store. Detect modifications to browser Preferences and Secure Preferences files that bypass extension verification.",
+      "url": "https://www.volexity.com/blog/2022/07/28/sharptongue-deploys-clever-mail-stealing-browser-extension-sharpext/"
+    },
+    {
+      "title": "Credential Phishing Infrastructure",
+      "content": "Deploy URL filtering to block newly registered domains (<30 days old) mimicking login portals. Monitor for certificate transparency logs registering domains similar to organizational login pages. Alert on HTML attachments with credential harvesting forms.",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a"
+    },
+    {
+      "title": "Cloud C2 via Google Drive/Dropbox",
+      "content": "Monitor for unusual file upload/download patterns to cloud storage from endpoints. Detect OAuth token grants to unfamiliar third-party applications. Alert on API calls to Google Drive/Dropbox from processes other than official clients.",
+      "url": "https://asec.ahnlab.com/en/57873/"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "Lazarus Group",
+      "relationship": "Same nation (DPRK)",
+      "desc": "Both RGB but different missions."
+    },
+    {
+      "name": "APT37",
+      "relationship": "DPRK co-operator",
+      "desc": "ScarCruft/Reaper — overlapping South Korea targeting."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Deploy FIDO2/WebAuthn phishing-resistant MFA. Kimsuky's primary vector is credential phishing via cloned portals.",
+      "source": "CISA AA20-301A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a"
+    },
+    {
+      "text": "Manage browser extensions via GPO. Allow only approved extensions. Kimsuky deploys SHARPEXT to read Gmail silently.",
+      "source": "Volexity SHARPEXT",
+      "url": "https://www.volexity.com/blog/2022/07/28/sharptongue-deploys-clever-mail-stealing-browser-extension-sharpext/"
+    },
+    {
+      "text": "Monitor email forwarding rules for unauthorized external forwarding. Kimsuky creates silent forwarding rules.",
+      "source": "Microsoft EOP Guide",
+      "url": "https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "CISA AA20-301A Kimsuky",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a",
+      "desc": "Kimsuky APT IOCs and detection guidance"
+    },
+    {
+      "name": "MITRE ATT&CK G0094",
+      "url": "https://attack.mitre.org/groups/G0094/",
+      "desc": "Full Kimsuky technique mapping"
+    },
+    {
+      "name": "AhnLab Kimsuky IOCs",
+      "url": "https://asec.ahnlab.com/en/57873/",
+      "desc": "Korean security vendor Kimsuky analysis"
+    },
+    {
+      "name": "SentinelOne SHARPEXT",
+      "url": "https://www.sentinelone.com/labs/kimsuky-new-social-engineering-campaign-aims-to-steal-credentials-and-gather-strategic-intelligence/",
+      "desc": "SHARPEXT browser extension analysis"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "BabyShark Analysis",
+      "url": "https://unit42.paloaltonetworks.com/new-babyshark-malware-targets-u-s-national-security-think-tanks/",
+      "type": "Reconnaissance Backdoor"
+    },
+    {
+      "name": "BabyShark",
+      "url": "https://attack.mitre.org/software/S0414/",
+      "type": "VBS Backdoor"
+    },
+    {
+      "name": "AppleSeed",
+      "url": "https://attack.mitre.org/software/S1055/",
+      "type": "Backdoor"
+    },
+    {
+      "name": "ReconShark",
+      "url": "https://www.sentinelone.com/labs/kimsuky-evolves-reconnaissance-capabilities-in-new-global-campaign/",
+      "type": "Reconnaissance Tool"
+    },
+    {
+      "name": "SHARPEXT",
+      "url": "https://www.volexity.com/blog/2022/07/28/sharptongue-deploys-clever-mail-stealing-browser-extension-sharpext/",
+      "type": "Browser Extension"
+    },
+    {
+      "name": "FlowerPower",
+      "url": "https://attack.mitre.org/software/S1043/",
+      "type": "PowerShell Backdoor"
+    },
+    {
+      "name": "GoldDragon",
+      "url": "https://attack.mitre.org/software/S1032/",
+      "type": "Multi-Stage Backdoor"
+    },
+    {
+      "name": "GoPhish",
+      "url": "https://github.com/gophish/gophish",
+      "type": "Phishing Framework"
+    }
+  ],
+  "target_industries": [
+    "Think Tanks",
+    "Academia",
+    "Government",
+    "Journalism",
+    "Diplomacy",
+    "Nuclear Research"
+  ],
+  "target_country_flags": [
+    {
+      "country": "South Korea",
+      "flag": "🇰🇷"
+    },
+    {
+      "country": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "country": "Japan",
+      "flag": "🇯🇵"
+    },
+    {
+      "country": "European Union",
+      "flag": "🇪🇺"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "CISA/FBI/CNMF joint Kimsuky advisory (2020)",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a"
+      },
+      {
+        "text": "South Korean NIS attribution to RGB 63rd Research Center",
+        "url": "https://attack.mitre.org/groups/G0094/"
+      },
+      {
+        "text": "Multiple vendor attributions (AhnLab, SentinelOne, Rapid7)",
+        "url": "https://asec.ahnlab.com/en/57873/"
+      }
+    ]
+  },
+  "legal_actions": [],
+  "threat_assessment": {
+    "capability": 6,
+    "intent": 8,
+    "targeting": 6,
+    "overall": "Moderate",
+    "summary": "Prolific but less technically sophisticated than Lazarus. Relies heavily on social engineering. Primary mission is intelligence collection on DPRK policy."
+  },
+  "kill_chain": [],
+  "recent_news": [
+    {
+      "date": "2024-03",
+      "title": "Rapid7: Kimsuky social engineering targeting researchers",
+      "url": "https://www.rapid7.com/blog/post/2024/03/14/social-engineering-by-dprk/"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0094",
+      "url": "https://attack.mitre.org/groups/G0094/"
+    },
+    {
+      "name": "CISA AA20-301A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a"
+    },
+    {
+      "name": "AhnLab ASEC Reports",
+      "url": "https://asec.ahnlab.com/en/57873/"
+    },
+    {
+      "name": "SentinelOne SHARPEXT",
+      "url": "https://www.sentinelone.com/labs/kimsuky-new-social-engineering-campaign-aims-to-steal-credentials-and-gather-strategic-intelligence/"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1566.002",
+      "name": "Spearphishing Link",
+      "tactic": "Initial Access",
+      "tool": "GoPhish",
+      "command": "# Deploy credential harvesting page via GoPhish",
+      "platform": "Linux",
+      "url": "https://github.com/gophish/gophish",
+      "note": "Credential phishing campaign framework"
+    },
+    {
+      "tid": "T1176",
+      "name": "Browser Extensions",
+      "tactic": "Persistence",
+      "tool": "Manual",
+      "command": "# SHARPEXT Chrome extension sideloading",
+      "platform": "Windows",
+      "url": "https://www.volexity.com/blog/2022/07/28/sharptongue-deploys-clever-mail-stealing-browser-extension-sharpext/",
+      "note": "Chrome extension deployment for email theft"
+    }
+  ]
+}

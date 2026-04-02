@@ -1,0 +1,634 @@
+{
+  "id": "turla",
+  "name": "Turla",
+  "aliases": [
+    "Snake",
+    "Venomous Bear",
+    "Secret Blizzard",
+    "KRYPTON",
+    "Waterbug",
+    "Iron Hunter",
+    "Uroburos",
+    "Group 88",
+    "Belugasturgeon",
+    "Pacifier APT"
+  ],
+  "country": "Russia",
+  "country_code": "RU",
+  "flag_emoji": "🇷🇺",
+  "attribution": "Russian Federal Security Service (FSB), Center 16",
+  "motivation": "Espionage",
+  "threat_type": "Nation-State",
+  "first_seen": "1996",
+  "last_seen": "2025",
+  "status": "Active",
+  "description": "Turla is one of the oldest and most sophisticated Russian cyber espionage groups, attributed to the FSB's Center 16. Active since the mid-1990s, the group is known for its innovative techniques including satellite-based C2, hijacking other threat actors' infrastructure, and deploying rootkits. Turla's Snake malware network was dismantled by the FBI in 2023 via Operation MEDUSA, but the group continues to develop new capabilities.",
+  "target_sectors": [
+    "Government",
+    "Diplomacy",
+    "Military",
+    "Research",
+    "Education"
+  ],
+  "target_countries": [
+    "United States",
+    "European Union",
+    "Ukraine",
+    "Central Asia",
+    "Middle East"
+  ],
+  "tools": [
+    "Snake/Uroburos",
+    "Carbon",
+    "Kazuar",
+    "ComRAT",
+    "LightNeuron",
+    "Gazer",
+    "Crutch",
+    "TinyTurla",
+    "Capibar",
+    "DeliveryCheck",
+    "Snake Malware Advisory",
+    "Chisel"
+  ],
+  "attack_techniques": {
+    "initial_access": [
+      {
+        "id": "T1566.001",
+        "name": "Spearphishing Attachment"
+      },
+      {
+        "id": "T1189",
+        "name": "Drive-by Compromise"
+      },
+      {
+        "id": "T1199",
+        "name": "Trusted Relationship"
+      }
+    ],
+    "execution": [
+      {
+        "id": "T1059.001",
+        "name": "PowerShell"
+      },
+      {
+        "id": "T1059.003",
+        "name": "Windows Command Shell"
+      }
+    ],
+    "persistence": [
+      {
+        "id": "T1547.001",
+        "name": "Registry Run Keys"
+      },
+      {
+        "id": "T1543.003",
+        "name": "Windows Service"
+      },
+      {
+        "id": "T1505.003",
+        "name": "Web Shell"
+      }
+    ],
+    "privilege_escalation": [
+      {
+        "id": "T1068",
+        "name": "Exploitation for Privilege Escalation"
+      },
+      {
+        "id": "T1055",
+        "name": "Process Injection"
+      }
+    ],
+    "defense_evasion": [
+      {
+        "id": "T1027",
+        "name": "Obfuscated Files"
+      },
+      {
+        "id": "T1014",
+        "name": "Rootkit"
+      },
+      {
+        "id": "T1553.002",
+        "name": "Code Signing"
+      }
+    ],
+    "credential_access": [
+      {
+        "id": "T1003",
+        "name": "OS Credential Dumping"
+      },
+      {
+        "id": "T1555",
+        "name": "Credentials from Password Stores"
+      }
+    ],
+    "discovery": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1016",
+        "name": "System Network Configuration Discovery"
+      }
+    ],
+    "lateral_movement": [
+      {
+        "id": "T1021.002",
+        "name": "SMB"
+      },
+      {
+        "id": "T1080",
+        "name": "Taint Shared Content"
+      }
+    ],
+    "collection": [
+      {
+        "id": "T1114",
+        "name": "Email Collection"
+      },
+      {
+        "id": "T1005",
+        "name": "Data from Local System"
+      }
+    ],
+    "command_and_control": [
+      {
+        "id": "T1071.001",
+        "name": "Web Protocols"
+      },
+      {
+        "id": "T1102",
+        "name": "Web Service"
+      },
+      {
+        "id": "T1001",
+        "name": "Data Obfuscation"
+      },
+      {
+        "id": "T1205",
+        "name": "Traffic Signaling"
+      }
+    ],
+    "exfiltration": [
+      {
+        "id": "T1041",
+        "name": "Exfiltration Over C2 Channel"
+      },
+      {
+        "id": "T1048",
+        "name": "Exfiltration Over Alternative Protocol"
+      }
+    ],
+    "impact": []
+  },
+  "emulation_plans": [
+    {
+      "name": "MITRE CTID - Turla Full Emulation Plan",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/turla",
+      "desc": "Complete Turla emulation with Carbon and Snake P2P operations"
+    },
+    {
+      "name": "ATT&CK Evaluations - Turla Round 5",
+      "source": "MITRE Engenuity",
+      "type": "Framework",
+      "url": "https://github.com/attackevals/ael",
+      "desc": "Official evaluation featuring Turla Carbon and Snake toolset"
+    },
+    {
+      "name": "CISA Snake Malware Advisory",
+      "source": "CISA/FBI",
+      "type": "Guide",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a",
+      "desc": "Technical advisory with detection guidance for Snake rootkit"
+    },
+    {
+      "name": "ATT&CK Evaluations - Turla Round 5",
+      "source": "MITRE Engenuity",
+      "type": "Framework",
+      "url": "https://github.com/attackevals/ael/tree/main/Enterprise/turla",
+      "desc": "Official Round 5 evaluation with Carbon backdoor and Snake rootkit emulation scenarios"
+    },
+    {
+      "name": "MITRE CTID - Turla Emulation Plan",
+      "source": "MITRE CTID",
+      "type": "Open Source",
+      "url": "https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/turla/Emulation_Plan",
+      "desc": "Step-by-step Carbon and Snake P2P operations with detection and protection scenarios"
+    },
+    {
+      "name": "Hunting Russian Intelligence Snake Malware (CISA AA23-129A)",
+      "source": "AttackIQ",
+      "type": "Blog Post",
+      "url": "https://www.attackiq.com/2023/05/11/attack-graph-response-to-cisa-advisory-aa23-129a/",
+      "desc": "Attack graph response emulating Snake rootkit behaviors from CISA/FBI joint advisory"
+    }
+  ],
+  "notable_campaigns": [
+    {
+      "year": "2008",
+      "name": "Agent.BTZ / Buckshot Yankee",
+      "description": "Compromise of classified US military networks via USB worm."
+    },
+    {
+      "year": "2015",
+      "name": "Satellite C2",
+      "description": "First known use of satellite internet links for covert C2 communications."
+    },
+    {
+      "year": "2020",
+      "name": "Iron Tiger/OilRig Hijack",
+      "description": "Hijacking of Iranian APT infrastructure for own espionage operations."
+    },
+    {
+      "year": "2023",
+      "name": "Operation MEDUSA",
+      "description": "FBI disruption of Snake malware P2P network spanning 50+ countries."
+    }
+  ],
+  "references": [
+    {
+      "title": "CISA AA23-129A: Snake Malware",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+    },
+    {
+      "title": "MITRE ATT&CK Group G0010",
+      "url": "https://attack.mitre.org/groups/G0010/"
+    },
+    {
+      "title": "ESET: Turla LightNeuron",
+      "url": "https://www.welivesecurity.com/2019/05/07/turla-lightneuron-email-too-far/"
+    },
+    {
+      "title": "Kaspersky: Turla/Uroburos Operations",
+      "url": "https://securelist.com/the-epic-turla-operation/65545/"
+    },
+    {
+      "title": "DOJ: FBI Disrupts Snake Malware Network",
+      "url": "https://www.justice.gov/opa/pr/justice-department-announces-court-authorized-disruption-snake-malware-network-controlled"
+    },
+    {
+      "title": "Symantec: Waterbug/Turla Arsenal",
+      "url": "https://symantec-enterprise-blogs.security.com/threat-intelligence/waterbug-espionage-governments"
+    },
+    {
+      "title": "Malpedia: Turla",
+      "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/turla_group"
+    }
+  ],
+  "mitre_id": "G0010",
+  "image": "turla.png",
+  "attack_flow": {
+    "campaign": "Operation MEDUSA / Snake P2P",
+    "steps": [
+      {
+        "step": "Watering Hole",
+        "tid": "T1189",
+        "tactic": "Initial Access",
+        "desc": "Compromises embassy/government websites"
+      },
+      {
+        "step": "Rootkit Installation",
+        "tid": "T1014",
+        "tactic": "Defense Evasion",
+        "desc": "Snake rootkit with kernel-level stealth"
+      },
+      {
+        "step": "Named Pipe P2P C2",
+        "tid": "T1090",
+        "tactic": "Command & Control",
+        "desc": "Snake implants form P2P network for C2"
+      },
+      {
+        "step": "Satellite Internet C2",
+        "tid": "T1205",
+        "tactic": "Command & Control",
+        "desc": "Hijacks satellite links for untraceable C2"
+      },
+      {
+        "step": "Exchange Backdoor",
+        "tid": "T1505.003",
+        "tactic": "Persistence",
+        "desc": "LightNeuron on Exchange intercepts all email"
+      },
+      {
+        "step": "Data Collection",
+        "tid": "T1114",
+        "tactic": "Collection",
+        "desc": "Harvests email and diplomatic communications"
+      },
+      {
+        "step": "Steganographic Exfil",
+        "tid": "T1001",
+        "tactic": "Command & Control",
+        "desc": "Data hidden within images and PDFs"
+      },
+      {
+        "step": "Infrastructure Hijacking",
+        "tid": "T1584",
+        "tactic": "Resource Development",
+        "desc": "Hijacks other APT groups' C2"
+      }
+    ]
+  },
+  "diamond_model": {
+    "adversary": "FSB Center 16, operators in Ryazan, Russia. Snake active since 2003.",
+    "infrastructure": "Global P2P Snake relay (50+ countries), hijacked satellite links, compromised embassies",
+    "capability": "Snake/Uroburos rootkit, Carbon, Kazuar, ComRAT, LightNeuron, TinyTurla, Gazer",
+    "victim": "Government/diplomatic in 50+ countries, NATO, US DoD, European foreign ministries"
+  },
+  "cves": [
+    {
+      "id": "CVE-2013-5065",
+      "desc": "Windows NDProxy.sys privilege escalation",
+      "year": "2013"
+    },
+    {
+      "id": "CVE-2014-1761",
+      "desc": "Word RTF RCE via spearphishing",
+      "year": "2014"
+    },
+    {
+      "id": "CVE-2022-30190",
+      "desc": "Follina MSDT RCE in Ukraine campaigns",
+      "year": "2022"
+    }
+  ],
+  "iocs": {
+    "domains": [
+      "support-ede3[.]com",
+      "travelede[.]com"
+    ],
+    "hashes": [
+      "SHA256: 4c2f...e7a2 (Snake kernel driver)",
+      "SHA256: 7d8a...b3c1 (Carbon framework)"
+    ],
+    "sigma_rules": [
+      "sysmon_driver_load_unsigned",
+      "file_event_win_susp_named_pipe"
+    ]
+  },
+  "detection": [
+    {
+      "title": "Snake Rootkit Detection",
+      "content": "Monitor for unsigned kernel drivers via Sysmon Event ID 6 (Driver Loaded). Detect named pipe patterns used by Snake (e.g., \\\\.\\pipe\\isarpc*). Deploy kernel integrity monitoring tools. The FBI released the PERSEUS tool specifically designed to detect and neutralize Snake installations.",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+    },
+    {
+      "title": "LightNeuron Exchange Backdoor",
+      "content": "Audit Exchange TransportAgent registry entries for unknown DLL assemblies. Monitor for emails being silently forwarded, modified, or blocked by transport rules not created by administrators. Check IIS logs for anomalous Exchange Web Services activity.",
+      "url": "https://www.welivesecurity.com/2019/05/07/turla-lightneuron-email-too-far/"
+    },
+    {
+      "title": "Infrastructure Hijacking Detection",
+      "content": "Monitor for unexpected changes in DNS resolution for known C2 infrastructure of other threat actors. Turla has documented history of hijacking OilRig/APT34 C2 servers. Deploy DNS monitoring for infrastructure changes in threat intel feeds.",
+      "url": "https://securelist.com/the-epic-turla-operation/65545/"
+    }
+  ],
+  "related_actors": [
+    {
+      "name": "APT28",
+      "relationship": "Russian co-operator",
+      "desc": "Turla documented hijacking APT28 infrastructure."
+    },
+    {
+      "name": "APT29",
+      "relationship": "Russian co-operator",
+      "desc": "Different service (FSB vs SVR), may coordinate."
+    },
+    {
+      "name": "OilRig",
+      "relationship": "Hijacked infrastructure",
+      "desc": "Turla hijacked OilRig C2 in 2019-2020."
+    }
+  ],
+  "defense_recommendations": [
+    {
+      "text": "Deploy kernel integrity monitoring. Turla Snake operates at kernel level and evades standard EDR.",
+      "source": "CISA AA23-129A",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+    },
+    {
+      "text": "Audit Exchange transport agents. Remove non-Microsoft agents. LightNeuron installs as transport agent.",
+      "source": "ESET LightNeuron",
+      "url": "https://www.welivesecurity.com/2019/05/07/turla-lightneuron-email-too-far/"
+    },
+    {
+      "text": "Implement strict egress filtering. Allow only known protocols/destinations.",
+      "source": "NIST SP 800-41",
+      "url": "https://csrc.nist.gov/pubs/sp/800/41/r1/final"
+    },
+    {
+      "text": "Review all mitigations in CISA AA23-129A for Snake malware detection and removal.",
+      "source": "CISA/FBI Advisory",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+    }
+  ],
+  "ioc_sources": [
+    {
+      "name": "CISA AA23-129A Snake Malware",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a",
+      "desc": "FBI/CISA Snake malware technical analysis and IOCs"
+    },
+    {
+      "name": "DOJ Snake Network Disruption",
+      "url": "https://www.justice.gov/opa/pr/justice-department-announces-court-authorized-disruption-snake-malware-network-controlled",
+      "desc": "Operation MEDUSA disruption details"
+    },
+    {
+      "name": "MITRE ATT&CK G0010",
+      "url": "https://attack.mitre.org/groups/G0010/",
+      "desc": "Full Turla technique and software mapping"
+    },
+    {
+      "name": "ESET Turla IOCs",
+      "url": "https://github.com/eset/malware-ioc/tree/master/turla",
+      "desc": "ESET published Turla IOCs on GitHub"
+    },
+    {
+      "name": "Kaspersky Epic Turla",
+      "url": "https://securelist.com/the-epic-turla-operation/65545/",
+      "desc": "Comprehensive Turla campaign analysis"
+    }
+  ],
+  "tool_urls": [
+    {
+      "name": "Snake Malware Advisory",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a",
+      "type": "Rootkit/Backdoor"
+    },
+    {
+      "name": "Snake/Uroburos",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a",
+      "type": "Kernel Rootkit"
+    },
+    {
+      "name": "Carbon",
+      "url": "https://attack.mitre.org/software/S0030/",
+      "type": "P2P Backdoor"
+    },
+    {
+      "name": "Kazuar",
+      "url": "https://attack.mitre.org/software/S0265/",
+      "type": "Multiplatform Backdoor"
+    },
+    {
+      "name": "ComRAT",
+      "url": "https://attack.mitre.org/software/S0126/",
+      "type": "RAT (Gmail C2)"
+    },
+    {
+      "name": "LightNeuron",
+      "url": "https://www.welivesecurity.com/2019/05/07/turla-lightneuron-email-too-far/",
+      "type": "Exchange Backdoor"
+    },
+    {
+      "name": "TinyTurla",
+      "url": "https://blog.talosintelligence.com/2021/09/tinyturla.html",
+      "type": "Minimal Backdoor"
+    },
+    {
+      "name": "Gazer",
+      "url": "https://attack.mitre.org/software/S0168/",
+      "type": "Second-Stage Backdoor"
+    },
+    {
+      "name": "Chisel",
+      "url": "https://github.com/jpillora/chisel",
+      "type": "TCP/UDP Tunnel"
+    }
+  ],
+  "target_industries": [
+    "Government/Diplomatic",
+    "Military",
+    "Defense",
+    "Foreign Affairs",
+    "Research Institutions"
+  ],
+  "target_country_flags": [
+    {
+      "country": "Global (50+ countries)",
+      "flag": "🌍"
+    },
+    {
+      "country": "United States",
+      "flag": "🇺🇸"
+    },
+    {
+      "country": "European Union",
+      "flag": "🇪🇺"
+    },
+    {
+      "country": "Ukraine",
+      "flag": "🇺🇦"
+    }
+  ],
+  "attribution_confidence": {
+    "level": "High",
+    "evidence": [
+      {
+        "text": "FBI/CISA Snake malware attribution to FSB Center 16",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+      },
+      {
+        "text": "DOJ disrupts Snake network via Operation MEDUSA",
+        "url": "https://www.justice.gov/opa/pr/justice-department-announces-court-authorized-disruption-snake-malware-network-controlled"
+      },
+      {
+        "text": "ESET, Kaspersky, Symantec long-term tracking",
+        "url": "https://securelist.com/the-epic-turla-operation/65545/"
+      }
+    ]
+  },
+  "legal_actions": [
+    {
+      "date": "2023-05",
+      "type": "Disruption",
+      "title": "DOJ/FBI disrupts Snake malware network via Operation MEDUSA",
+      "url": "https://www.justice.gov/opa/pr/justice-department-announces-court-authorized-disruption-snake-malware-network-controlled"
+    }
+  ],
+  "threat_assessment": {
+    "capability": 10,
+    "intent": 8,
+    "targeting": 8,
+    "overall": "Critical",
+    "summary": "Most technically sophisticated espionage actor. Kernel rootkit capability (Snake), satellite C2, and documented infrastructure hijacking of other APT groups."
+  },
+  "kill_chain": [],
+  "recent_news": [
+    {
+      "date": "2023-05",
+      "title": "FBI/CISA: Snake malware network disrupted",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "MITRE ATT&CK G0010",
+      "url": "https://attack.mitre.org/groups/G0010/"
+    },
+    {
+      "name": "CISA AA23-129A Snake Malware",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+    },
+    {
+      "name": "DOJ Operation MEDUSA",
+      "url": "https://www.justice.gov/opa/pr/justice-department-announces-court-authorized-disruption-snake-malware-network-controlled"
+    },
+    {
+      "name": "ESET Turla Research",
+      "url": "https://github.com/eset/malware-ioc/tree/master/turla"
+    },
+    {
+      "name": "Kaspersky Epic Turla",
+      "url": "https://securelist.com/the-epic-turla-operation/65545/"
+    }
+  ],
+  "page_contributors": [
+    {
+      "name": "Adversary Village",
+      "github": "https://github.com/adversaryvillage",
+      "twitter": "https://twitter.com/AdversaryVillag",
+      "linkedin": "https://linkedin.com/company/adversaryvillage"
+    },
+    {
+      "name": "MITRE ATT&CK Team",
+      "github": "https://github.com/mitre-attack",
+      "twitter": "https://twitter.com/MITREattack",
+      "linkedin": "https://linkedin.com/company/mitre"
+    },
+    {
+      "name": "BreachSimRange",
+      "github": "https://github.com/BreachSimRange",
+      "twitter": "https://twitter.com/BreachSimRange",
+      "linkedin": "https://linkedin.com/company/breachsimrange"
+    }
+  ],
+  "ttp_commands": [
+    {
+      "tid": "T1014",
+      "name": "Rootkit",
+      "tactic": "Defense Evasion",
+      "tool": "Manual",
+      "command": "# Snake kernel rootkit - requires custom driver loading",
+      "platform": "Windows",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a",
+      "note": "Kernel-level rootkit - not safely reproducible in lab"
+    },
+    {
+      "tid": "T1090",
+      "name": "Connection Proxy",
+      "tactic": "Command & Control",
+      "tool": "Chisel",
+      "command": "./chisel server --reverse --port 8080",
+      "platform": "Linux",
+      "url": "https://github.com/jpillora/chisel",
+      "note": "Tunneling proxy for C2 relay chains"
+    }
+  ]
+}
