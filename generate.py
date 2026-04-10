@@ -146,7 +146,7 @@ def hd(t,d=0):
 
 def nv(d=0):
     p="../"*d;h=f"{p}" if d>0 else "index.html";ch=f"{p}contributors/" if d>0 else "contributors/";wh=f"{p}why/" if d>0 else "why/"
-    return f'<nav class="nav-bar"><a href="{h}" class="nav-brand"><div class="nav-brand-icon">ADV</div><div class="nav-brand-text">Threat Actor Profiles</div></a><ul class="nav-links"><li><a href="{h}">Threat Actors</a></li><li><a href="{ch}">Contributors</a></li><li><a href="{wh}">Why This Project</a></li><li><a href="https://adversaryvillage.org" target="_blank">Adversary Village</a></li></ul></nav>'
+    return f'<nav class="nav-bar"><a href="{h}" class="nav-brand"><div class="nav-brand-icon">ADV</div><div class="nav-brand-text">Threat Actor Profiles</div></a><ul class="nav-links"><li><a href="{h}">Threat Actors</a></li><li><a href="{ch}">Contributors</a></li><li><a href="{wh}">Why This Project</a></li><li><a href="https://adversaryvillage.org" target="_blank">Adversary Village</a></li></ul><button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>'
 
 def ft():
     return '<footer class="site-footer"><div class="footer-inner"><div class="footer-brand">Threat Actor Profiles</div><div class="footer-text">An open-source, community-driven threat actor profiles project by <a href="https://adversaryvillage.org" target="_blank" style="color:#604ca9;text-decoration:none;font-weight:600">Adversary Village</a>.</div><div style="color:var(--td);font-size:1.2rem;margin-top:.8rem">&copy; 2026 Adversary Village. All rights reserved.</div><ul class="footer-links"><li><a href="https://adversaryvillage.org" target="_blank">Adversary Village</a></li><li><a href="https://github.com/adversaryvillage" target="_blank">GitHub</a></li></ul></div></footer>'
@@ -491,7 +491,7 @@ def gen_contributors(contributors):
             <div style="font-size:1.5rem;color:#555;line-height:1.65;margin-bottom:1.4rem">{escape(bio)}</div>
             <div style="display:flex;gap:1.4rem;flex-wrap:wrap">{socials}</div>
         </div></div>'''
-    html=f'''{hd('Contributors',1)}<body >{nv(1)}
+    html=f'''{hd('Contributors',1)}<body class="contributors-page">{nv(1)}
 <section style="padding:150px 40px 40px;text-align:center;background:#fff;min-height:60vh">
 <div style="font-family:var(--fb);font-weight:700;font-size:1.4rem;letter-spacing:.4rem;text-transform:uppercase;color:var(--p);margin-bottom:1.6rem">The Team</div>
 <h1 style="font-family:var(--fh);font-size:4.5rem;font-weight:600;color:#333;margin-bottom:1.6rem">Contributors</h1>

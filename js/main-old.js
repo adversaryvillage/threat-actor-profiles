@@ -1,31 +1,6 @@
 // Adversary Threat Actor Encyclopedia - Frontend Logic
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ---- HAMBURGER MENU ----
-  const hamburger = document.querySelector('.nav-hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      navLinks.classList.toggle('open');
-      hamburger.classList.toggle('active');
-    });
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('active');
-      }
-    });
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('active');
-      });
-    });
-  }
-
   // ---- SEARCH ----
   const searchInput = document.getElementById('actor-search');
   const cards = document.querySelectorAll('.actor-card');
