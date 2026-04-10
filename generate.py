@@ -149,7 +149,7 @@ def nv(d=0):
     return f'<nav class="nav-bar"><a href="{h}" class="nav-brand"><div class="nav-brand-icon">ADV</div><div class="nav-brand-text">Threat Actor Profiles</div></a><ul class="nav-links"><li><a href="{h}">Threat Actors</a></li><li><a href="{ch}">Contributors</a></li><li><a href="{wh}">Why This Project</a></li><li><a href="https://adversaryvillage.org" target="_blank">Adversary Village</a></li></ul><button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>'
 
 def ft():
-    return '<footer class="site-footer"><div class="footer-inner"><div class="footer-brand">Threat Actor Profiles</div><div class="footer-text">An open-source, community-driven threat actor profiles project by <a href="https://adversaryvillage.org" target="_blank" style="color:#604ca9;text-decoration:none;font-weight:600">Adversary Village</a>.</div><div style="color:var(--td);font-size:1.2rem;margin-top:.8rem">&copy; 2026 Adversary Village. All rights reserved.</div><ul class="footer-links"><li><a href="https://adversaryvillage.org" target="_blank">Adversary Village</a></li><li><a href="https://github.com/adversaryvillage" target="_blank">GitHub</a></li></ul></div></footer>'
+    return '<footer class="site-footer"><div class="footer-inner"><div class="footer-brand">Threat Actor Profiles</div><div class="footer-text">An open-source, community-driven threat actor profiles project by <a href="https://adversaryvillage.org" target="_blank" style="color:#604ca9;text-decoration:none;font-weight:600">Adversary Village</a>.</div><div style="color:var(--td);font-size:1.2rem;margin-top:.8rem">&copy; 2026 Adversary Village. All rights reserved.</div><ul class="footer-links"><li><a href="https://adversaryvillage.org" target="_blank">Adversary Village</a></li><li><a href="https://github.com/adversaryvillage/threat-actor-profiles" target="_blank">GitHub</a></li></ul></div></footer>'
 
 def gidx(actors,sponsors=None):
     if sponsors is None: sponsors=[]
@@ -450,7 +450,7 @@ def gen_why():
 
     c+='<p style="margin-bottom:2rem">The entire project is data-driven. Every actor page is generated from a single JSON file. You do not need to know Python or HTML. Edit the JSON, submit a pull request, and the maintainers review and merge. Check the <a href="https://github.com/adversaryvillage/threat-actor-profiles" target="_blank" style="color:#604ca9;font-weight:600">README on GitHub</a> for the full contribution guide.</p>'
 
-    c+='<a href="https://github.com/adversaryvillage" target="_blank" style="display:inline-block;padding:1.4rem 3.2rem;background:var(--p);color:#fff;border-radius:var(--r);font:700 1.4rem var(--fb);letter-spacing:.15rem;text-transform:uppercase;text-decoration:none;margin-top:1rem">Contribute on GitHub</a>'
+    c+='<a href="https://github.com/adversaryvillage/threat-actor-profiles" target="_blank" style="display:inline-block;padding:1.4rem 3.2rem;background:var(--p);color:#fff;border-radius:var(--r);font:700 1.4rem var(--fb);letter-spacing:.15rem;text-transform:uppercase;text-decoration:none;margin-top:1rem">Contribute on GitHub</a>'
 
     c+='</div></section>'
     html=hd('Why This Project',1)+'<body>'+nv(1)+c+ft()+'<script src="../js/main.js"></script></body></html>'
@@ -504,7 +504,7 @@ def gen_contributors(contributors):
 <div style="margin-top:2rem;text-align:center;padding:3rem;background:#f5f5f5;border:1px solid #e0e0e0;border-radius:var(--r)">
 <div style="font-family:var(--fh);font-size:2.4rem;font-weight:600;color:#333;margin-bottom:1.2rem">Want to Contribute?</div>
 <div style="font-size:1.6rem;color:#666;max-width:600px;margin:0 auto 2rem;line-height:1.65">Add threat actor profiles, fix data, improve detection engineering, or submit custom artwork.</div>
-<a href="https://github.com/adversaryvillage" target="_blank" style="display:inline-block;padding:1.4rem 3.2rem;background:var(--p);color:#fff;border-radius:var(--r);font-weight:700;font-size:1.4rem;letter-spacing:.15rem;text-transform:uppercase;text-decoration:none">Contribute on GitHub</a>
+<a href="https://github.com/adversaryvillage/threat-actor-profiles" target="_blank" style="display:inline-block;padding:1.4rem 3.2rem;background:var(--p);color:#fff;border-radius:var(--r);font-weight:700;font-size:1.4rem;letter-spacing:.15rem;text-transform:uppercase;text-decoration:none">Contribute on GitHub</a>
 </div></section>{ft()}<script src="../js/main.js"></script></body></html>'''
     with open(os.path.join(cdir,'index.html'),'w') as f: f.write(fmt_html(html))
     print("  ✓ contributors/index.html")

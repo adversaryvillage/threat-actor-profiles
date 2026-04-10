@@ -533,22 +533,10 @@
   ],
   "page_contributors": [
     {
-      "name": "Adversary Village",
-      "github": "https://github.com/adversaryvillage",
-      "twitter": "https://twitter.com/AdversaryVillag",
-      "linkedin": "https://linkedin.com/company/adversaryvillage"
-    },
-    {
-      "name": "MITRE ATT&CK Team",
-      "github": "https://github.com/mitre-attack",
-      "twitter": "https://twitter.com/MITREattack",
-      "linkedin": "https://linkedin.com/company/mitre"
-    },
-    {
-      "name": "BreachSimRange",
-      "github": "https://github.com/BreachSimRange",
-      "twitter": "https://twitter.com/BreachSimRange",
-      "linkedin": "https://linkedin.com/company/breachsimrange"
+      "name": "Abhijith 'Abx' B R",
+      "github": "https://github.com/abhijithbr",
+      "twitter": "https://twitter.com/abhijithbr",
+      "linkedin": "https://in.linkedin.com/in/abhijith-b-r"
     }
   ],
   "ttp_commands": [
